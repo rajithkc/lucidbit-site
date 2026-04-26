@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GentleLimit — Mindful Screen Time for Mac | LucidBit</title>
+<meta name="description" content="GentleLimit is a calm, non-blocking screen time app for macOS. Track app usage, set daily limits, and keep awareness visible with floating widgets and subtle signals — no hard blockers, no forced interruptions.">
+<meta name="keywords" content="Mac screen time app, macOS app usage tracker, non-blocking screen time, mindful screen time Mac, app usage limits Mac, macOS focus app, digital wellbeing Mac, menu bar screen time">
+<link rel="canonical" href="https://lucidbit.app/GentleLimit/gentlelimit.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LucidBit">
+<meta property="og:title" content="GentleLimit — Mindful Screen Time for Mac">
+<meta property="og:description" content="A calm, non-blocking screen time tool. Awareness through subtle signals and floating widgets — no interruptions.">
+<meta property="og:url" content="https://lucidbit.app/GentleLimit/gentlelimit.html">
+<meta property="og:image" content="https://lucidbit.app/Images/og/og-gentlelimit.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GentleLimit — Mindful Screen Time for Mac">
+<meta name="twitter:description" content="A calm, non-blocking screen time app for macOS.">
+<meta name="twitter:image" content="https://lucidbit.app/Images/og/og-gentlelimit.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#4B84BD">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lucidbit.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "GentleLimit",
+      "item": "https://lucidbit.app/GentleLimit/gentlelimit.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GentleLimit",
+  "operatingSystem": "macOS 14.0 or later",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Screen Time",
+  "softwareVersion": "1.5",
+  "url": "https://lucidbit.app/GentleLimit/gentlelimit.html",
+  "image": "https://lucidbit.app/Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp",
+  "screenshot": [
+    "https://lucidbit.app/Images/GentleLimit/your_digital_day.webp",
+    "https://lucidbit.app/Images/GentleLimit/floating_widgets.webp",
+    "https://lucidbit.app/Images/GentleLimit/insights.webp"
+  ],
+  "featureList": [
+    "Per-app daily usage limits with visible progress",
+    "Floating widgets you can drag out of the menu",
+    "Insights into immersion, context switches, high-usage days",
+    "Optional gentle overlay when daily limits are reached",
+    "Awareness through subtle signals — never force-quits apps",
+    "Fully on-device; no account, no telemetry"
+  ],
+  "description": "A calm, non-blocking screen time tool for macOS that keeps your usage visible through subtle signals and floating widgets.",
+  "offers": { "@type": "Offer", "price": "6.99", "priceCurrency": "USD", "url": "https://apps.apple.com/app/id6758135762" },
+  "publisher": { "@type": "Organization", "name": "LucidBit", "url": "https://lucidbit.app/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "GentleLimit — preview",
+  "description": "Short demonstration of GentleLimit — a calm, non-blocking screen time tool for macOS.",
+  "thumbnailUrl": "https://lucidbit.app/Images/og/og-gentlelimit.png",
+  "uploadDate": "2026-04-26",
+  "duration": "PT11S",
+  "contentUrl": "https://lucidbit.app/Images/GentleLimit/gentlelimit_preview.mp4",
+  "publisher": { "@type": "Organization", "name": "LucidBit", "url": "https://lucidbit.app/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Will GentleLimit force-quit or block my apps?", "acceptedAnswer": { "@type": "Answer", "text": "No. GentleLimit never closes apps for you. Awareness comes through floating widgets and subtle signals — you stay in control." } },
+    { "@type": "Question", "name": "How is GentleLimit different from Apple Screen Time?", "acceptedAnswer": { "@type": "Answer", "text": "GentleLimit is built for active Mac use: floating widgets that follow your work, per-app daily limits with visible progress, no hard blocks. Apple Screen Time is broader and family-oriented; GentleLimit is a single-purpose Mac tool for personal awareness." } },
+    { "@type": "Question", "name": "Does GentleLimit require an account?", "acceptedAnswer": { "@type": "Answer", "text": "No. Fully on-device. No account, no cloud sync, no telemetry leaving your Mac." } },
+    { "@type": "Question", "name": "What macOS versions are supported?", "acceptedAnswer": { "@type": "Answer", "text": "macOS 14 (Sonoma) or later, native on Apple Silicon and supported Intel Macs." } },
+    { "@type": "Question", "name": "Does GentleLimit work on iPhone?", "acceptedAnswer": { "@type": "Answer", "text": "Not today — GentleLimit is a Mac app. If you need iPhone parity, Apple's built-in Screen Time may fit better." } },
+    { "@type": "Question", "name": "Is GentleLimit a subscription?", "acceptedAnswer": { "@type": "Answer", "text": "No. $6.99 once on the Mac App Store, with a 7-day free trial. One purchase, all future updates." } }
+  ]
+}
+</script>
+<style>
+:root { --page-accent: var(--daily-blue); }
+
+/* ─────────────────────────────────────────────────────────────
+   GentleLimit — centered hero + video-with-halo format,
+   tinted with dailyBlue (Daily Progress Bar color from the app).
+   All content verbatim from the previous layout; only structure
+   and accent colors change.
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  --daily-blue:      #4B84BD;
+  --daily-blue-glow: rgba(75, 132, 189, 0.22);
+  --daily-blue-dim:  rgba(75, 132, 189, 0.10);
+}
+
+/* ── HERO (centered) ── */
+.gl-hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 32px 60px;
+  text-align: center;
+  position: relative;
+}
+
+.gl-back-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 56px;
+}
+
+.gl-kicker-centered {
+  justify-content: center;
+  margin-bottom: 28px;
+  color: var(--daily-blue);
+}
+.gl-kicker-centered::before { background: var(--daily-blue); }
+
+.gl-hero-icon {
+  width: 116px;
+  height: 116px;
+  margin: 0 auto 28px;
+  display: block;
+  border-radius: 26px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  animation: gl-rise 0.9s 0.1s var(--ease-out) both;
+}
+
+.gl-title-centered {
+  font-size: clamp(3.6rem, 9vw, 7rem) !important;
+  margin-bottom: 16px !important;
+  animation: gl-rise 0.9s 0.2s var(--ease-out) both;
+}
+
+.gl-tagline-centered {
+  margin: 0 auto 20px !important;
+  animation: gl-rise 0.9s 0.3s var(--ease-out) both;
+}
+
+.gl-desc-centered {
+  margin: 0 auto 36px !important;
+  max-width: 620px !important;
+  text-align: center;
+  animation: gl-rise 0.9s 0.35s var(--ease-out) both;
+  /* No pre-line — the two sentences flow as one paragraph, matching
+     ActiveStat's continuous-prose description style. */
+}
+
+.gl-cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+  animation: gl-rise 0.9s 0.4s var(--ease-out) both;
+}
+
+/* dailyBlue-tinted buy & primary buttons on this page only */
+.gl-hero .btn-primary,
+.gl-hero .btn-buy {
+  background: var(--daily-blue);
+  box-shadow: 0 4px 24px var(--daily-blue-glow);
+}
+.gl-hero .btn-primary:hover,
+.gl-hero .btn-buy:hover {
+  box-shadow: 0 8px 32px var(--daily-blue-glow);
+}
+
+/* Sentence-case meta row (matches PeekFocus). Final item is a
+   "Notarized by Apple" seal; the seal icon takes the page's dailyBlue accent. */
+.gl-meta-centered {
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-2);
+  line-height: 1.5;
+  margin-bottom: 28px;
+  animation: gl-rise 0.9s 0.48s var(--ease-out) both;
+}
+.gl-meta-centered .dot {
+  display: inline-block;
+  margin: 0 10px;
+  opacity: 0.4;
+}
+.gl-meta-centered .seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  vertical-align: middle;
+}
+.gl-meta-centered .seal svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: var(--daily-blue);
+}
+
+.gl-mas-wrap {
+  display: flex;
+  justify-content: center;
+  animation: gl-rise 0.9s 0.55s var(--ease-out) both;
+}
+
+@keyframes gl-rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── VIDEO SECTION (dailyBlue glow halo) ──
+   GentleLimit's preview is landscape 1920×1080 (16:9), so the wrap
+   uses aspect-ratio 16:9 with width capped for a balanced hero. */
+.gl-video {
+  max-width: 1160px;
+  margin: 40px auto 100px;
+  padding: 0 48px;
+  position: relative;
+}
+
+
+.gl-video-wrap {
+  position: relative;
+  display: block;
+}
+
+.gl-video-wrap video,
+.gl-video-wrap img {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.08),
+    0 30px 70px rgba(0,0,0,0.18),
+    0 80px 140px rgba(0,0,0,0.16);
+  transition: transform 0.35s var(--ease-out),
+              box-shadow 0.35s var(--ease-out);
+}
+
+.gl-video-wrap:hover video,
+.gl-video-wrap:hover img {
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.10),
+    0 22px 60px rgba(0,0,0,0.20),
+    0 52px 100px rgba(0,0,0,0.15);
+}
+
+/* ── FEATURE ROWS ──
+   Per-row padding (32px top/bottom) sets the rhythm between rows; the
+   site-wide .feature-rows gap is 0, so adjacent rows are separated by
+   the sum of their paddings only (~64px), not paddings + flex gap. */
+.feature-rows { padding: 0; }
+
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 32px 48px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.feature-row:last-child {
+  padding-bottom: 20px;
+}
+
+.feature-row.reverse { direction: rtl; }
+.feature-row.reverse > * { direction: ltr; }
+
+.feature-image {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.feature-image img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  box-shadow:
+    0 2px 6px  rgba(0,0,0,0.08),
+    0 14px 40px rgba(0,0,0,0.15),
+    0 40px 80px rgba(0,0,0,0.12);
+  transition: box-shadow 0.5s ease;
+}
+.feature-image:hover img {
+  box-shadow:
+    0 4px 10px  rgba(0,0,0,0.10),
+    0 22px 60px rgba(0,0,0,0.20),
+    0 52px 100px rgba(0,0,0,0.15);
+}
+
+.feature-text h2 {
+  font-family: 'Cormorant', serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.feature-text p {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-2);
+  line-height: 1.8;
+  max-width: 380px;
+}
+
+/* ── CORE FEATURES GRID — re-tint the site-default .feat-card volt
+   accent to dailyBlue, scoped to this page only via .gl-core. ── */
+.gl-core .feat-icon svg {
+  stroke: var(--daily-blue);
+}
+.gl-core .feat-icon svg [stroke="var(--volt)"] {
+  stroke: var(--daily-blue);
+}
+.gl-core .feat-icon svg [fill="var(--volt)"] {
+  fill: var(--daily-blue);
+}
+.gl-core .feat-icon {
+  background: var(--daily-blue-dim);
+  border-color: rgba(75, 132, 189, 0.18);
+}
+.gl-core .detail-section-label {
+  color: var(--daily-blue);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .gl-hero { padding: 100px 24px 40px; }
+  .gl-hero-icon { width: 96px; height: 96px; }
+  .gl-video { padding: 0 20px; margin-bottom: 60px; }
+  .feature-row { grid-template-columns: 1fr; gap: 40px; padding: 44px 24px; }
+  .feature-row.reverse { direction: ltr; }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+  }
+  .newsletter-form button {
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .gl-hero { padding: 90px 20px 32px; }
+  .gl-hero-icon { width: 80px; height: 80px; border-radius: 19px; }
+  .feature-row { padding: 28px 20px; gap: 24px; }
+  .feature-text h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .feature-text p { font-size: 0.95rem; }
+  .gl-video::before { inset: -40px -40px -40px -40px; filter: blur(24px); }
+}
+</style>
+</head>
+<body data-reveal-threshold="0.08">
+
+<nav id="main-nav">
+  <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        Apps
+        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-panel" role="menu">
+        <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
+          <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">GentleLimit</span>
+            <span class="nav-dropdown-sub">Mindful screen time habits</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
+          <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">ActiveStat</span>
+            <span class="nav-dropdown-sub">Performance. Simplified.</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
+          <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">PeekFocus</span>
+            <span class="nav-dropdown-sub">The calm between windows</span>
+          </span>
+        </a>
+      </div>
+    </li>
+    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+    <li><a href="../privacy.html">Privacy</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="detail-nav-space"></div>
+
+  <!-- ── HERO (centered) ── -->
+  <section class="gl-hero">
+    <div class="gl-back-row">
+      <a class="back-btn" href="../index.html">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        All Apps
+      </a>
+    </div>
+
+    <p class="detail-kicker gl-kicker-centered">Screen Time · Menu Bar</p>
+
+    <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp"
+         alt="GentleLimit Icon"
+         class="gl-hero-icon">
+
+    <h1 class="detail-title gl-title-centered">GentleLimit</h1>
+
+    <p class="detail-tagline gl-tagline-centered">Mindful screen time habits.</p>
+
+    <p class="detail-desc gl-desc-centered">A calm, non-blocking screen time tool for macOS that keeps your usage visible through subtle signals and floating widgets, so you stay mindful without interrupting your focus.</p>
+
+    <div class="gl-cta-row">
+      <a class="btn btn-primary" href="../downloads/GentleLimit.dmg">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0"><path d="M7 2v7M4 6.5l3 3 3-3M2 11.5h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Free Download
+      </a>
+      <a class="btn btn-buy" href="https://lucidbit.lemonsqueezy.com/checkout/buy/ddb73247-048b-45f7-9f71-1efc0ba0236c" target="_blank" rel="noopener">Buy — $6.99</a>
+      <a class="btn btn-ghost" href="changelog.html">Changelog</a>
+    </div>
+
+    <p class="gl-meta-centered">
+      7-day free trial <span class="dot">·</span> One-time payment <span class="dot">·</span>
+      <span class="seal">
+        <!-- checkmark.seal.fill — matches the SF Symbol used in-app. -->
+        <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M225.86 102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28 23.51 138.44 16 128 16s-18.27 7.51-25.18 14.14c-3.94 3.77-8 7.67-11.57 9.14C88 40.64 82.56 40.72 77.31 40.8c-9.76.15-20.82.31-28.51 8S41 67.55 40.8 77.31c-.08 5.25-.16 10.67-1.52 13.94-1.47 3.56-5.37 7.63-9.14 11.57C23.51 109.72 16 117.56 16 128s7.51 18.27 14.14 25.18c3.77 3.94 7.67 8 9.14 11.57 1.36 3.27 1.44 8.69 1.52 13.94.15 9.76.31 20.82 8 28.51s18.75 7.85 28.51 8c5.25.08 10.67.16 13.94 1.52 3.56 1.47 7.63 5.37 11.57 9.14C109.72 232.49 117.56 240 128 240s18.27-7.51 25.18-14.14c3.94-3.77 8-7.67 11.57-9.14 3.27-1.36 8.69-1.44 13.94-1.52 9.76-.15 20.82-.31 28.51-8s7.85-18.75 8-28.51c.08-5.25.16-10.67 1.52-13.94 1.47-3.56 5.37-7.63 9.14-11.57C232.49 146.28 240 138.44 240 128S232.49 109.73 225.86 102.82Zm-52.2 6.84-56 56a8 8 0 0 1-11.32 0l-24-24a8 8 0 0 1 11.32-11.32L112 148.69l50.34-50.35a8 8 0 0 1 11.32 11.32Z"/>
+        </svg>
+        Notarized by Apple
+      </span>
+    </p>
+
+    <div class="gl-mas-wrap">
+      <a class="mas-badge-link" href="https://apps.apple.com/app/id6758135762" target="_blank" rel="noopener" aria-label="Download GentleLimit on the Mac App Store">
+        <svg class="mas-badge-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 52" role="img">
+          <rect width="172" height="52" rx="9" fill="#000"/>
+          <g transform="translate(12, 4) scale(1.75)">
+            <path fill="white" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </g>
+          <text x="54" y="21" fill="white" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" letter-spacing="0.4">Download on the</text>
+          <text x="54" y="39" fill="white" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="17.5" font-weight="600" letter-spacing="-0.3">Mac App Store</text>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── VIDEO WITH DAILYBLUE GLOW HALO ── -->
+  <section class="gl-video reveal">
+    <div class="gl-video-wrap" data-tilt data-tilt-strength="3">
+      <video autoplay muted loop playsinline preload="metadata"
+             poster="../Images/GentleLimit/Protect_your_flow.png">
+        <source src="../Images/GentleLimit/gentlelimit_preview.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+<!-- FEATURE ROWS -->
+<section class="feature-rows">
+
+  <!-- Floating widgets -->
+  <div class="feature-row">
+    <div class="feature-image" data-tilt data-tilt-strength="4">
+      <img src="../Images/GentleLimit/floating_widgets.webp" alt="Floating usage widgets">
+    </div>
+    <div class="feature-text">
+      <h2>Drag rows into floating widgets.</h2>
+      <p>
+        Stay aware in your peripheral view. Drag any monitored row out and
+        keep usage visible without switching windows.
+      </p>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="feature-row reverse">
+    <div class="feature-image" data-tilt data-tilt-strength="4">
+      <img src="../Images/GentleLimit/your_digital_day.webp" alt="Usage overview">
+    </div>
+    <div class="feature-text">
+      <h2>Your digital day, distilled.</h2>
+      <p>
+        Apps, limits, and gentle nudges in one menu. Real-time progress
+        bars update quietly without interrupting your work.
+      </p>
+    </div>
+  </div>
+
+  <!-- Insights -->
+  <div class="feature-row">
+    <div class="feature-image" data-tilt data-tilt-strength="4">
+      <img src="../Images/GentleLimit/insights.webp" alt="Insights">
+    </div>
+    <div class="feature-text">
+      <h2>Notice patterns in your digital habits.</h2>
+      <p>
+        Insights surface trends in how you use your Mac — immersion
+        sessions, frequent context switches, and high-usage days.
+      </p>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="feature-row reverse">
+    <div class="feature-image" data-tilt data-tilt-strength="4">
+      <img src="../Images/GentleLimit/overlay.webp" alt="Daily limit overlay">
+    </div>
+    <div class="feature-text">
+      <h2>Protect your flow</h2>
+      <p>
+        When your daily limit is reached, GentleLimit pauses the moment
+        with a short optional overlay — a gentle reminder to step back
+        before continuing your work.
+      </p>
+    </div>
+  </div>
+
+  <!-- Settings -->
+  <div class="feature-row">
+    <div class="feature-image" data-tilt data-tilt-strength="4">
+      <img src="../Images/GentleLimit/settings.webp" alt="Settings">
+    </div>
+    <div class="feature-text">
+      <h2>Your Mac. Your rules.</h2>
+      <p>
+        Per-app limits, gentle cues, the time display you choose.
+        GentleLimit adapts to your workflow — not the other way around.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+  <!-- CORE FEATURES (dailyBlue-tinted via .gl-core) -->
+  <section class="detail-body gl-core">
+    <div class="container">
+      <p class="detail-section-label">Core Features</p>
+      <!-- ── CORE FEATURES — 6 cards, no duplication with feature rows above.
+           Floating Widgets, Daily Limit Overlay, and Insights are removed
+           here because they're already shown as feature rows. The remaining
+           cards each surface something the rows don't: the color language
+           (Visual Awareness), the limits + extend mechanic (Set limits, keep
+           control), the audio/haptic cues, the menu-bar architecture, the
+           privacy stance, and the pricing model. -->
+      <div class="feat-grid">
+
+        <!-- Visual Awareness — the green/amber/red color language -->
+        <div class="feat-card">
+          <div class="feat-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--volt)" stroke-width="1.4" stroke-linecap="round">
+              <circle cx="9" cy="9" r="6.5"/>
+              <circle cx="9" cy="9" r="2.5" fill="var(--volt)" stroke="none"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">Visual Awareness</h3>
+          <p class="feat-desc">
+            Calm progress indicators update in real time. Colors shift gently —
+            green to amber to red — as you approach your limits. Usage stays
+            visible without breaking your flow.
+          </p>
+        </div>
+
+        <!-- Set limits, keep control — clubs Usage Limits + Daily Overlay + Extend -->
+        <div class="feat-card">
+          <div class="feat-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--volt)" stroke-width="1.4" stroke-linecap="round">
+              <circle cx="9" cy="9" r="6.5"/>
+              <path d="M9 9L9 4" stroke-width="1.6"/>
+              <path d="M9 9 L13.6 11.5" stroke-width="1.4" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">Set limits, keep control</h3>
+          <p class="feat-desc">
+            Per-app and daily limits, tracked in real time. When you hit your
+            daily cap, GentleLimit pauses briefly with an optional overlay —
+            step away, or extend by a few more minutes. Never a hard block.
+          </p>
+        </div>
+
+        <!-- Gentle cues — the optional sound + haptic -->
+        <div class="feat-card">
+          <div class="feat-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--volt)" stroke-width="1.4" stroke-linecap="round">
+              <path d="M3 9h2"/>
+              <path d="M7 9h4"/>
+              <path d="M13 9h2"/>
+              <path d="M9 4v2"/>
+              <path d="M9 12v2"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">Gentle cues</h3>
+          <p class="feat-desc">
+            An optional soft chime when an app reaches its limit. A subtle
+            haptic feedback as you approach it. Configurable in Settings.
+          </p>
+        </div>
+
+        <!-- Menu Bar Native — architectural choice -->
+        <div class="feat-card">
+          <div class="feat-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--volt)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="16" height="11" rx="2"/>
+              <line x1="1" y1="7.5" x2="17" y2="7.5" stroke-width="1.6"/>
+              <circle cx="14.5" cy="5.75" r="0.7" fill="var(--volt)" stroke="none"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">Menu Bar Native</h3>
+          <p class="feat-desc">
+            Lives entirely in your menu bar — no dock icon, no desktop clutter.
+            GentleLimit is always one click away and completely out of the way
+            when you don't need it.
+          </p>
+        </div>
+
+        <!-- Private by Design — privacy stance -->
+        <div class="feat-card">
+          <div class="feat-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--volt)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 2l6 3v4c0 3.5-2.5 6-6 7-3.5-1-6-3.5-6-7V5l6-3z"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">Private by Design</h3>
+          <p class="feat-desc">
+            No tracking. No external analytics. Your screen time data never
+            leaves your Mac — all monitoring and analysis run entirely on-device.
+          </p>
+        </div>
+
+        <!-- One-Time Purchase — pricing model -->
+        <div class="feat-card">
+          <div class="feat-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--volt)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="9" r="6.5"/>
+              <path d="M6.5 9l1.8 1.8L11.5 7.5"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">One-Time Purchase</h3>
+          <p class="feat-desc">
+            Buy once and keep GentleLimit forever. No subscriptions, no
+            recurring payments — just a simple one-time purchase with free
+            updates.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ──
+       Questions answered on the page; mirrored in FAQPage
+       JSON-LD in <head> so Google can surface answers as rich
+       results in search. -->
+  <section class="app-faq-section" aria-label="GentleLimit FAQ">
+    <div class="container">
+      <h2 class="app-faq-title">FAQ</h2>
+      <div class="app-faq-list">
+        <details>
+          <summary>Will GentleLimit force-quit or block my apps?</summary>
+          <p>No. GentleLimit never closes apps for you. Awareness comes through floating widgets and subtle signals — you stay in control.</p>
+        </details>
+        <details>
+          <summary>How is it different from Apple Screen Time?</summary>
+          <p>GentleLimit is built for active Mac use: floating widgets that follow your work, per-app daily limits with visible progress, no hard blocks. Apple Screen Time is broader and family-oriented; GentleLimit is a single-purpose Mac tool for personal awareness.</p>
+        </details>
+        <details>
+          <summary>Does it require an account?</summary>
+          <p>No. Fully on-device. No account, no cloud sync, no telemetry leaving your Mac.</p>
+        </details>
+        <details>
+          <summary>What macOS versions are supported?</summary>
+          <p>macOS 14 (Sonoma) or later, native on Apple Silicon and supported Intel Macs.</p>
+        </details>
+        <details>
+          <summary>Does it work on iPhone?</summary>
+          <p>Not today — GentleLimit is a Mac app. If you need iPhone parity, Apple's built-in Screen Time may fit better.</p>
+        </details>
+        <details>
+          <summary>Is it a subscription?</summary>
+          <p>No. $6.99 once on the Mac App Store, with a 7-day free trial. One purchase, all future updates.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-card reveal">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">A note when there’s something new.</h2>
+        </div>
+        <div class="newsletter-form-wrap">
+          <form action="https://app.kit.com/forms/9114040/subscriptions" method="post" class="newsletter-form" target="kit-iframe" id="kit-form">
+            <input type="email" name="email_address" placeholder="your@email.com" required class="newsletter-input">
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-thanks" id="kit-thanks" style="display:none;">Thank you for subscribing!</p>
+          <iframe name="kit-iframe" style="display:none;" aria-hidden="true"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-wordmark" href="../index.html">Lucid<span class="bit">Bit</span></a>
+        <div class="footer-links">
+			<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+        </div>
+        <span class="footer-copy">&#169; 2026 LucidBit</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="../shared.js"></script>
+</body>
+</html>

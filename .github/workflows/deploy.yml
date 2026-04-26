@@ -1,0 +1,42 @@
+name: Deploy to GitHub Pages
+
+# Trigger: every push to main + manual runs from the Actions tab
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Permissions the deploy-pages action needs
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Prevent concurrent deploys stepping on each other
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      # Pure static site — no build step needed. Upload the repo root as-is.
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PeekFocus vs Backdrop — Mac Window Focus Compared | LucidBit</title>
+<meta name="description" content="Backdrop hides everything behind a solid color. PeekFocus dims or blurs background windows in place — three modes, you stay aware of context.">
+<meta name="keywords" content="Backdrop alternative, Mac focus app, window dimmer Mac, PeekFocus, blur background Mac, distraction-free macOS">
+<link rel="canonical" href="https://lucidbit.app/PeekFocus/vs/backdrop.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LucidBit">
+<meta property="og:title" content="PeekFocus vs Backdrop — Different Window Focus">
+<meta property="og:description" content="Backdrop hides everything; PeekFocus dims or blurs. Pick the calm you want.">
+<meta property="og:url" content="https://lucidbit.app/PeekFocus/vs/backdrop.html">
+<meta property="og:image" content="https://lucidbit.app/Images/og/og-peekfocus.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PeekFocus vs Backdrop — Different Window Focus">
+<meta name="twitter:description" content="Backdrop hides everything; PeekFocus dims or blurs. Pick the calm you want.">
+<meta name="twitter:image" content="https://lucidbit.app/Images/og/og-peekfocus.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#7B3F98">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../comparisons.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lucidbit.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "PeekFocus",
+      "item": "https://lucidbit.app/PeekFocus/peekfocus.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "PeekFocus vs Backdrop",
+      "item": "https://lucidbit.app/PeekFocus/vs/backdrop.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can PeekFocus completely hide background windows?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Focus mode comes close \u2014 heavy blur and dim \u2014 but the windows remain on the desktop. Backdrop covers them entirely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why three modes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Different work needs different intensities. Casual reading is Standard; deep writing is Focus."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I switch modes via keyboard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 one shortcut cycles modes, with optional per-mode shortcuts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it on the Mac App Store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 $4.99 once, sandboxed and notarized, with a 7-day free trial."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --accent: #7B3F98;
+  --accent-glow: rgba(123, 63, 152, 0.22);
+  --accent-dim: rgba(123, 63, 152, 0.10);
+}
+</style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <a class="nav-logo" href="../../index.html">Lucid<span class="bit">Bit</span></a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        Apps
+        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-panel" role="menu">
+        <a class="nav-dropdown-item" href="../../GentleLimit/gentlelimit.html" role="menuitem">
+          <img src="../../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">GentleLimit</span>
+            <span class="nav-dropdown-sub">Mindful screen time habits</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../../ActiveStat/activestat.html" role="menuitem">
+          <img src="../../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">ActiveStat</span>
+            <span class="nav-dropdown-sub">Performance. Simplified.</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../../PeekFocus/peekfocus.html" role="menuitem">
+          <img src="../../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">PeekFocus</span>
+            <span class="nav-dropdown-sub">The calm between windows</span>
+          </span>
+        </a>
+      </div>
+    </li>
+    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+    <li><a href="../../privacy.html">Privacy</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <div class="detail-nav-space"></div>
+
+  <section class="cmp-hero">
+    <div class="cmp-back-row">
+      <a class="back-btn" href="../peekfocus.html">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to PeekFocus
+      </a>
+    </div>
+
+    <div class="cmp-icons">
+      <img src="../../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="PeekFocus icon">
+      <span class="cmp-vs">vs</span>
+      <span class="cmp-competitor-tile">Backdrop</span>
+    </div>
+
+    <p class="detail-kicker cmp-kicker">PeekFocus · A softer Backdrop alternative</p>
+    <h1 class="cmp-title">PeekFocus <em>vs</em> Backdrop</h1>
+    <p class="cmp-lede">Backdrop drops a solid color (or wallpaper) behind your active app, hiding every other window completely. It's an effective sledgehammer. PeekFocus uses a scalpel: dim or blur the background, three modes, you keep peripheral awareness when you want it.</p>
+
+    <div class="cmp-cta-row">
+      <a class="btn btn-primary" href="https://apps.apple.com/app/id6762947349" target="_blank" rel="noopener">Try PeekFocus free</a>
+      <a class="btn btn-ghost" href="../peekfocus.html">Learn more</a>
+    </div>
+    <p class="cmp-meta">7-day free trial <span class="dot">·</span> One-time payment <span class="dot">·</span> Notarized by Apple</p>
+  </section>
+
+  <section class="cmp-body">
+    <div class="container">
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">At a glance</p>
+        <div class="cmp-table-wrap">
+          <table class="cmp-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="cmp-ours-cell">PeekFocus</th>
+                <th>Backdrop</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Approach</td>
+                <td class="cmp-ours">Dim / blur in place</td>
+                <td>Solid color or wallpaper backdrop</td>
+              </tr>
+              <tr>
+                <td>Modes</td>
+                <td class="cmp-ours">Three (Standard, Ambience, Focus)</td>
+                <td>Single backdrop</td>
+              </tr>
+              <tr>
+                <td>Peripheral awareness</td>
+                <td class="cmp-ours">Yes — soft</td>
+                <td>No — fully hidden</td>
+              </tr>
+              <tr>
+                <td>Pricing</td>
+                <td class="cmp-ours">$4.99 one-time, 7-day trial</td>
+                <td>One-time</td>
+              </tr>
+              <tr>
+                <td>Distribution</td>
+                <td class="cmp-ours">Mac App Store, sandboxed</td>
+                <td>Mac App Store</td>
+              </tr>
+              <tr>
+                <td>Apple Silicon</td>
+                <td class="cmp-ours">Native</td>
+                <td>Native</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">Where they're similar</p>
+<h2>Both isolate your active window</h2>
+        <p>Both apps make the window you're working in feel like the only one. Both are native, both run on Apple Silicon, both put a single keystroke between distraction and calm.</p>
+      </div>
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">Where they differ</p>
+<h2>Hide everything vs. dim everything</h2>
+        <p>Backdrop is binary — your background is gone, replaced by a single color or your wallpaper. That's powerful when you really want to disappear into one app and the rest of the desktop is a mess.</p>
+        <p>PeekFocus is graduated. Standard mode is a soft dim — you can still see chats or charts in your peripheral vision. Ambience adds a tonal blur. Focus is the closest to Backdrop's approach — but even there, the windows are still on screen, just heavily de-emphasized.</p>
+
+        <h3>When each shines</h3>
+        <p>If you want absolute disappearance — single window, nothing else — Backdrop is more decisive. If you want a softer treatment with several intensities, PeekFocus gives you the dial.</p>
+      </div>
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">Pick the right one</p>
+<h2>Which should you choose?</h2>
+        <p><strong>Choose Backdrop</strong> if you want everything else to truly vanish behind a solid surface.</p>
+        <p><strong>Choose PeekFocus</strong> if you want a softer, multi-mode treatment that keeps the rest of the screen visible but quiet.</p>
+      </div>
+
+      <div class="cmp-section cmp-faq">
+        <h2>FAQ</h2>
+
+        <details>
+          <summary>Can PeekFocus completely hide background windows?</summary>
+          <p>Focus mode comes close — heavy blur and dim — but the windows remain on the desktop. Backdrop covers them entirely.</p>
+        </details>
+
+        <details>
+          <summary>Why three modes?</summary>
+          <p>Different work needs different intensities. Casual reading is Standard; deep writing is Focus.</p>
+        </details>
+
+        <details>
+          <summary>Can I switch modes via keyboard?</summary>
+          <p>Yes — one shortcut cycles modes, with optional per-mode shortcuts.</p>
+        </details>
+
+        <details>
+          <summary>Is it on the Mac App Store?</summary>
+          <p>Yes — $4.99 once, sandboxed and notarized, with a 7-day free trial.</p>
+        </details>
+      </div>
+
+      <div class="cmp-final">
+        <h2>A softer way to focus</h2>
+        <p>If Backdrop's hard cut feels too abrupt, PeekFocus's three modes give you the dial.</p>
+        <div class="cmp-cta-row">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6762947349" target="_blank" rel="noopener">Try PeekFocus free</a>
+          <a class="btn btn-ghost" href="../peekfocus.html">See all features</a>
+        </div>
+      </div>
+
+      <div class="cmp-related">
+        <p class="cmp-related-title">Other comparisons</p>
+        <div class="cmp-related-grid">
+          <a class="cmp-related-card" href="hocus-focus.html">
+            <span><span class="cmp-related-name">vs Hocus Focus</span><br><span class="cmp-related-sub">Auto-hide inactive windows</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+          <a class="cmp-related-card" href="vanilla.html">
+            <span><span class="cmp-related-name">vs Vanilla</span><br><span class="cmp-related-sub">Menu bar icon hider</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+          <a class="cmp-related-card" href="hazeover.html">
+            <span><span class="cmp-related-name">vs HazeOver</span><br><span class="cmp-related-sub">Background dimmer</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+          <a class="cmp-related-card" href="muzzle.html">
+            <span><span class="cmp-related-name">vs Muzzle</span><br><span class="cmp-related-sub">Notification silencer</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-wordmark" href="../../index.html">Lucid<span class="bit">Bit</span></a>
+        <div class="footer-links">
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
+          <a href="../../privacy.html">Privacy</a>
+          <a href="../../terms.html">Terms</a>
+        </div>
+        <span class="footer-copy">&#169; 2026 LucidBit</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="../../shared.js"></script>
+</body>
+</html>

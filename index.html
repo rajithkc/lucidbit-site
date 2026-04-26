@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LucidBit — Minimal, Private Mac Apps</title>
+<meta name="description" content="LucidBit is an independent macOS studio making minimal menu-bar apps. GentleLimit for mindful screen time, ActiveStat for system performance, PeekFocus for calm focus. Native, private, one-time purchase.">
+<meta name="keywords" content="macOS apps, Mac menu bar apps, minimal Mac apps, indie Mac apps, screen time app Mac, system monitor Mac, focus app Mac, Apple Silicon apps, native Mac apps, one-time purchase">
+<meta name="author" content="LucidBit">
+<link rel="canonical" href="https://lucidbit.app/">
+
+<!-- Open Graph / social share -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LucidBit">
+<meta property="og:title" content="LucidBit — Minimal, Private Mac Apps">
+<meta property="og:description" content="An independent macOS studio making minimal menu-bar apps. Native, private, one-time purchase — no subscriptions.">
+<meta property="og:url" content="https://lucidbit.app/">
+<meta property="og:image" content="https://lucidbit.app/Images/og/og-lucidbit.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LucidBit — Minimal, Private Mac Apps">
+<meta name="twitter:description" content="Minimal menu-bar apps for macOS. Native, private, one-time purchase.">
+<meta name="twitter:image" content="https://lucidbit.app/Images/og/og-lucidbit.png">
+
+<!-- Favicons —
+     /favicon.ico at root is Google's primary discovery target for SERP
+     branding; without it Google falls back to the generic globe icon.
+     The .svg is preferred by modern browsers (sharp at any size); the
+     .png is the universal fallback. -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#6FA800">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<!-- Schema.org structured data — Organization + WebSite + the three apps.
+     Google uses this to (a) identify the studio, (b) enable Sitelinks, and
+     (c) surface individual apps in search results. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lucidbit.app/#org",
+      "name": "LucidBit",
+      "alternateName": "LucidBit Studio",
+      "url": "https://lucidbit.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lucidbit.app/Images/lucidbit-logo-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://lucidbit.app/Images/og/og-lucidbit.png",
+      "description": "An independent macOS studio making minimal, private menu-bar apps. Native, one-time purchase, no subscriptions.",
+      "foundingDate": "2025",
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lucidbit.app/#site",
+      "url": "https://lucidbit.app/",
+      "name": "LucidBit",
+      "description": "Minimal, private Mac apps from LucidBit.",
+      "publisher": { "@id": "https://lucidbit.app/#org" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "GentleLimit",
+      "operatingSystem": "macOS",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Screen Time",
+      "url": "https://lucidbit.app/GentleLimit/gentlelimit.html",
+      "image": "https://lucidbit.app/Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp",
+      "description": "A calm, non-blocking screen time tool for macOS that keeps your usage visible through subtle signals and floating widgets.",
+      "offers": { "@type": "Offer", "price": "6.99", "priceCurrency": "USD" },
+      "publisher": { "@id": "https://lucidbit.app/#org" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "ActiveStat",
+      "operatingSystem": "macOS",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "System Monitor",
+      "url": "https://lucidbit.app/ActiveStat/activestat.html",
+      "image": "https://lucidbit.app/Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp",
+      "description": "High-fidelity Mac telemetry in a clean, minimal menu-bar interface. CPU, RAM, disk, battery — quiet when efficient, clear when it matters.",
+      "offers": { "@type": "Offer", "price": "6.99", "priceCurrency": "USD" },
+      "publisher": { "@id": "https://lucidbit.app/#org" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "PeekFocus",
+      "operatingSystem": "macOS",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Focus",
+      "url": "https://lucidbit.app/PeekFocus/peekfocus.html",
+      "image": "https://lucidbit.app/Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp",
+      "description": "PeekFocus brings intentional focus to your Mac workflow by dimming or blurring every window except the one you're working in.",
+      "offers": { "@type": "Offer", "price": "4.99", "priceCurrency": "USD" },
+      "publisher": { "@id": "https://lucidbit.app/#org" }
+    }
+  ]
+}
+</script>
+<style>
+
+/* Per-app arrow accent — overrides the site default (volt green) so each
+   card's hover arrow matches its app's own accent color. */
+.app-card-plum { --card-accent: #7B3F98; }
+.app-card-blue { --card-accent: #4B84BD; }
+.app-card-plum:hover .card-arrow,
+.app-card-blue:hover .card-arrow {
+  background: var(--card-accent);
+  border-color: var(--card-accent);
+  color: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Hero radial wash — a subtle three-tone glow behind the hero
+   headline, hinting at the three apps' accent colors (plum, volt,
+   dailyBlue). Very low opacity so it reads as warmth, not blobs.
+   ───────────────────────────────────────────────────────────── */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 45% at 28% 38%, rgba(198, 166, 217, 0.18), transparent 70%),
+    radial-gradient(ellipse 65% 55% at 72% 48%, rgba(155, 210, 70, 0.12), transparent 70%),
+    radial-gradient(ellipse 50% 45% at 50% 80%, rgba(120, 170, 220, 0.12), transparent 65%);
+  z-index: 0;
+  pointer-events: none;
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Section rhythm — the apps section sits on a slightly cooler tonal
+   band that fades in at the top and out at the bottom so there are
+   no hard edges. Creates vertical rhythm when scrolling.
+   ───────────────────────────────────────────────────────────── */
+.apps-section {
+  background: linear-gradient(
+    to bottom,
+    transparent 0,
+    rgba(14, 14, 13, 0.022) 80px,
+    rgba(14, 14, 13, 0.022) calc(100% - 80px),
+    transparent 100%
+  );
+}
+
+.as-icon {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.as-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-3);
+  margin-bottom: 2px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize; /* Changed from uppercase to match screenshot */
+}
+.as-val {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1;
+  white-space: nowrap;
+}
+.as-val span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-3);
+  margin-left: 2px;
+}
+
+/* Active Dot */
+.as-dot {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #27C93F;
+  box-shadow: 0 0 4px rgba(39,201,63,0.6);
+}
+
+/* CPU Pulse Graph (Aligned to pods) */
+.as-graph {
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  width: calc(100% - 48px);
+  height: 80px;
+  z-index: 1;
+}
+.as-graph-line {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 640px) {
+  .as-graph {
+    left: 16px;
+    width: calc(100% - 32px);
+  }
+  .as-pods { gap: 8px; padding: 24px 16px 0 16px; }
+  .as-pod { padding: 12px 8px; }
+  .as-val { font-size: 0.95rem; }
+}
+
+</style>
+</head>
+<body data-reveal-threshold="0.12">
+
+<nav id="main-nav">
+  <a class="nav-logo" href="index.html">Lucid<span class="bit">Bit</span></a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        Apps
+        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-panel" role="menu">
+        <a class="nav-dropdown-item" href="GentleLimit/gentlelimit.html" role="menuitem">
+          <img src="Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">GentleLimit</span>
+            <span class="nav-dropdown-sub">Mindful screen time habits</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="ActiveStat/activestat.html" role="menuitem">
+          <img src="Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">ActiveStat</span>
+            <span class="nav-dropdown-sub">Performance. Simplified.</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="PeekFocus/peekfocus.html" role="menuitem">
+          <img src="Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">PeekFocus</span>
+            <span class="nav-dropdown-sub">The calm between windows</span>
+          </span>
+        </a>
+      </div>
+    </li>
+    <li><a href="privacy.html">Privacy</a></li>
+    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+
+  <section class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">Independent Studio</p>
+      <h1 class="hero-headline">Every pixel<br><em>earns its place.</em></h1>
+      <p class="hero-body">Minimal high-quality apps for your iPhone and Mac. Native, fast, and private.</p>
+    </div>
+  </section>
+
+  <section class="apps-section" id="apps-section">
+    <div class="container">
+      <div class="apps-header reveal">
+        <h2 class="apps-title">Applications</h2>
+      </div>
+      <div class="apps-grid">
+
+        <a class="app-card app-card-plum reveal reveal-d1" href="PeekFocus/peekfocus.html">
+          <div class="card-inner">
+            <div class="card-top">
+              <div class="card-icon" style="padding:0;overflow:hidden;">
+                <img src="Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp"
+                     alt="PeekFocus"
+                     style="width:100%;height:100%;object-fit:cover;border-radius:13px;display:block;">
+              </div>
+              <span class="card-badge">Menu Bar · Available</span>
+            </div>
+            <h3 class="card-name">PeekFocus</h3>
+            <p class="card-sub">Focus Mode</p>
+            <p class="card-desc">Blur the noise. Focus on what matters. Dim, blur, or replace the space around your work — and reveal everything again with a single keystroke.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-pills">
+              <span class="pill">Focus · Ambience</span>
+              <span class="pill">Hold to Reveal</span>
+              <span class="pill">Multi-Display</span>
+            </div>
+            <div class="card-arrow">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a class="app-card reveal reveal-d2" href="ActiveStat/activestat.html">
+          <div class="card-inner">
+            <div class="card-top">
+              <div class="card-icon" style="padding:0;overflow:hidden;">
+                <img src="Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp"
+                     alt="ActiveStat"
+                     style="width:100%;height:100%;object-fit:cover;border-radius:13px;display:block;">
+              </div>
+              <span class="card-badge">Menu Bar · Available</span>
+            </div>
+            <h3 class="card-name">ActiveStat</h3>
+            <p class="card-sub">Performance Monitoring</p>
+            <p class="card-desc">Real-time system stats, right in your menu bar — quiet when your system is efficient, clear when it matters.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-pills">
+              <span class="pill">CPU · RAM · Disk</span>
+              <span class="pill">Battery Impact</span>
+              <span class="pill">Apple Silicon</span>
+            </div>
+            <div class="card-arrow">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a class="app-card app-card-blue reveal reveal-d3" href="GentleLimit/gentlelimit.html">
+          <div class="card-inner">
+            <div class="card-top">
+              <div class="card-icon" style="padding:0;overflow:hidden;">
+                <img src="Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp"
+                     alt="GentleLimit"
+                     style="width:100%;height:100%;object-fit:cover;border-radius:13px;display:block;">
+              </div>
+              <span class="card-badge">Menu Bar · Available</span>
+            </div>
+            <h3 class="card-name">GentleLimit</h3>
+            <p class="card-sub">Screen Time</p>
+            <p class="card-desc">Stay aware of screen time — without breaking your flow. Track usage, set limits, and keep it visible with subtle signals and floating widgets.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-pills">
+              <span class="pill">Usage Limits</span>
+              <span class="pill">Floating Widgets</span>
+              <span class="pill">Insights</span>
+            </div>
+            <div class="card-arrow">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-card reveal">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">A note when there’s something new.</h2>
+        </div>
+        <div class="newsletter-form-wrap">
+          <form action="https://app.kit.com/forms/9114040/subscriptions" method="post" class="newsletter-form" target="kit-iframe" id="kit-form">
+            <input type="email" name="email_address" placeholder="your@email.com" required class="newsletter-input">
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-thanks" id="kit-thanks" style="display:none;">Thank you for subscribing!</p>
+          <iframe name="kit-iframe" style="display:none;" aria-hidden="true"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-wordmark" href="index.html">Lucid<span class="bit">Bit</span></a>
+        <div class="footer-links">
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+        <span class="footer-copy">&#169; 2026 LucidBit</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>

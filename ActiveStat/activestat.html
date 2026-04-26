@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ActiveStat — Mac System Monitor for Menu Bar | LucidBit</title>
+<meta name="description" content="ActiveStat is a calm macOS system monitor that lives in your menu bar. High-fidelity CPU, RAM, disk, and battery telemetry — quiet when your Mac is efficient, clear when it matters. One-time purchase. Apple Silicon ready.">
+<meta name="keywords" content="Mac system monitor, macOS menu bar stats, CPU monitor Mac, RAM monitor Mac, Apple Silicon monitoring, Mac performance app, menu bar CPU, iStat alternative, system telemetry Mac">
+<link rel="canonical" href="https://lucidbit.app/ActiveStat/activestat.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LucidBit">
+<meta property="og:title" content="ActiveStat — Performance. Simplified.">
+<meta property="og:description" content="A calm macOS system monitor in your menu bar. High-fidelity telemetry, quiet when efficient, clear when it matters.">
+<meta property="og:url" content="https://lucidbit.app/ActiveStat/activestat.html">
+<meta property="og:image" content="https://lucidbit.app/Images/og/og-activestat.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ActiveStat — Performance. Simplified.">
+<meta name="twitter:description" content="A calm macOS system monitor for your menu bar.">
+<meta name="twitter:image" content="https://lucidbit.app/Images/og/og-activestat.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#9BD246">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lucidbit.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ActiveStat",
+      "item": "https://lucidbit.app/ActiveStat/activestat.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ActiveStat",
+  "operatingSystem": "macOS 14.0 or later",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "System Monitor",
+  "softwareVersion": "1.2",
+  "url": "https://lucidbit.app/ActiveStat/activestat.html",
+  "image": "https://lucidbit.app/Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp",
+  "screenshot": [
+    "https://lucidbit.app/Images/ActiveStat/CPU.webp",
+    "https://lucidbit.app/Images/ActiveStat/Memory_Usage.webp",
+    "https://lucidbit.app/Images/ActiveStat/Battery.webp"
+  ],
+  "featureList": [
+    "Real-time CPU, RAM, disk, and battery telemetry",
+    "Performance and Efficiency core breakdown on Apple Silicon",
+    "GPU usage and thermal state",
+    "Energy classification and battery health (cycle count, design capacity)",
+    "Configurable menu-bar readout (CPU, RAM, disk)",
+    "Smart alerts for sustained CPU, low storage, low battery",
+    "Sandboxed; no kernel extensions, no privileged helpers"
+  ],
+  "description": "A calm Mac system monitor in the menu bar. CPU, RAM, disk, battery telemetry — quiet when efficient, clear when it matters.",
+  "offers": { "@type": "Offer", "price": "6.99", "priceCurrency": "USD", "url": "https://apps.apple.com/app/id6758884994" },
+  "publisher": { "@type": "Organization", "name": "LucidBit", "url": "https://lucidbit.app/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "ActiveStat — preview",
+  "description": "Short demonstration of ActiveStat — a calm macOS system monitor that lives in the menu bar.",
+  "thumbnailUrl": "https://lucidbit.app/Images/og/og-activestat.png",
+  "uploadDate": "2026-04-26",
+  "duration": "PT9S",
+  "contentUrl": "https://lucidbit.app/Images/ActiveStat/activestat_preview.mp4",
+  "publisher": { "@type": "Organization", "name": "LucidBit", "url": "https://lucidbit.app/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What does ActiveStat monitor?", "acceptedAnswer": { "@type": "Answer", "text": "CPU usage with separate Performance and Efficiency core breakdown, RAM (App, Wired, Compressed, plus SSD swap), disk read/write across volumes, battery (charge, cycle count, design capacity, temperature), thermal state, GPU usage, and a real-time energy classification. The menu bar shows what you pick — CPU + RAM, CPU only, RAM only, or disk — and the dropdown shows the rest." } },
+    { "@type": "Question", "name": "Will ActiveStat slow my Mac down?", "acceptedAnswer": { "@type": "Answer", "text": "No. ActiveStat samples at low frequencies, sleeps when the dropdown is closed, and is designed to be invisible to your performance." } },
+    { "@type": "Question", "name": "Is ActiveStat Apple Silicon native?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — native arm64 build that breaks out Performance and Efficiency core clusters separately on M-series Macs. Runs on macOS 14 (Sonoma) or later, on Apple Silicon and supported Intel Macs." } },
+    { "@type": "Question", "name": "Does ActiveStat need any special permissions?", "acceptedAnswer": { "@type": "Answer", "text": "No kernel extensions, no privileged helpers. ActiveStat is sandboxed and uses Apple's public APIs only." } },
+    { "@type": "Question", "name": "Where does my data go?", "acceptedAnswer": { "@type": "Answer", "text": "Nowhere. Everything stays on-device. No account, no telemetry, no analytics." } },
+    { "@type": "Question", "name": "Is ActiveStat a subscription?", "acceptedAnswer": { "@type": "Answer", "text": "No. $6.99 once on the Mac App Store, with a 7-day free trial. One purchase, all future updates." } }
+  ]
+}
+</script>
+<style>
+:root { --page-accent: var(--volt); }
+
+/* ─────────────────────────────────────────────────────────────
+   ActiveStat — centered hero + video-with-halo format,
+   matching the site's new product-page pattern. Uses volt green
+   (site default) as the accent — no content changes vs the
+   previous two-column layout.
+   ───────────────────────────────────────────────────────────── */
+
+/* ── HERO (centered) ── */
+.as-hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 32px 60px;
+  text-align: center;
+  position: relative;
+}
+
+.as-back-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 56px;
+}
+
+.as-kicker-centered { justify-content: center; margin-bottom: 28px; }
+
+.as-hero-icon {
+  width: 116px;
+  height: 116px;
+  margin: 0 auto 28px;
+  display: block;
+  border-radius: 26px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  animation: as-rise 0.9s 0.1s var(--ease-out) both;
+}
+
+.as-title-centered {
+  font-size: clamp(3.6rem, 9vw, 7rem) !important;
+  margin-bottom: 16px !important;
+  animation: as-rise 0.9s 0.2s var(--ease-out) both;
+}
+
+.as-tagline-centered {
+  margin: 0 auto 20px !important;
+  animation: as-rise 0.9s 0.3s var(--ease-out) both;
+}
+
+.as-desc-centered {
+  margin: 0 auto 36px !important;
+  max-width: 620px !important;
+  text-align: center;
+  animation: as-rise 0.9s 0.35s var(--ease-out) both;
+}
+
+.as-cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+  animation: as-rise 0.9s 0.4s var(--ease-out) both;
+}
+
+/* Sentence-case meta row (matches PeekFocus). Final item is a
+   "Notarized by Apple" seal; the seal icon takes the page's volt accent. */
+.as-meta-centered {
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-2);
+  line-height: 1.5;
+  margin-bottom: 28px;
+  animation: as-rise 0.9s 0.48s var(--ease-out) both;
+}
+.as-meta-centered .dot {
+  display: inline-block;
+  margin: 0 10px;
+  opacity: 0.4;
+}
+.as-meta-centered .seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  vertical-align: middle;
+}
+.as-meta-centered .seal svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: var(--volt);
+}
+
+.as-mas-wrap {
+  display: flex;
+  justify-content: center;
+  animation: as-rise 0.9s 0.55s var(--ease-out) both;
+}
+
+@keyframes as-rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── VIDEO SECTION (volt-green glow halo) ──
+   The ActiveStat preview is now landscape (3:2) after the 2026-04 re-encode.
+   Wrap fills the full content column (max 1160px) instead of the old
+   portrait-era 450px cap, and the halo sits behind the section to hug the
+   wider footprint. */
+.as-video {
+  max-width: 1160px;
+  margin: 40px auto 100px;
+  padding: 0 48px;
+  position: relative;
+}
+
+
+.as-video-wrap {
+  position: relative;
+  display: block;
+}
+
+.as-video-wrap video,
+.as-video-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;       /* natural aspect ratio — no cropping */
+  border-radius: 20px;
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.08),
+    0 30px 70px rgba(0,0,0,0.18),
+    0 80px 140px rgba(0,0,0,0.16);
+  transition: transform 0.35s var(--ease-out),
+              box-shadow 0.35s var(--ease-out);
+}
+
+.as-video-wrap:hover video,
+.as-video-wrap:hover img {
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.10),
+    0 22px 60px rgba(0,0,0,0.20),
+    0 52px 100px rgba(0,0,0,0.15);
+}
+
+/* ── FEATURE ROWS ──
+   Per-row 32px top/bottom padding sets the rhythm between rows. The
+   site-wide .feature-rows gap is 0, so vertical separation between
+   adjacent rows is paddings only (~64px), not paddings + flex gap. */
+.feature-rows { padding: 0; }
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 32px 48px;
+  border-top: 1px solid var(--glass-border);
+}
+.feature-row.reverse { direction: rtl; }
+.feature-row.reverse > * { direction: ltr; }
+
+.feature-image {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.feature-image img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  box-shadow:
+    0 2px 6px  rgba(0,0,0,0.08),
+    0 14px 40px rgba(0,0,0,0.15),
+    0 40px 80px rgba(0,0,0,0.12);
+  transition: box-shadow 0.5s ease;
+}
+.feature-image:hover img {
+  box-shadow:
+    0 4px 10px  rgba(0,0,0,0.10),
+    0 22px 60px rgba(0,0,0,0.20),
+    0 52px 100px rgba(0,0,0,0.15);
+}
+
+.feature-image.narrow img {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.feature-text h2 {
+  font-family: 'Cormorant', serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.feature-text p {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-2);
+  line-height: 1.8;
+  max-width: 380px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .as-hero { padding: 100px 24px 40px; }
+  .as-hero-icon { width: 96px; height: 96px; }
+  .as-video { padding: 0 20px; margin-bottom: 60px; }
+  .feature-row { grid-template-columns: 1fr; gap: 40px; padding: 44px 24px; }
+  .feature-row.reverse { direction: ltr; }
+}
+@media (max-width: 640px) {
+  .as-hero { padding: 90px 20px 32px; }
+  .as-hero-icon { width: 80px; height: 80px; border-radius: 19px; }
+  .feature-row { padding: 28px 20px; gap: 24px; }
+  .feature-text h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .feature-text p { font-size: 0.95rem; }
+  .feature-image.narrow img { max-width: 280px; }
+}
+</style>
+</head>
+<body data-reveal-threshold="0.08">
+
+<div class="ambient">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="orb o3"></div>
+</div>
+
+<nav id="main-nav">
+  <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        Apps
+        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-panel" role="menu">
+        <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
+          <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">GentleLimit</span>
+            <span class="nav-dropdown-sub">Mindful screen time habits</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
+          <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">ActiveStat</span>
+            <span class="nav-dropdown-sub">Performance. Simplified.</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
+          <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">PeekFocus</span>
+            <span class="nav-dropdown-sub">The calm between windows</span>
+          </span>
+        </a>
+      </div>
+    </li>
+<li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+    <li><a href="../privacy.html">Privacy</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="detail-nav-space"></div>
+
+  <!-- ── HERO (centered) ── -->
+  <section class="as-hero">
+    <div class="as-back-row">
+      <a class="back-btn" href="../index.html">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All Apps
+      </a>
+    </div>
+    <p class="detail-kicker as-kicker-centered">Performance Monitoring · Menu Bar</p>
+    <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="ActiveStat App Icon" class="as-hero-icon">
+    <h1 class="detail-title as-title-centered">ActiveStat</h1>
+    <p class="detail-tagline as-tagline-centered">Performance. Simplified.</p>
+    <p class="detail-desc as-desc-centered">Your Mac is powerful. Understanding its performance should be effortless. ActiveStat is a calm system observer — delivering high-fidelity telemetry in a clean, minimal interface. Quiet when your Mac is efficient. Clear when it matters.</p>
+    <div class="as-cta-row">
+      <a class="btn btn-primary" href="../downloads/ActiveStat.dmg">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0"><path d="M7 2v7M4 6.5l3 3 3-3M2 11.5h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Free Download
+      </a>
+      <a class="btn btn-buy"
+         href="https://lucidbit.lemonsqueezy.com/checkout/buy/ecc1bcc1-86ed-45ef-9678-c7760180d124"
+         target="_blank"
+         rel="noopener">
+        Buy — $6.99
+      </a>
+      <a class="btn btn-ghost" href="changelog.html">Changelog</a>
+    </div>
+    <p class="as-meta-centered">
+      7-day free trial <span class="dot">·</span> One-time payment <span class="dot">·</span>
+      <span class="seal">
+        <!-- checkmark.seal.fill — matches the SF Symbol used in-app. -->
+        <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M225.86 102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28 23.51 138.44 16 128 16s-18.27 7.51-25.18 14.14c-3.94 3.77-8 7.67-11.57 9.14C88 40.64 82.56 40.72 77.31 40.8c-9.76.15-20.82.31-28.51 8S41 67.55 40.8 77.31c-.08 5.25-.16 10.67-1.52 13.94-1.47 3.56-5.37 7.63-9.14 11.57C23.51 109.72 16 117.56 16 128s7.51 18.27 14.14 25.18c3.77 3.94 7.67 8 9.14 11.57 1.36 3.27 1.44 8.69 1.52 13.94.15 9.76.31 20.82 8 28.51s18.75 7.85 28.51 8c5.25.08 10.67.16 13.94 1.52 3.56 1.47 7.63 5.37 11.57 9.14C109.72 232.49 117.56 240 128 240s18.27-7.51 25.18-14.14c3.94-3.77 8-7.67 11.57-9.14 3.27-1.36 8.69-1.44 13.94-1.52 9.76-.15 20.82-.31 28.51-8s7.85-18.75 8-28.51c.08-5.25.16-10.67 1.52-13.94 1.47-3.56 5.37-7.63 9.14-11.57C232.49 146.28 240 138.44 240 128S232.49 109.73 225.86 102.82Zm-52.2 6.84-56 56a8 8 0 0 1-11.32 0l-24-24a8 8 0 0 1 11.32-11.32L112 148.69l50.34-50.35a8 8 0 0 1 11.32 11.32Z"/>
+        </svg>
+        Notarized by Apple
+      </span>
+    </p>
+    <div class="as-mas-wrap">
+      <a class="mas-badge-link" href="https://apps.apple.com/app/id6758884994" target="_blank" rel="noopener" aria-label="Download ActiveStat on the Mac App Store">
+        <svg class="mas-badge-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 52" role="img">
+          <rect width="172" height="52" rx="9" fill="#000"/>
+          <g transform="translate(12, 4) scale(1.75)">
+            <path fill="white" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </g>
+          <text x="54" y="21" fill="white" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" letter-spacing="0.4">Download on the</text>
+          <text x="54" y="39" fill="white" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="17.5" font-weight="600" letter-spacing="-0.3">Mac App Store</text>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── VIDEO WITH VOLT GLOW HALO ── -->
+  <section class="as-video reveal">
+    <div class="as-video-wrap" data-tilt data-tilt-strength="3">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="../Images/ActiveStat/activestat_preview.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <section class="feature-rows">
+
+    <div class="feature-row reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <img src="../Images/ActiveStat/CPU.webp" alt="CPU Activity Tracking">
+      </div>
+      <div class="feature-text">
+        <h2>CPU Activity</h2>
+        <p>Deep visibility into processor performance. Track total usage, individual core load, cluster activity, system uptime, and idle capacity with precision.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reverse reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <img src="../Images/ActiveStat/Memory_Usage.webp" alt="Memory & Swap Clarity">
+      </div>
+      <div class="feature-text">
+        <h2>Memory & Swap Clarity</h2>
+        <p>Understand where your RAM goes. Clear breakdowns of App Memory, Wired, and Compressed memory — with visual indicators when macOS begins using SSD swap.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <img src="../Images/ActiveStat/Battery.webp" alt="Intelligent Energy Impact">
+      </div>
+      <div class="feature-text">
+        <h2>Intelligent Energy Impact</h2>
+        <p>A real-time energy classification powered by CPU load, thermal state, and memory pressure. Includes battery health data and time-remaining estimates on MacBook models.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reverse reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <img src="../Images/ActiveStat/Storage.webp" alt="Disk Telemetry">
+      </div>
+      <div class="feature-text">
+        <h2>Disk Telemetry</h2>
+        <p>Live read and write speeds with daily tracking totals. See how storage activity evolves throughout your workflow on both internal and removable volumes.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <div class="feature-image narrow" data-tilt data-tilt-strength="5">
+        <img src="../Images/ActiveStat/Settings.webp" alt="Minimalist, Respectful UI">
+      </div>
+      <div class="feature-text">
+        <h2>Minimalist, Respectful UI</h2>
+        <p>A refined glass interface designed to stay out of the way. Customise your dashboard with Smart Auto-Expand, Insight Verbosity, and granular alert controls.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="detail-body">
+    <div class="container">
+      <p class="detail-section-label">Core Features</p>
+      <div class="feat-grid">
+
+        <div class="feat-card">
+          <div class="feat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--volt)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="7" y="7" width="10" height="10" rx="2"/>
+              <path d="M9 3v4M15 3v4M9 17v4M15 17v4"/>
+              <path d="M3 9h4M3 15h4M17 9h4M17 15h4"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">Smart Insight Engine</h3>
+          <p class="feat-desc">Real-time system interpretation — not just raw numbers. Monitor thermal state, energy impact, and core behavior with contextual summaries.</p>
+        </div>
+
+        <!-- Sustained Load — calm-by-design feature: filters transient
+             spikes (cpuSustained in SystemSnapshot) so the UI only signals
+             real state changes, not micro-jumps. -->
+        <div class="feat-card">
+          <div class="feat-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--volt)" stroke-width="1.4" stroke-linecap="round"><path d="M9 2a7 7 0 100 14A7 7 0 009 2z"/><path d="M9 5v4l2.5 1.5"/></svg>
+          </div>
+          <h3 class="feat-title">Sustained Load Engine</h3>
+          <p class="feat-desc">Filters out transient spikes. The UI only highlights state changes when the load is truly sustained, keeping the experience calm and stable.</p>
+        </div>
+
+        <!-- Battery & Thermals — adds detail beyond the Energy Impact row:
+             cycle count, design capacity, real-time battery temperature. -->
+        <div class="feat-card">
+          <div class="feat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--volt)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="18" height="10" rx="2"/>
+              <line x1="22" y1="11" x2="22" y2="13"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">Battery &amp; Thermals</h3>
+          <p class="feat-desc">Track real-time battery temperature, cycle count, and design capacity. Includes time-remaining estimates for MacBook models.</p>
+        </div>
+
+        <div class="feat-card">
+          <div class="feat-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--volt)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="5" height="5" rx="1"/>
+              <rect x="10" y="3" width="5" height="5" rx="1"/>
+              <rect x="3" y="10" width="5" height="5" rx="1"/>
+              <rect x="10" y="10" width="5" height="5" rx="1"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">Built for Apple Silicon</h3>
+          <p class="feat-desc">Optimised for M-series Macs. View Efficiency and Performance core clusters independently to see how work is distributed.</p>
+        </div>
+
+        <div class="feat-card">
+          <div class="feat-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--volt)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 2l6 3v4c0 3.5-2.5 6-6 7-3.5-1-6-3.5-6-7V5l6-3z"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">Strict Privacy</h3>
+          <p class="feat-desc">No analytics. No tracking. All telemetry processing and analysis run strictly locally on your Mac.</p>
+        </div>
+
+        <div class="feat-card">
+          <div class="feat-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--volt)" stroke-width="1.4" stroke-linecap="round"><rect x="3" y="3" width="12" height="12" rx="2"/><path d="M6 3v12M12 3v12M3 6h12M3 12h12"/></svg>
+          </div>
+          <h3 class="feat-title">One-Time Purchase</h3>
+          <p class="feat-desc">No subscriptions or hidden costs. A single purchase unlocks lifetime access to ActiveStat and all future updates.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ──
+       Questions answered on the page; mirrored in FAQPage
+       JSON-LD in <head> so Google can surface answers as rich
+       results in search. -->
+  <section class="app-faq-section" aria-label="ActiveStat FAQ">
+    <div class="container">
+      <h2 class="app-faq-title">FAQ</h2>
+      <div class="app-faq-list">
+        <details>
+          <summary>What does ActiveStat monitor?</summary>
+          <p>CPU usage with separate Performance and Efficiency core breakdown, RAM (App, Wired, Compressed, plus SSD swap), disk read/write across volumes, battery (charge, cycle count, design capacity, temperature), thermal state, GPU usage, and a real-time energy classification. The menu bar shows what you pick — CPU + RAM, CPU only, RAM only, or disk — and the dropdown shows the rest.</p>
+        </details>
+        <details>
+          <summary>Will it slow my Mac down?</summary>
+          <p>No. ActiveStat samples at low frequencies, sleeps when the dropdown is closed, and is designed to be invisible to your performance.</p>
+        </details>
+        <details>
+          <summary>Is it Apple Silicon native?</summary>
+          <p>Yes — native arm64 build that breaks out Performance and Efficiency core clusters separately on M-series Macs. Runs on macOS 14 (Sonoma) or later, on Apple Silicon and supported Intel Macs.</p>
+        </details>
+        <details>
+          <summary>Does ActiveStat need any special permissions?</summary>
+          <p>No kernel extensions, no privileged helpers. ActiveStat is sandboxed and uses Apple's public APIs only.</p>
+        </details>
+        <details>
+          <summary>Where does my data go?</summary>
+          <p>Nowhere. Everything stays on-device. No account, no telemetry, no analytics.</p>
+        </details>
+        <details>
+          <summary>Is it a subscription?</summary>
+          <p>No. $6.99 once on the Mac App Store, with a 7-day free trial. One purchase, all future updates.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-card reveal">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">A note when there’s something new.</h2>
+        </div>
+        <div class="newsletter-form-wrap">
+          <form action="https://app.kit.com/forms/9114040/subscriptions" method="post" class="newsletter-form" target="kit-iframe" id="kit-form">
+            <input type="email" name="email_address" placeholder="your@email.com" required class="newsletter-input">
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-thanks" id="kit-thanks" style="display:none;">Thank you for subscribing!</p>
+          <iframe name="kit-iframe" style="display:none;" aria-hidden="true"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-wordmark" href="../index.html">Lucid<span class="bit">Bit</span></a>
+        <div class="footer-links">
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+        </div>
+        <span class="footer-copy">&#169; 2026 LucidBit</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="../shared.js"></script>
+</body>
+</html>

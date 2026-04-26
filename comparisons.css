@@ -1,0 +1,411 @@
+/* ─────────────────────────────────────────────────────────────────
+   comparisons.css — shared styles for /<App>/vs/<competitor>.html pages.
+   Layered on top of styles.css. Each page sets its --accent /
+   --accent-glow / --accent-dim variables in a <style> block so the
+   same template re-tints per app (volt for ActiveStat, daily-blue
+   for GentleLimit, plum for PeekFocus).
+   ───────────────────────────────────────────────────────────────── */
+
+.cmp-hero {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 120px 32px 60px;
+  text-align: center;
+  position: relative;
+}
+.cmp-back-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 48px;
+}
+
+/* App icon + "vs" + competitor name label, centered */
+.cmp-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0 auto 32px;
+  animation: cmp-rise 0.9s 0.1s var(--ease-out) both;
+}
+.cmp-icons img {
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+  object-fit: cover;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid var(--glass-border);
+}
+.cmp-icons .cmp-vs {
+  font-family: 'Cormorant', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: var(--text-3);
+  letter-spacing: 0.02em;
+}
+/* Competitor "tile" — neutral chip, no logo (we don't license third-party
+   marks). Reads as a label, sized to balance our 88px icon. */
+.cmp-competitor-tile {
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.45);
+  border: 1px dashed rgba(0,0,0,0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  text-align: center;
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1;
+  color: var(--text-2);
+  letter-spacing: -0.01em;
+}
+
+.cmp-kicker {
+  justify-content: center;
+  margin-bottom: 22px;
+  color: var(--accent);
+  animation: cmp-rise 0.9s 0.15s var(--ease-out) both;
+}
+.cmp-kicker::before { background: var(--accent); }
+
+.cmp-title {
+  font-family: 'Cormorant', serif;
+  font-weight: 300;
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 18px;
+  animation: cmp-rise 0.9s 0.2s var(--ease-out) both;
+}
+.cmp-title em {
+  font-style: italic;
+  color: var(--text-2);
+}
+
+.cmp-lede {
+  max-width: 660px;
+  margin: 0 auto 36px;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-2);
+  line-height: 1.75;
+  animation: cmp-rise 0.9s 0.28s var(--ease-out) both;
+}
+
+.cmp-cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  animation: cmp-rise 0.9s 0.36s var(--ease-out) both;
+}
+.cmp-cta-row .btn-primary,
+.cmp-cta-row .btn-buy {
+  background: var(--accent);
+  box-shadow: 0 4px 24px var(--accent-glow);
+}
+.cmp-cta-row .btn-primary:hover,
+.cmp-cta-row .btn-buy:hover {
+  box-shadow: 0 8px 32px var(--accent-glow);
+}
+
+.cmp-meta {
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.86rem;
+  color: var(--text-3);
+  line-height: 1.5;
+  margin-bottom: 0;
+  animation: cmp-rise 0.9s 0.45s var(--ease-out) both;
+}
+.cmp-meta .dot { display: inline-block; margin: 0 8px; opacity: 0.5; }
+
+@keyframes cmp-rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── BODY SECTIONS ── */
+.cmp-body { padding: 40px 0 80px; }
+.cmp-body .container { max-width: 920px; }
+
+.cmp-section { margin-bottom: 80px; }
+.cmp-section-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cmp-section-eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.7;
+}
+.cmp-section h2 {
+  font-family: 'Cormorant', serif;
+  font-weight: 300;
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.cmp-section p {
+  font-size: 1.02rem;
+  font-weight: 400;
+  color: var(--text-2);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.cmp-section p:last-child { margin-bottom: 0; }
+.cmp-section h3 {
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+  font-size: 1.35rem;
+  color: var(--text);
+  margin: 32px 0 10px;
+  letter-spacing: -0.01em;
+}
+
+/* ── COMPARISON TABLE ── */
+.cmp-table-wrap {
+  background: rgba(255,255,255,0.48);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border: 1px solid rgba(255,255,255,0.70);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.07), inset 0 1px 0 rgba(255,255,255,0.85);
+}
+.cmp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cmp-table th, .cmp-table td {
+  padding: 18px 24px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-size: 0.92rem;
+  vertical-align: top;
+}
+.cmp-table thead th {
+  font-family: 'Cormorant', serif;
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  background: rgba(255,255,255,0.30);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.cmp-table thead th:first-child {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.cmp-table tbody td:first-child {
+  font-weight: 500;
+  color: var(--text);
+  font-size: 0.86rem;
+  width: 32%;
+}
+.cmp-table tbody td {
+  color: var(--text-2);
+  line-height: 1.55;
+}
+.cmp-table tbody tr:last-child td { border-bottom: none; }
+.cmp-table .cmp-ours {
+  background: var(--accent-dim);
+}
+.cmp-table .cmp-ours-cell {
+  color: var(--text);
+}
+
+/* ── FAQ ──
+   Smoothly animated open/close. The non-summary content is forced to
+   render at all times (display:block) so its max-height can transition
+   from 0 to the open value instead of jumping. The "FAQ" heading is
+   bumped to display size to match the main pages' treatment. */
+.cmp-faq h2 {
+  font-family: 'Cormorant', serif;
+  font-weight: 300;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  letter-spacing: -0.025em;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 36px;
+  line-height: 1;
+}
+.cmp-faq details {
+  background: rgba(255,255,255,0.48);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.70);
+  border-radius: var(--r-md);
+  padding: 18px 24px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.cmp-faq details[open] {
+  background: rgba(255,255,255,0.66);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+.cmp-faq summary {
+  list-style: none;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.cmp-faq summary::-webkit-details-marker { display: none; }
+.cmp-faq summary::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--accent);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  line-height: 1;
+}
+.cmp-faq details[open] summary::after { transform: rotate(45deg); }
+.cmp-faq details > p {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  font-size: 0.94rem;
+  color: var(--text-2);
+  line-height: 1.75;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              margin-top  0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity     0.25s ease;
+}
+.cmp-faq details[open] > p {
+  max-height: 800px;
+  margin-top: 14px;
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .cmp-faq h2 {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+    margin-bottom: 24px;
+  }
+}
+
+/* ── CLOSING CTA ── */
+.cmp-final {
+  text-align: center;
+  background: rgba(255,255,255,0.42);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border: 1px solid rgba(255,255,255,0.70);
+  border-radius: var(--r-lg);
+  padding: 56px 40px;
+  box-shadow: var(--card-shadow);
+}
+.cmp-final h2 {
+  font-family: 'Cormorant', serif;
+  font-weight: 300;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+.cmp-final p {
+  font-size: 1rem;
+  color: var(--text-2);
+  max-width: 540px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+}
+.cmp-final .cmp-cta-row { margin-bottom: 0; }
+
+/* ── RELATED COMPARISONS ── */
+.cmp-related {
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px solid var(--glass-border);
+}
+.cmp-related-title {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.cmp-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.cmp-related-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.50);
+  border: 1px solid rgba(255,255,255,0.70);
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.2s, border-color 0.2s, transform 0.25s var(--ease-out);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.cmp-related-card:hover {
+  background: rgba(255,255,255,0.75);
+  border-color: rgba(0,0,0,0.10);
+  transform: translateY(-2px);
+}
+.cmp-related-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.cmp-related-sub {
+  font-size: 0.72rem;
+  color: var(--text-3);
+}
+.cmp-related-arrow {
+  margin-left: auto;
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  .cmp-hero { padding: 80px 20px 32px; }
+  .cmp-icons { gap: 18px; }
+  .cmp-icons img { width: 64px; height: 64px; border-radius: 14px; }
+  .cmp-icons .cmp-vs { font-size: 1.2rem; }
+  .cmp-body { padding: 24px 0 60px; }
+  .cmp-section { margin-bottom: 56px; }
+  .cmp-table th, .cmp-table td { padding: 14px 16px; font-size: 0.86rem; }
+  .cmp-table tbody td:first-child { width: 38%; }
+  .cmp-final { padding: 40px 24px; }
+}

@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PeekFocus — Calm Focus Mode for Mac | LucidBit</title>
+<meta name="description" content="PeekFocus dims or blurs every window except the one you're working in. Three modes (Standard, Ambience, Focus), one keystroke. A menu bar focus app for macOS — no forced interruptions, full control.">
+<meta name="keywords" content="Mac focus app, macOS focus mode, window dimming Mac, distraction blocker Mac, menu bar focus app, ambient desktop Mac, Mac concentration app, blur background Mac, focus mode macOS">
+<link rel="canonical" href="https://lucidbit.app/PeekFocus/peekfocus.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LucidBit">
+<meta property="og:title" content="PeekFocus — The Calm Between Windows">
+<meta property="og:description" content="Dims or blurs every window except the one you're working in. Three modes, one keystroke. A calm focus app for macOS.">
+<meta property="og:url" content="https://lucidbit.app/PeekFocus/peekfocus.html">
+<meta property="og:image" content="https://lucidbit.app/Images/og/og-peekfocus.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PeekFocus — The Calm Between Windows">
+<meta name="twitter:description" content="A calm focus app for macOS. Three modes, one keystroke.">
+<meta name="twitter:image" content="https://lucidbit.app/Images/og/og-peekfocus.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#7B3F98">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lucidbit.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "PeekFocus",
+      "item": "https://lucidbit.app/PeekFocus/peekfocus.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PeekFocus",
+  "operatingSystem": "macOS 14.0 or later",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Focus",
+  "softwareVersion": "1.0",
+  "url": "https://lucidbit.app/PeekFocus/peekfocus.html",
+  "image": "https://lucidbit.app/Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp",
+  "screenshot": [
+    "https://lucidbit.app/Images/PeekFocus/ThreeModes.webp",
+    "https://lucidbit.app/Images/PeekFocus/ambience.webp",
+    "https://lucidbit.app/Images/PeekFocus/Surfaces.webp"
+  ],
+  "featureList": [
+    "Three modes: Standard, Ambience, Focus",
+    "Blur, dim, or wallpaper surfaces per mode",
+    "Hold-to-reveal everything with a single keystroke",
+    "Independent configuration per display",
+    "Configurable global keyboard shortcut",
+    "Native arm64 build"
+  ],
+  "description": "PeekFocus brings intentional focus to your Mac workflow. It dims or blurs every window except the one you're working in. Three modes (Standard, Ambience, Focus), one keystroke.",
+  "offers": { "@type": "Offer", "price": "4.99", "priceCurrency": "USD", "url": "https://apps.apple.com/app/id6762947349" },
+  "publisher": { "@type": "Organization", "name": "LucidBit", "url": "https://lucidbit.app/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "PeekFocus — preview",
+  "description": "Short demonstration of PeekFocus on macOS — switching between Standard, Ambience, and Focus modes.",
+  "thumbnailUrl": "https://lucidbit.app/Images/og/og-peekfocus.png",
+  "uploadDate": "2026-04-26",
+  "duration": "PT28S",
+  "contentUrl": "https://lucidbit.app/Images/PeekFocus/peekfocus_preview.mp4",
+  "publisher": { "@type": "Organization", "name": "LucidBit", "url": "https://lucidbit.app/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What does PeekFocus do?", "acceptedAnswer": { "@type": "Answer", "text": "PeekFocus softens everything around the app you're using. Three modes, switched from the menu bar: Standard leaves your desktop alone. Ambience keeps every app visible and quiets the space behind them. Focus shows only your frontmost app and quiets everything else. Ambience and Focus share the same surface choices — blur, dim, or wallpaper — kept independently per mode. The blur surface adds a slow live gradient in Ambience; in Focus it stays still." } },
+    { "@type": "Question", "name": "Will PeekFocus block notifications?", "acceptedAnswer": { "@type": "Answer", "text": "No — that's macOS's Focus modes. PeekFocus is purely visual; it works alongside whatever notification settings you already use." } },
+    { "@type": "Question", "name": "Will PeekFocus work with multiple displays?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each display can be configured independently." } },
+    { "@type": "Question", "name": "Can I customize the PeekFocus keyboard shortcut?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — fully configurable in Settings, with optional per-mode shortcuts." } },
+    { "@type": "Question", "name": "Is PeekFocus Apple Silicon native?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — native arm64 build. Runs on macOS 14 (Sonoma) or later." } },
+    { "@type": "Question", "name": "Is PeekFocus a subscription?", "acceptedAnswer": { "@type": "Answer", "text": "No. $4.99 once on the Mac App Store, with a 7-day free trial. One purchase, all future updates." } }
+  ]
+}
+</script>
+<style>
+:root { --page-accent: var(--plum); }
+
+/* ─────────────────────────────────────────────────────────────
+   PeekFocus — centered hero with plum accent
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  --plum: #7B3F98;
+  --plum-glow: rgba(123, 63, 152, 0.22);
+  --plum-dim:  rgba(123, 63, 152, 0.10);
+  --plum-soft: rgba(198, 166, 217, 0.20);
+}
+
+/* ── HERO (centered) ── */
+.pk-hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 32px 60px;
+  text-align: center;
+  position: relative;
+}
+
+.pk-back-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 56px;
+}
+
+/* Matches ActiveStat's icon pattern — single <img> with border-radius
+   applied directly. Avoids the brief unmasked flash that the previous
+   div+SVG-mask approach caused, since the mask data URI was decoding
+   AFTER the image first painted. */
+.pk-icon {
+  width: 116px;
+  height: 116px;
+  margin: 0 auto 28px;
+  display: block;
+  border-radius: 26px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  animation: pk-rise 0.9s 0.1s var(--ease-out) both;
+}
+
+/* Harmonized to match ActiveStat/GentleLimit: plum-tinted kicker above
+   the icon, upright Cormorant display title, small uppercase tracked
+   tagline, then the descriptive paragraph. Uses the site-wide
+   .detail-kicker / .detail-title / .detail-tagline / .detail-desc base
+   classes from styles.css — these local rules only re-tint and center. */
+.pk-kicker-centered {
+  justify-content: center;
+  margin-bottom: 28px;
+  color: var(--plum);
+  animation: pk-rise 0.9s 0.1s var(--ease-out) both;
+}
+.pk-kicker-centered::before { background: var(--plum); }
+
+.pk-title-centered {
+  font-size: clamp(3.6rem, 9vw, 7rem) !important;
+  margin-bottom: 16px !important;
+  animation: pk-rise 0.9s 0.2s var(--ease-out) both;
+}
+
+.pk-tagline-centered {
+  margin: 0 auto 20px !important;   /* matches ActiveStat's as-tagline-centered */
+  animation: pk-rise 0.9s 0.3s var(--ease-out) both;
+}
+
+.pk-desc-centered {
+  margin: 0 auto 36px !important;
+  max-width: 620px !important;
+  text-align: center;
+  animation: pk-rise 0.9s 0.35s var(--ease-out) both;
+}
+
+.pk-cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  animation: pk-rise 0.9s 0.4s var(--ease-out) both;
+}
+
+/* Plum-tinted buy button variant (overrides site's green btn-buy on this page). */
+.pk-hero .btn-buy,
+.pk-hero .btn-primary {
+  background: var(--plum);
+  box-shadow: 0 4px 24px var(--plum-glow);
+}
+.pk-hero .btn-buy:hover,
+.pk-hero .btn-primary:hover {
+  box-shadow: 0 8px 32px var(--plum-glow);
+}
+
+/* Sentence-case meta row — reads like prose rather than a uppercase
+   legal strip. The last item is a "Notarized by Apple" seal; the seal
+   icon picks up the page's plum accent. */
+.pk-meta {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-2);
+  line-height: 1.5;
+  margin-bottom: 28px;
+  animation: pk-rise 0.9s 0.5s var(--ease-out) both;
+}
+.pk-meta .dot {
+  display: inline-block;
+  margin: 0 10px;
+  opacity: 0.4;
+}
+.pk-meta .seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  vertical-align: middle;
+}
+/* checkmark.seal.fill shape — 10-point rounded seal with a check
+   cut out via fill-rule:evenodd (so the page bg shows through the
+   check). Matches the SF Symbol used inside the app itself. */
+.pk-meta .seal svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: var(--plum);
+}
+
+.pk-mas-wrap {
+  display: flex;
+  justify-content: center;
+  animation: pk-rise 0.9s 0.55s var(--ease-out) both;
+}
+
+@keyframes pk-rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── VIDEO SECTION (plum glow halo) ── */
+.pk-video {
+  max-width: 1160px;
+  margin: 40px auto 100px;
+  padding: 0 48px;
+  position: relative;
+}
+
+/* The wrap is a plain positioning box — no overflow:hidden, no shadow,
+   no hover transform. All visual styles live on the child (video OR
+   placeholder). This mirrors ActiveStat's .hero-video / .hero-video video
+   split so the same tilt + hover behavior applies identically. */
+.pk-video-wrap {
+  position: relative;
+  display: block;
+}
+
+
+.pk-video-wrap video,
+.pk-video-wrap .pk-video-placeholder,
+.pk-video-wrap img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.08),
+    0 30px 70px rgba(0,0,0,0.18),
+    0 80px 140px rgba(0,0,0,0.16);
+  transition: transform 0.35s var(--ease-out),
+              box-shadow 0.35s var(--ease-out);
+}
+.pk-video-wrap:hover video,
+.pk-video-wrap:hover .pk-video-placeholder,
+.pk-video-wrap:hover img {
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.10),
+    0 22px 60px rgba(0,0,0,0.20),
+    0 52px 100px rgba(0,0,0,0.15);
+}
+
+/* Inline fallback — shown when no preview video is dropped in yet. */
+.pk-video-placeholder {
+  background:
+    radial-gradient(ellipse 70% 60% at 20% 30%, rgba(198, 166, 217, 0.35), transparent 60%),
+    radial-gradient(ellipse 60% 70% at 80% 70%, rgba(123, 63, 152, 0.40), transparent 65%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(230, 200, 240, 0.25), transparent 60%),
+    linear-gradient(180deg, #2a1f35 0%, #171021 100%);
+  color: rgba(255,255,255,0.55);
+  font-family: 'Cormorant', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  /* Grid keeps the caption centered even when tilt applies a rotation. */
+  display: grid;
+  place-items: center;
+}
+
+/* ── FEATURE ROWS (ActiveStat pattern, plum-themed placeholders) ──
+   Per-row 32px top/bottom padding sets the rhythm; .feature-rows gap is
+   0 site-wide, so adjacent rows are separated by paddings only (~64px). */
+.feature-rows { padding: 0; }
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 32px 48px;
+  border-top: 1px solid var(--glass-border);
+}
+.feature-row.reverse { direction: rtl; }
+.feature-row.reverse > * { direction: ltr; }
+
+.feature-image {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.feature-image img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.08),
+    0 14px 40px rgba(0,0,0,0.15),
+    0 40px 80px rgba(0,0,0,0.12);
+  transition: box-shadow 0.5s ease;
+}
+.feature-image:hover img {
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.10),
+    0 22px 60px rgba(0,0,0,0.20),
+    0 52px 100px rgba(0,0,0,0.15);
+}
+.feature-image.placeholder {
+  aspect-ratio: 16 / 10;
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(198,166,217,0.22), transparent 60%),
+    linear-gradient(180deg, #f6f4f8 0%, #ece6f0 100%);
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.06),
+    0 14px 40px rgba(0,0,0,0.15),
+    0 40px 80px rgba(0,0,0,0.12) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-3);
+  font-family: 'Cormorant', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  transition: box-shadow 0.5s ease;
+}
+.feature-image.placeholder:hover {
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.10),
+    0 22px 60px rgba(0,0,0,0.20),
+    0 52px 100px rgba(0,0,0,0.15) !important;
+}
+
+.feature-text h2 {
+  font-family: 'Cormorant', serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.feature-text p {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-2);
+  line-height: 1.8;
+  max-width: 380px;
+}
+
+/* ── CORE FEATURES GRID — ActiveStat pattern, tinted with plum ── */
+.pk-core {
+  max-width: 1160px;
+  margin: 100px auto 0;
+  padding: 0 48px;
+}
+.pk-core-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--plum);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pk-core-label::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--plum);
+  opacity: 0.7;
+}
+
+/* Reuse the site's .feat-grid / .feat-card structure, but scope the plum
+   accent using --volt-overrides inside .pk-core. This re-tints the SVG
+   stroke without forking styles.css. */
+.pk-core .feat-icon svg { stroke: var(--plum); }
+.pk-core .feat-icon {
+  background: var(--plum-dim);
+  border-color: rgba(123, 63, 152, 0.18);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .pk-hero { padding: 100px 24px 40px; }
+  .pk-icon { width: 96px; height: 96px; }
+  .pk-video { padding: 0 20px; margin-bottom: 60px; }
+  .feature-row { grid-template-columns: 1fr; gap: 40px; padding: 44px 24px; }
+  .feature-row.reverse { direction: ltr; }
+  .pk-core { padding: 0 24px; margin-top: 72px; }
+}
+
+@media (max-width: 640px) {
+  .pk-hero { padding: 90px 20px 32px; }
+  .pk-icon { width: 80px; height: 80px; }
+  .pk-tagline { font-size: 1.02rem; }
+  .pk-subtag { font-size: 1.1rem; }
+  .feature-row { padding: 28px 20px; gap: 24px; }
+  .feature-text h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .feature-text p { font-size: 0.95rem; }
+  .pk-video::before { inset: -40px -40px -40px -40px; filter: blur(24px); }
+}
+</style>
+</head>
+<body data-reveal-threshold="0.08">
+
+<div class="ambient">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="orb o3"></div>
+</div>
+
+<nav id="main-nav">
+  <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        Apps
+        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-panel" role="menu">
+        <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
+          <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">GentleLimit</span>
+            <span class="nav-dropdown-sub">Mindful screen time habits</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
+          <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">ActiveStat</span>
+            <span class="nav-dropdown-sub">Performance. Simplified.</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
+          <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">PeekFocus</span>
+            <span class="nav-dropdown-sub">The calm between windows</span>
+          </span>
+        </a>
+      </div>
+    </li>
+    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+    <li><a href="../privacy.html">Privacy</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="detail-nav-space"></div>
+
+  <!-- ── HERO ── -->
+  <section class="pk-hero">
+    <div class="pk-back-row">
+      <a class="back-btn" href="../index.html">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All Apps
+      </a>
+    </div>
+
+    <p class="detail-kicker pk-kicker-centered">Focus Mode · Menu Bar</p>
+
+    <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp"
+         alt="PeekFocus App Icon"
+         class="pk-icon"
+         onerror="this.style.display='none'">
+
+    <h1 class="detail-title pk-title-centered">PeekFocus</h1>
+
+    <p class="detail-tagline pk-tagline-centered">Less Noise. More Clarity.</p>
+
+    <p class="detail-desc pk-desc-centered">PeekFocus brings intentional focus to your Mac workflow. When you need to concentrate, it dims or blurs every window except the one you're working in — so your screen matches the clarity you're going for.</p>
+
+    <div class="pk-cta-row">
+      <a class="btn btn-primary" href="../downloads/PeekFocus.dmg">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0"><path d="M7 2v7M4 6.5l3 3 3-3M2 11.5h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Free Download
+      </a>
+      <a class="btn btn-buy"
+         href="https://lucidbit.lemonsqueezy.com/checkout/buy/98dba67f-db04-4ff5-877d-9a1dcd053c79"
+         target="_blank"
+         rel="noopener">
+        Buy — $4.99
+      </a>
+      <a class="btn btn-ghost" href="changelog.html">Changelog</a>
+    </div>
+
+    <p class="pk-meta">
+      7-day free trial <span class="dot">·</span> One-time payment <span class="dot">·</span>
+      <span class="seal">
+        <!-- checkmark.seal.fill — 16-lobe rosette matching the SF Symbol
+             used inside the app itself. The check cuts through the fill
+             as negative space via fill-rule:evenodd. -->
+        <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M225.86 102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28 23.51 138.44 16 128 16s-18.27 7.51-25.18 14.14c-3.94 3.77-8 7.67-11.57 9.14C88 40.64 82.56 40.72 77.31 40.8c-9.76.15-20.82.31-28.51 8S41 67.55 40.8 77.31c-.08 5.25-.16 10.67-1.52 13.94-1.47 3.56-5.37 7.63-9.14 11.57C23.51 109.72 16 117.56 16 128s7.51 18.27 14.14 25.18c3.77 3.94 7.67 8 9.14 11.57 1.36 3.27 1.44 8.69 1.52 13.94.15 9.76.31 20.82 8 28.51s18.75 7.85 28.51 8c5.25.08 10.67.16 13.94 1.52 3.56 1.47 7.63 5.37 11.57 9.14C109.72 232.49 117.56 240 128 240s18.27-7.51 25.18-14.14c3.94-3.77 8-7.67 11.57-9.14 3.27-1.36 8.69-1.44 13.94-1.52 9.76-.15 20.82-.31 28.51-8s7.85-18.75 8-28.51c.08-5.25.16-10.67 1.52-13.94 1.47-3.56 5.37-7.63 9.14-11.57C232.49 146.28 240 138.44 240 128S232.49 109.73 225.86 102.82Zm-52.2 6.84-56 56a8 8 0 0 1-11.32 0l-24-24a8 8 0 0 1 11.32-11.32L112 148.69l50.34-50.35a8 8 0 0 1 11.32 11.32Z"/>
+        </svg>
+        Notarized by Apple
+      </span>
+    </p>
+
+    <div class="pk-mas-wrap">
+      <a class="mas-badge-link" href="https://apps.apple.com/app/id6762947349" target="_blank" rel="noopener" aria-label="Download PeekFocus on the Mac App Store">
+        <svg class="mas-badge-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 52" role="img">
+          <rect width="172" height="52" rx="9" fill="#000"/>
+          <g transform="translate(12, 4) scale(1.75)">
+            <path fill="white" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </g>
+          <text x="54" y="21" fill="white" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" letter-spacing="0.4">Download on the</text>
+          <text x="54" y="39" fill="white" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="17.5" font-weight="600" letter-spacing="-0.3">Mac App Store</text>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── VIDEO WITH PLUM GLOW HALO ── -->
+  <!-- When the preview video is ready, drop it at:
+         ../Images/PeekFocus/peekfocus_preview.mp4
+       and the placeholder will be replaced automatically. -->
+  <section class="pk-video reveal">
+    <div class="pk-video-wrap" data-tilt data-tilt-strength="3">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="../Images/PeekFocus/peekfocus_preview.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- ── FEATURE ROWS — real PeekFocus features ── -->
+  <section class="feature-rows">
+
+    <div class="feature-row reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <img src="../Images/PeekFocus/ThreeModes.webp" alt="PeekFocus in Focus mode — only the active Safari window stays sharp, every window behind it is softly blurred">
+      </div>
+      <div class="feature-text">
+        <h2>Three modes, one keystroke.</h2>
+        <p>Standard, Ambience, or Focus — each doing one thing, beautifully. Standard leaves your desktop alone. Ambience turns the whole backdrop calm. Focus (shown here) keeps only the active app sharp while everything else gently blurs back.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reverse reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <img src="../Images/PeekFocus/ambience.webp" alt="PeekFocus Ambience mode replacing the desktop with a calm wallpaper behind the active windows">
+      </div>
+      <div class="feature-text">
+        <h2>Reduce clutter, keep context.</h2>
+        <p>Ambience swaps the noise around your apps for a calm backdrop — a soft default gradient, your own wallpaper, or an optional slow live drift. Your windows stay exactly where they are; everything behind them becomes a quiet room.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <img src="../Images/PeekFocus/Surfaces.webp" alt="PeekFocus surface controls — choose Blur, Dim with Subtle / Balanced / Strong intensity, or Wallpaper">
+      </div>
+      <div class="feature-text">
+        <h2>Beautiful surfaces.</h2>
+        <p>Pick how the rest of the desktop fades. A frosted blur softens everything behind you. A smooth dim darkens it, with three intensity levels — subtle, balanced, or strong (shown here). Or replace it with a wallpaper of your own. Each mode remembers its own surface, so Ambience and Focus can feel completely different.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reverse reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <img src="../Images/PeekFocus/MenuBarWidget.webp" alt="PeekFocus Settings panel — General, Shortcuts, Lifetime license — alongside two desktop widget variants for quick mode switching">
+      </div>
+      <div class="feature-text">
+        <h2>Designed to stay out of the way.</h2>
+        <p>Lives quietly in your menu bar. Switch modes from a desktop widget, a keyboard shortcut, or a quick mouse shake. Hold your reveal key to peek underneath, without leaving Focus. Supports every display — apply to all at once or configure each one separately. Settings when you want them, invisible when you don't.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── CORE FEATURES GRID ── -->
+  <section class="pk-core reveal">
+    <p class="pk-core-label">Core Features</p>
+
+    <div class="feat-grid">
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="14" height="10" rx="2" opacity="0.35"/>
+            <rect x="6" y="8" width="14" height="10" rx="2" opacity="0.65"/>
+            <rect x="9" y="11" width="14" height="10" rx="2"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Three Modes</h3>
+        <p class="feat-desc">Standard, Ambience, or Focus — switch from the menu bar at any time. Each mode does exactly one thing, beautifully.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="14" rx="2"/>
+            <rect x="7" y="8" width="10" height="6" rx="1" opacity="0.5"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Beautiful Surfaces</h3>
+        <p class="feat-desc">Blur, dim, or replace with a wallpaper. Each mode has its own independent surface, so Ambience and Focus can feel completely different.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Hold to Reveal</h3>
+        <p class="feat-desc">Hold Option — or a modifier of your choice — to briefly peek through. Release and the calm returns. No toggling, no accidental closes.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 12c2-2 4-2 6 0s4 2 6 0 4-2 4 0"/>
+            <circle cx="5" cy="6" r="1.5" fill="currentColor" stroke="none"/>
+            <path d="M5 6l2 4" opacity="0.6"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Shake to Toggle</h3>
+        <p class="feat-desc">Give the mouse a small shake to toggle the veil on or off. Hands stay on the trackpad; eyes stay on the work.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="9" height="7" rx="1"/>
+            <rect x="14" y="4" width="7" height="12" rx="1"/>
+            <rect x="3" y="13" width="9" height="7" rx="1" opacity="0.6"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Every Display</h3>
+        <p class="feat-desc">Apply the calm to one screen or all of them. Multi-display setups are treated as first-class citizens, not an afterthought.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3c5 0 9 4 9 9s-4 9-9 9-9-4-9-9 4-9 9-9z"/>
+            <path d="M12 3a15 15 0 010 18M3 12h18" opacity="0.6"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Live Gradient</h3>
+        <p class="feat-desc">A slowly drifting gradient that breathes in the background. Optional — enable it when you want movement; leave it off for stillness.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="16" rx="3"/>
+            <rect x="7" y="8" width="10" height="8" rx="1.5" opacity="0.45"/>
+            <circle cx="10" cy="12" r="1" fill="currentColor" stroke="none"/>
+            <circle cx="14" cy="12" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Desktop Widget</h3>
+        <p class="feat-desc">Tap a widget on your desktop to switch modes without opening the app. A second path to the same calm, always one click away.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M3 12h18"/>
+            <path d="M12 3a13 13 0 010 18M12 3a13 13 0 000 18" opacity="0.7"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Speaks Your Language</h3>
+        <p class="feat-desc">Ships with 35 languages out of the box. The interface follows your Mac's system language — or pick one directly from the menu.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l8 4v6c0 4-3 7-8 9-5-2-8-5-8-9V6l8-4z"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Strict Privacy</h3>
+        <p class="feat-desc">No analytics. No tracking. Everything is local and stays on your Mac.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke-width="1.4" stroke-linecap="round"><rect x="3" y="3" width="12" height="12" rx="2"/><path d="M6 3v12M12 3v12M3 6h12M3 12h12"/></svg>
+        </div>
+        <h3 class="feat-title">One-Time Purchase</h3>
+        <p class="feat-desc">No subscriptions or hidden costs. A single purchase unlocks lifetime access to PeekFocus and all future updates.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FAQ ──
+       Questions answered on the page; mirrored in FAQPage
+       JSON-LD in <head> so Google can surface answers as rich
+       results in search. -->
+  <section class="app-faq-section" aria-label="PeekFocus FAQ">
+    <div class="container">
+      <h2 class="app-faq-title">FAQ</h2>
+      <div class="app-faq-list">
+        <details>
+          <summary>What does PeekFocus do?</summary>
+          <p>PeekFocus softens everything around the app you're using. Three modes, switched from the menu bar: <strong>Standard</strong> leaves your desktop alone. <strong>Ambience</strong> keeps every app visible and quiets the space behind them. <strong>Focus</strong> shows only your frontmost app and quiets everything else. Ambience and Focus share the same surface choices — blur, dim, or wallpaper — kept independently per mode. The blur surface adds a slow live gradient in Ambience; in Focus it stays still.</p>
+        </details>
+        <details>
+          <summary>Will it block notifications?</summary>
+          <p>No — that's macOS's Focus modes. PeekFocus is purely visual; it works alongside whatever notification settings you already use.</p>
+        </details>
+        <details>
+          <summary>Will it work with multiple displays?</summary>
+          <p>Yes. Each display can be configured independently.</p>
+        </details>
+        <details>
+          <summary>Can I customize the keyboard shortcut?</summary>
+          <p>Yes — fully configurable in Settings, with optional per-mode shortcuts.</p>
+        </details>
+        <details>
+          <summary>Is it Apple Silicon native?</summary>
+          <p>Yes — native arm64 build. Runs on macOS 14 (Sonoma) or later.</p>
+        </details>
+        <details>
+          <summary>Is it a subscription?</summary>
+          <p>No. $4.99 once on the Mac App Store, with a 7-day free trial. One purchase, all future updates.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEWSLETTER ── -->
+  <div class="section-rule" style="margin-top: 100px;"></div>
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-card reveal">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">A note when there’s something new.</h2>
+        </div>
+        <div class="newsletter-form-wrap">
+          <form action="https://app.kit.com/forms/9114040/subscriptions" method="post" class="newsletter-form" target="kit-iframe" id="kit-form">
+            <input type="email" name="email_address" placeholder="your@email.com" required class="newsletter-input">
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-thanks" id="kit-thanks" style="display:none;">Thank you for subscribing!</p>
+          <iframe name="kit-iframe" style="display:none;" aria-hidden="true"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-wordmark" href="../index.html">Lucid<span class="bit">Bit</span></a>
+        <div class="footer-links">
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+        </div>
+        <span class="footer-copy">&#169; 2026 LucidBit</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="../shared.js"></script>
+</body>
+</html>

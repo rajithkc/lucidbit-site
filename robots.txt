@@ -1,0 +1,8 @@
+# robots.txt for LucidBit (https://lucidbit.app/)
+# Open site — all search engines welcome.
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://lucidbit.app/sitemap.xml

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ActiveStat vs MenuBar Stats — A Quieter Mac System Monitor | LucidBit</title>
+<meta name="description" content="MenuBar Stats packs many metrics into your menu bar. ActiveStat is a quieter alternative — focused on CPU, RAM, disk, and battery with sensible defaults and a one-time price.">
+<meta name="keywords" content="MenuBar Stats alternative, Sereni Software, macOS menu bar monitor, calm Mac monitor, ActiveStat, system monitor Apple Silicon">
+<link rel="canonical" href="https://lucidbit.app/ActiveStat/vs/menubar-stats.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LucidBit">
+<meta property="og:title" content="ActiveStat vs MenuBar Stats — A Quieter Alternative">
+<meta property="og:description" content="A focused macOS system monitor for the menu bar. One-time purchase.">
+<meta property="og:url" content="https://lucidbit.app/ActiveStat/vs/menubar-stats.html">
+<meta property="og:image" content="https://lucidbit.app/Images/og/og-activestat.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ActiveStat vs MenuBar Stats — A Quieter Alternative">
+<meta name="twitter:description" content="A focused macOS system monitor for the menu bar.">
+<meta name="twitter:image" content="https://lucidbit.app/Images/og/og-activestat.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#9BD246">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../comparisons.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lucidbit.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ActiveStat",
+      "item": "https://lucidbit.app/ActiveStat/activestat.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ActiveStat vs Menubar Stats",
+      "item": "https://lucidbit.app/ActiveStat/vs/menubar-stats.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is ActiveStat different from MenuBar Stats?",
+      "acceptedAnswer": { "@type": "Answer", "text": "MenuBar Stats packs many metrics into the menu bar with a wide configuration surface. ActiveStat covers CPU (with P/E core breakdown), RAM, disk, battery, GPU, and thermal state with sensible defaults and a smaller learning curve." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ActiveStat have a free trial?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — 7 days through the Mac App Store, before a one-time $6.99 unlock." }
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --accent: #6FA800;
+  --accent-glow: rgba(111, 168, 0, 0.22);
+  --accent-dim: rgba(111, 168, 0, 0.09);
+}
+</style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <a class="nav-logo" href="../../index.html">Lucid<span class="bit">Bit</span></a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        Apps
+        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-panel" role="menu">
+        <a class="nav-dropdown-item" href="../../GentleLimit/gentlelimit.html" role="menuitem">
+          <img src="../../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">GentleLimit</span>
+            <span class="nav-dropdown-sub">Mindful screen time habits</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../../ActiveStat/activestat.html" role="menuitem">
+          <img src="../../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">ActiveStat</span>
+            <span class="nav-dropdown-sub">Performance. Simplified.</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../../PeekFocus/peekfocus.html" role="menuitem">
+          <img src="../../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">PeekFocus</span>
+            <span class="nav-dropdown-sub">The calm between windows</span>
+          </span>
+        </a>
+      </div>
+    </li>
+    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+    <li><a href="../../privacy.html">Privacy</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <div class="detail-nav-space"></div>
+
+  <section class="cmp-hero">
+    <div class="cmp-back-row">
+      <a class="back-btn" href="../activestat.html">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to ActiveStat
+      </a>
+    </div>
+
+    <div class="cmp-icons">
+      <img src="../../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="ActiveStat icon">
+      <span class="cmp-vs">vs</span>
+      <span class="cmp-competitor-tile">MenuBar<br>Stats</span>
+    </div>
+
+    <p class="detail-kicker cmp-kicker">ActiveStat &middot; A quieter MenuBar Stats alternative</p>
+    <h1 class="cmp-title">ActiveStat <em>vs</em> MenuBar Stats</h1>
+    <p class="cmp-lede">MenuBar Stats from Sereni Software has been a go-to for users who want a lot of telemetry stuffed into the menu bar. ActiveStat takes the opposite approach: fewer metrics, more breathing room, and decisions already made for you.</p>
+
+    <div class="cmp-cta-row">
+      <a class="btn btn-primary" href="https://apps.apple.com/app/id6758884994" target="_blank" rel="noopener">Try ActiveStat free</a>
+      <a class="btn btn-ghost" href="../activestat.html">Learn more</a>
+    </div>
+    <p class="cmp-meta">7-day free trial <span class="dot">·</span> One-time payment <span class="dot">·</span> Notarized by Apple</p>
+  </section>
+
+  <section class="cmp-body">
+    <div class="container">
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">At a glance</p>
+        <div class="cmp-table-wrap">
+          <table class="cmp-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="cmp-ours-cell">ActiveStat</th>
+                <th>MenuBar Stats</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pricing</td>
+                <td class="cmp-ours">$6.99 one-time, 7-day trial</td>
+                <td>One-time license</td>
+              </tr>
+              <tr>
+                <td>Distribution</td>
+                <td class="cmp-ours">Mac App Store, sandboxed</td>
+                <td>Mac App Store + direct</td>
+              </tr>
+              <tr>
+                <td>Metric scope</td>
+                <td class="cmp-ours">CPU (P/E cores), RAM, disk, battery, GPU, thermal</td>
+                <td>+ network throughput, fan RPM, broader sensors</td>
+              </tr>
+              <tr>
+                <td>Menu bar density</td>
+                <td class="cmp-ours">One picker — minimal footprint</td>
+                <td>Multiple modules, denser</td>
+              </tr>
+              <tr>
+                <td>Setup</td>
+                <td class="cmp-ours">Zero-config defaults</td>
+                <td>Module-by-module configuration</td>
+              </tr>
+              <tr>
+                <td>Apple Silicon</td>
+                <td class="cmp-ours">Native</td>
+                <td>Native</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">Where they're similar</p>
+        <h2>Same shelf, different aesthetic</h2>
+        <p>Both apps live in the menu bar. Both deliver the core macOS system metrics natively on Apple Silicon. Both can be set up to show CPU and memory at a glance, and both offer deeper readings one click away.</p>
+      </div>
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">Where they differ</p>
+        <h2>Density vs. calm</h2>
+        <p>MenuBar Stats packs a lot in. If you like seeing many readings across your menu bar — CPU graph, memory bar, disk activity, network, fan speeds, broader sensors — that's the design language MenuBar Stats is built for. Power users have lived in it for years.</p>
+        <p>ActiveStat takes a deliberate step back. The menu bar shows one picker (CPU + RAM, CPU only, RAM only, or disk usage). The dropdown shows the rest in a calm, glassy panel that breathes. There's less to look at because we already chose what's worth showing.</p>
+
+        <h3>Setup time</h3>
+        <p>MenuBar Stats rewards you for tuning each module. ActiveStat is faster on first run — defaults out of the box, settings accessed only when you need them.</p>
+
+        <h3>Battery alerts</h3>
+        <p>ActiveStat's battery alerts are gated to actually-on-battery — they never fire while you're plugged in. That's a small detail, but a real one if low-battery alerts have ever interrupted you for no reason.</p>
+      </div>
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">Pick the right one</p>
+        <h2>Which should you choose?</h2>
+        <p><strong>Choose MenuBar Stats</strong> if you want a wide spread of metrics across the menu bar and you enjoy module-level configuration.</p>
+        <p><strong>Choose ActiveStat</strong> if you want a single calm picker, sensible defaults, and a quieter menu bar overall — same idea, smaller footprint.</p>
+      </div>
+
+      <div class="cmp-section cmp-faq">
+        <h2>FAQ</h2>
+
+        <details>
+          <summary>Does ActiveStat show GPU and fan speeds?</summary>
+          <p>GPU usage is shown. Fan RPM isn't surfaced — if live fan readings are important, MenuBar Stats covers that. ActiveStat does show macOS thermal state as a proxy for cooling load.</p>
+        </details>
+
+        <details>
+          <summary>Does ActiveStat take less menu bar space?</summary>
+          <p>Yes — by design. There's a single menu bar item with one configurable display style.</p>
+        </details>
+
+        <details>
+          <summary>Is there a free trial?</summary>
+          <p>Yes — 7 days through the Mac App Store.</p>
+        </details>
+
+        <details>
+          <summary>Will my battery alerts stop firing while charging?</summary>
+          <p>Yes. ActiveStat only emits battery alerts while you're actually on battery power.</p>
+        </details>
+      </div>
+
+      <div class="cmp-final">
+        <h2>Less to look at, by design</h2>
+        <p>If your menu bar feels crowded and you'd like a quieter version of the same idea, ActiveStat is $6.99 once with a 7-day trial.</p>
+        <div class="cmp-cta-row">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6758884994" target="_blank" rel="noopener">Try ActiveStat free</a>
+          <a class="btn btn-ghost" href="../activestat.html">See all features</a>
+        </div>
+      </div>
+
+      <div class="cmp-related">
+        <p class="cmp-related-title">Other comparisons</p>
+        <div class="cmp-related-grid">
+          <a class="cmp-related-card" href="istat-menus.html">
+            <span><span class="cmp-related-name">vs iStat Menus</span><br><span class="cmp-related-sub">The veteran reference monitor</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+          <a class="cmp-related-card" href="menumeters.html">
+            <span><span class="cmp-related-name">vs MenuMeters</span><br><span class="cmp-related-sub">The classic free monitor</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+          <a class="cmp-related-card" href="stats.html">
+            <span><span class="cmp-related-name">vs Stats (exelban)</span><br><span class="cmp-related-sub">The popular open-source pick</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+          <a class="cmp-related-card" href="sensei.html">
+            <span><span class="cmp-related-name">vs Sensei</span><br><span class="cmp-related-sub">Performance + cleaner combo</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-wordmark" href="../../index.html">Lucid<span class="bit">Bit</span></a>
+        <div class="footer-links">
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
+          <a href="../../privacy.html">Privacy</a>
+          <a href="../../terms.html">Terms</a>
+        </div>
+        <span class="footer-copy">&#169; 2026 LucidBit</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="../../shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ActiveStat Changelog — Every Release, Documented | LucidBit</title>
+<meta name="description" content="Every ActiveStat release, documented. See what's new, what's improved, and what's fixed across versions of LucidBit's calm Mac system monitor.">
+<link rel="canonical" href="https://lucidbit.app/ActiveStat/changelog.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LucidBit">
+<meta property="og:title" content="ActiveStat Changelog">
+<meta property="og:description" content="Every ActiveStat release, documented.">
+<meta property="og:url" content="https://lucidbit.app/ActiveStat/changelog.html">
+<meta property="og:image" content="https://lucidbit.app/Images/og/og-activestat.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#9BD246">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+.changelog-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 48px 140px;
+}
+.changelog-hero { margin-bottom: 80px; }
+.changelog-app-label {
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--volt);
+  display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+}
+.changelog-app-label::before {
+  content: ''; width: 20px; height: 1px; background: var(--volt); opacity: 0.7;
+}
+.changelog-title {
+  font-family: 'Cormorant', serif; font-weight: 300;
+  font-size: clamp(2.8rem, 6vw, 5rem); letter-spacing: -0.03em;
+  line-height: 1; color: var(--text); margin-bottom: 16px;
+}
+.changelog-subtitle { font-size: 0.95rem; color: var(--text-3); font-weight: 400; }
+.release { padding: 52px 0; border-top: 1px solid var(--glass-border); }
+.release-header {
+  display: flex; align-items: baseline; gap: 16px;
+  margin-bottom: 28px; flex-wrap: wrap;
+}
+.release-version {
+  font-family: 'Cormorant', serif; font-weight: 400;
+  font-size: 1.9rem; letter-spacing: -0.02em; color: var(--text); line-height: 1;
+}
+.release-date {
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-3);
+}
+.release-badge {
+  font-size: 0.6rem; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--volt);
+  background: var(--volt-dim); border: 1px solid rgba(111,168,0,0.20);
+  padding: 3px 10px; border-radius: 50px;
+}
+.release-note {
+  font-size: 0.95rem; font-weight: 400; color: var(--text-2); line-height: 1.7;
+}
+.change-group { margin-bottom: 24px; }
+.change-group:last-child { margin-bottom: 0; }
+.change-group-label {
+  font-size: 0.65rem; font-weight: 500; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--text-3); margin-bottom: 12px;
+}
+.change-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.change-list li {
+  display: flex; gap: 12px; align-items: flex-start;
+  font-size: 0.95rem; font-weight: 400; color: var(--text-2); line-height: 1.65;
+}
+.change-list li::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--volt); flex-shrink: 0; opacity: 0.7; margin-top: 10px;
+}
+.change-list li > span { flex: 1; }
+@media (max-width: 640px) {
+  .changelog-wrap { padding: 48px 20px 100px; }
+  .changelog-hero { margin-bottom: 56px; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lucidbit.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ActiveStat",
+      "item": "https://lucidbit.app/ActiveStat/activestat.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Changelog",
+      "item": "https://lucidbit.app/ActiveStat/changelog.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="ambient">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="orb o3"></div>
+</div>
+<nav id="main-nav">
+  <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        Apps
+        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-panel" role="menu">
+        <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
+          <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">GentleLimit</span>
+            <span class="nav-dropdown-sub">Mindful screen time habits</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
+          <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">ActiveStat</span>
+            <span class="nav-dropdown-sub">Performance. Simplified.</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
+          <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">PeekFocus</span>
+            <span class="nav-dropdown-sub">The calm between windows</span>
+          </span>
+        </a>
+      </div>
+    </li>
+	<li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+    <li><a href="../privacy.html">Privacy</a></li>
+  </ul>
+</nav>
+<div class="page-wrap">
+  <div class="detail-nav-space"></div>
+  <div class="changelog-wrap">
+    <div class="changelog-hero">
+      <a class="back-btn" href="activestat.html">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        ActiveStat
+      </a>
+      <p class="changelog-app-label">ActiveStat</p>
+      <h1 class="changelog-title">Changelog</h1>
+      <p class="changelog-subtitle">Every update documented.</p>
+    </div>
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">1.2</span>
+        <span class="release-date">April 2026</span>
+        <span class="release-badge">Latest</span>
+      </div>
+      <div class="change-group">
+        <ul class="change-list">
+          <li><span>Completely rebuilt menu interface for smoother, more native animations.</span></li>
+          <li><span>New menu bar stats dropdown — choose between CPU + RAM, CPU only, RAM only, or Disk usage.</span></li>
+          <li><span>Battery alerts now fire only while you're actually on battery, not while charging.</span></li>
+          <li><span>Cleaner Settings layout with grouped cards.</span></li>
+          <li><span>Various UI refinements and stability improvements.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">1.1.5</span>
+        <span class="release-date">March 2026</span>
+      </div>
+      <div class="change-group">
+        <ul class="change-list">
+		  <li><span>Added menu bar stats view.</span></li>
+          <li><span>Updated CPU core arc layout.</span></li>
+          <li><span>Settings layout simplified.</span></li>
+          <li><span>Performance and UI refinements.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">1.1.4</span>
+        <span class="release-date">March 2026</span>
+      </div>
+      <div class="change-group">
+        <ul class="change-list">
+          <li><span>System status now updates only after a condition has held steady for a few seconds.</span></li>
+          <li><span>Trial status is shown clearly in the menu, with a direct path to upgrade when you are ready.</span></li>
+          <li><span>Performance and UI refinements.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">1.1.3</span>
+        <span class="release-date">March 2026</span>
+      </div>
+      <div class="change-group">
+        <ul class="change-list">
+          <li><span>Insight text in the CPU, Battery, and Storage panels no longer flickers when system conditions hover near a boundary. Text now updates only after a condition has held steady for a few seconds.</span></li>
+          <li><span>Smart Auto-Expand now locks the recommended panel the moment you open the menu, preventing it from switching while you are actively reading.</span></li>
+          <li><span>Your remaining trial days are now shown directly in the menu header with a one-tap path to upgrade.</span></li>
+          <li><span>Battery health now displays one decimal place for a more precise reading.</span></li>
+          <li><span>Reliability improvements to how the trial period is stored, ensuring it is preserved correctly across reinstalls and launch-at-login sessions.</span></li>
+		  <li><span>Performance and UI refinements.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">1.1.2</span>
+        <span class="release-date">March 2026</span>
+      </div>
+      <div class="change-group">
+        <ul class="change-list">
+          <li><span>Fixed an issue where the menu panel could extend beyond the screen edge in certain menu bar layouts</span></li>
+          <li><span>Improved interaction feedback for system snapshot cards</span></li>
+          <li><span>Performance and UI refinements.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">1.1.1</span>
+        <span class="release-date">March 2026</span>
+      </div>
+      <div class="change-group">
+        <ul class="change-list">
+          <li><span>Fixed menu bar interaction bug when returning from Settings.</span></li>
+		  <li><span>Improved Energy Impact stability.</span></li>
+		  <li><span>Refined Storage and battery notifications.</span></li>
+		  <li><span>Performance and UI refinements.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">1.1</span>
+        <span class="release-date">March 2026</span>
+      </div>
+      <p class="release-note" style="margin-bottom: 20px;">Telemetry Refinement Update. This version introduces deeper hardware awareness and UI customisation:</p>
+      <div class="change-group">
+        <ul class="change-list">
+          <li><span><strong>Apple Silicon Clusters:</strong> Added independent tracking for Performance and Efficiency core clusters to better visualize M-series load distribution.</span></li>
+          <li><span><strong>Memory &amp; Swap Clarity:</strong> Introduced dedicated monitoring for SSD Swap Read/Write speeds and improved breakdowns for App, Wired, and Compressed memory.</span></li>
+          <li><span><strong>Expanded Battery Health:</strong> Now tracks real-time Battery Temperature and Charge Cycles.</span></li>
+          <li><span><strong>Storage Telemetry:</strong> Added live disk throughput (Read/Write) tracking for internal and removable volumes.</span></li>
+          <li><span><strong>User Personalization:</strong> Introduced "Smart Auto-Expand" rows, Insight Verbosity levels, and granular thresholds for storage and battery alerts.</span></li>
+          <li><span><strong>Stability:</strong> Refined the Sustained Load Engine to further reduce UI noise during transient system spikes.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="release">
+      <div class="release-header">
+        <span class="release-version">1.0</span>
+        <span class="release-date">February 2026</span>
+      </div>
+      <div class="change-group">
+        <ul class="change-list">
+          <li><span>Initial release.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <a class="footer-wordmark" href="../index.html">Lucid<span class="bit">Bit</span></a>
+          <div class="footer-links">
+  <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
+            <a href="../privacy.html">Privacy</a>
+            <a href="../terms.html">Terms</a>
+          </div>
+          <span class="footer-copy">&#169; 2026 LucidBit</span>
+        </div>
+      </div>
+    </footer>
+<script src="../shared.js"></script>
+</body>
+</html>

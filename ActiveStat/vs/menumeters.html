@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ActiveStat vs MenuMeters — A Modern Mac System Monitor Alternative | LucidBit</title>
+<meta name="description" content="MenuMeters is a beloved free menu bar monitor for macOS. ActiveStat is a modern, native, notarized alternative — calm CPU, RAM, disk, and battery telemetry, one-time purchase.">
+<meta name="keywords" content="MenuMeters alternative, Mac system monitor, macOS menu bar stats, modern MenuMeters, native macOS monitor, Apple Silicon menu bar, ActiveStat">
+<link rel="canonical" href="https://lucidbit.app/ActiveStat/vs/menumeters.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LucidBit">
+<meta property="og:title" content="ActiveStat vs MenuMeters — A Modern Alternative">
+<meta property="og:description" content="A native, notarized macOS system monitor for the menu bar. One-time purchase, no subscription.">
+<meta property="og:url" content="https://lucidbit.app/ActiveStat/vs/menumeters.html">
+<meta property="og:image" content="https://lucidbit.app/Images/og/og-activestat.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ActiveStat vs MenuMeters — A Modern Alternative">
+<meta name="twitter:description" content="A modern, native macOS system monitor.">
+<meta name="twitter:image" content="https://lucidbit.app/Images/og/og-activestat.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#9BD246">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../comparisons.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lucidbit.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ActiveStat",
+      "item": "https://lucidbit.app/ActiveStat/activestat.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ActiveStat vs Menumeters",
+      "item": "https://lucidbit.app/ActiveStat/vs/menumeters.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is ActiveStat a modern MenuMeters alternative?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. ActiveStat is a native, notarized macOS app built for current versions of macOS, with the same menu bar idea — CPU, RAM, disk, battery — and a calm modern UI." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why isn't ActiveStat free like MenuMeters?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ActiveStat is $6.99 once on the Mac App Store, with a 7-day free trial. We chose a small one-time price to fund maintenance, sandbox notarization, and ongoing macOS compatibility instead of relying on donations." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ActiveStat support Apple Silicon?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — ActiveStat is a native Apple Silicon build and runs on macOS 14 or later." }
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --accent: #6FA800;
+  --accent-glow: rgba(111, 168, 0, 0.22);
+  --accent-dim: rgba(111, 168, 0, 0.09);
+}
+</style>
+</head>
+<body>
+
+<nav id="main-nav">
+  <a class="nav-logo" href="../../index.html">Lucid<span class="bit">Bit</span></a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        Apps
+        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-panel" role="menu">
+        <a class="nav-dropdown-item" href="../../GentleLimit/gentlelimit.html" role="menuitem">
+          <img src="../../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">GentleLimit</span>
+            <span class="nav-dropdown-sub">Mindful screen time habits</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../../ActiveStat/activestat.html" role="menuitem">
+          <img src="../../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">ActiveStat</span>
+            <span class="nav-dropdown-sub">Performance. Simplified.</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../../PeekFocus/peekfocus.html" role="menuitem">
+          <img src="../../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">PeekFocus</span>
+            <span class="nav-dropdown-sub">The calm between windows</span>
+          </span>
+        </a>
+      </div>
+    </li>
+    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+    <li><a href="../../privacy.html">Privacy</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <div class="detail-nav-space"></div>
+
+  <section class="cmp-hero">
+    <div class="cmp-back-row">
+      <a class="back-btn" href="../activestat.html">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to ActiveStat
+      </a>
+    </div>
+
+    <div class="cmp-icons">
+      <img src="../../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="ActiveStat icon">
+      <span class="cmp-vs">vs</span>
+      <span class="cmp-competitor-tile">Menu<br>Meters</span>
+    </div>
+
+    <p class="detail-kicker cmp-kicker">ActiveStat &middot; A modern MenuMeters alternative</p>
+    <h1 class="cmp-title">ActiveStat <em>vs</em> MenuMeters</h1>
+    <p class="cmp-lede">MenuMeters is a classic — small, free, and trusted by Mac users for years. ActiveStat is a modern take on the same idea: a native menu bar monitor built for current macOS, sandboxed and notarized, with a calm interface and sensible defaults.</p>
+
+    <div class="cmp-cta-row">
+      <a class="btn btn-primary" href="https://apps.apple.com/app/id6758884994" target="_blank" rel="noopener">Try ActiveStat free</a>
+      <a class="btn btn-ghost" href="../activestat.html">Learn more</a>
+    </div>
+    <p class="cmp-meta">7-day free trial <span class="dot">·</span> One-time payment <span class="dot">·</span> Notarized by Apple</p>
+  </section>
+
+  <section class="cmp-body">
+    <div class="container">
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">At a glance</p>
+        <div class="cmp-table-wrap">
+          <table class="cmp-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="cmp-ours-cell">ActiveStat</th>
+                <th>MenuMeters</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pricing</td>
+                <td class="cmp-ours">$6.99 one-time, 7-day trial</td>
+                <td>Free, donation-supported</td>
+              </tr>
+              <tr>
+                <td>Distribution</td>
+                <td class="cmp-ours">Mac App Store, sandboxed</td>
+                <td>Direct download from project page</td>
+              </tr>
+              <tr>
+                <td>Notarized</td>
+                <td class="cmp-ours">Yes</td>
+                <td>Varies by build</td>
+              </tr>
+              <tr>
+                <td>Apple Silicon native</td>
+                <td class="cmp-ours">Yes</td>
+                <td>Yes (community-maintained fork)</td>
+              </tr>
+              <tr>
+                <td>Metrics</td>
+                <td class="cmp-ours">CPU (P/E cores), RAM, disk, battery, GPU, thermal</td>
+                <td>CPU, RAM, disk activity, network</td>
+              </tr>
+              <tr>
+                <td>Visual style</td>
+                <td class="cmp-ours">Modern, glass dropdown</td>
+                <td>Classic, compact menu bar</td>
+              </tr>
+              <tr>
+                <td>Updates</td>
+                <td class="cmp-ours">Regular Mac App Store releases</td>
+                <td>Community / volunteer cadence</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">Where they're similar</p>
+        <h2>The same menu bar idea</h2>
+        <p>Both apps live in the menu bar. Both surface CPU and RAM at a glance, with deeper readings one click away. Neither asks for an account. Neither runs ads. Neither tries to be a kitchen-sink suite.</p>
+        <p>If you've used MenuMeters and felt at home with it, ActiveStat is a small step sideways into a more recent visual language — not a redesign of the underlying job.</p>
+      </div>
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">Where they differ</p>
+        <h2>Modern shell, smaller surface area</h2>
+        <p>MenuMeters originated in the early 2000s and has been carried forward by community maintainers. That history is part of its charm — and part of why some users hit installation friction on newer macOS versions, especially around system extensions and notarization.</p>
+        <p>ActiveStat is a fresh native build. It's sandboxed, distributed through the Mac App Store, and signed by Apple — so installation is the standard click-and-go. The trade-off is straightforward: ActiveStat asks $6.99 once to fund that polish.</p>
+
+        <h3>Battery, done right</h3>
+        <p>MenuMeters doesn't focus heavily on battery. ActiveStat surfaces battery health and time-remaining estimates, and battery alerts only fire when you're actually on battery — never while charging.</p>
+
+        <h3>Network monitoring</h3>
+        <p>MenuMeters has a long-standing network meter. ActiveStat doesn't show live network throughput today — that's a clear gap if it's a daily-use feature for you.</p>
+      </div>
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">Pick the right one</p>
+        <h2>Which should you choose?</h2>
+        <p><strong>Choose MenuMeters</strong> if free is non-negotiable, you want network throughput in the menu bar, and you don't mind the older visual language.</p>
+        <p><strong>Choose ActiveStat</strong> if you want a current, sandboxed Mac App Store app with a modern UI, predictable updates, and a calmer feel — and you're fine with $6.99 once for that.</p>
+      </div>
+
+      <div class="cmp-section cmp-faq">
+        <h2>FAQ</h2>
+
+        <details>
+          <summary>Is ActiveStat truly native on Apple Silicon?</summary>
+          <p>Yes. It's compiled for arm64 and runs natively on M-series chips, with the same build supporting Intel Macs on macOS 14 or later.</p>
+        </details>
+
+        <details>
+          <summary>Does ActiveStat install a kernel extension?</summary>
+          <p>No. ActiveStat uses Apple's public APIs only and is sandboxed for the Mac App Store, so there's nothing to grant kernel-level access to.</p>
+        </details>
+
+        <details>
+          <summary>What about per-process CPU usage?</summary>
+          <p>ActiveStat focuses on aggregate readings rather than per-process breakdowns. For deep per-process inspection, Activity Monitor (built into macOS) is the right tool.</p>
+        </details>
+
+        <details>
+          <summary>Can I try it without paying?</summary>
+          <p>Yes. There's a 7-day free trial through the Mac App Store.</p>
+        </details>
+      </div>
+
+      <div class="cmp-final">
+        <h2>Same menu bar habit, refreshed</h2>
+        <p>If MenuMeters has been your menu bar muscle memory and you want a current take that's notarized and quietly maintained, ActiveStat is $6.99 once with a 7-day trial.</p>
+        <div class="cmp-cta-row">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6758884994" target="_blank" rel="noopener">Try ActiveStat free</a>
+          <a class="btn btn-ghost" href="../activestat.html">See all features</a>
+        </div>
+      </div>
+
+      <div class="cmp-related">
+        <p class="cmp-related-title">Other comparisons</p>
+        <div class="cmp-related-grid">
+          <a class="cmp-related-card" href="istat-menus.html">
+            <span><span class="cmp-related-name">vs iStat Menus</span><br><span class="cmp-related-sub">The veteran reference monitor</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+          <a class="cmp-related-card" href="stats.html">
+            <span><span class="cmp-related-name">vs Stats (exelban)</span><br><span class="cmp-related-sub">The popular open-source pick</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+          <a class="cmp-related-card" href="menubar-stats.html">
+            <span><span class="cmp-related-name">vs MenuBar Stats</span><br><span class="cmp-related-sub">Sereni Software's monitor</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+          <a class="cmp-related-card" href="sensei.html">
+            <span><span class="cmp-related-name">vs Sensei</span><br><span class="cmp-related-sub">Performance + cleaner combo</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-wordmark" href="../../index.html">Lucid<span class="bit">Bit</span></a>
+        <div class="footer-links">
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
+          <a href="../../privacy.html">Privacy</a>
+          <a href="../../terms.html">Terms</a>
+        </div>
+        <span class="footer-copy">&#169; 2026 LucidBit</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="../../shared.js"></script>
+</body>
+</html>
