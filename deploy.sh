@@ -74,10 +74,12 @@ fi
 
 echo -e "Commit message:  ${GREEN}${COMMIT_MSG}${RESET}"
 echo ""
-read -p "Proceed with commit + push? [y/N] " -n 1 -r
+read -p "Proceed with commit + push? [Y/N] " -n 1 -r
 echo ""
 
-if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+# Default Yes: cancel only if the user explicitly answered N/n.
+# Accepts: <Enter> (yes), y, Y, n, N. Anything else falls through to yes.
+if [[ $REPLY =~ ^[Nn]$ ]]; then
     echo -e "${RED}✗ Cancelled. No changes pushed.${RESET}"
     echo -e "${DIM}  (Local files are still as they are; nothing was reverted.)${RESET}"
     exit 1
