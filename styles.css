@@ -1,8 +1,13 @@
 /* ── TOKENS ── */
 :root {
-  --volt: #6FA800;
-  --volt-glow: rgba(111,168,0,0.22);
-  --volt-dim: rgba(111,168,0,0.09);
+  /* Brand accent — plum, sourced from the LucidBit icon's wordmark.
+     Variable name kept as --volt for now (historical); semantically this
+     is the brand-level signature colour and could be renamed --brand
+     later. Per-app pages that want product-distinct accents continue to
+     override --accent locally and don't read --volt. */
+  --volt: #7851A9;
+  --volt-glow: rgba(120, 81, 169, 0.22);
+  --volt-dim:  rgba(120, 81, 169, 0.09);
   --bg: #FAFAFB;
   --bg2: #F6F7F9;
   --glass:              rgba(255,255,255,0.55);
@@ -162,6 +167,19 @@ nav.scrolled { background: var(--nav-bg-scrolled); border-color: var(--glass-bor
   letter-spacing: -0.02em; text-decoration: none; color: var(--text); line-height: 1;
 }
 .nav-logo .bit { color: var(--volt); font-weight: 500; }
+/* LucidBit icon — sourced from favicon.svg so brand identity lives in
+   one place. inline-block ::before with margin-right (NOT a flex gap)
+   means the wordmark text nodes "Lucid" + <span>Bit</span> stay glued
+   together; the spacing is only between the icon and the start of the
+   wordmark. Relative URL so this works under both file:// and http://. */
+.nav-logo::before {
+  content: '';
+  display: inline-block;
+  vertical-align: -0.18em;
+  width: 1em; height: 1em;
+  margin-right: 0.35em;
+  background: url('favicon.svg') no-repeat center / contain;
+}
 .nav-links { display: flex; gap: 32px; list-style: none; }
 .nav-links a {
   font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
@@ -409,8 +427,20 @@ nav.scrolled { background: var(--nav-bg-scrolled); border-color: var(--glass-bor
 /* ── FOOTER ── */
 footer { border-top: 1px solid var(--glass-border); padding: 44px 0; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
-.footer-wordmark { font-family: 'Cormorant', serif; font-weight: 400; font-size: 1.5rem; color: var(--text-2); text-decoration: none; letter-spacing: -0.02em; }
+.footer-wordmark {
+  font-family: 'Cormorant', serif; font-weight: 400; font-size: 1.5rem;
+  color: var(--text-2); text-decoration: none; letter-spacing: -0.02em;
+}
 .footer-wordmark .bit { color: var(--volt); font-weight: 500; }
+.footer-wordmark::before {
+  content: '';
+  display: inline-block;
+  vertical-align: -0.18em;
+  width: 1em; height: 1em;
+  margin-right: 0.32em;
+  background: url('favicon.svg') no-repeat center / contain;
+  opacity: 0.85;  /* muted to match the .text-2 wordmark colour */
+}
 .footer-links { display: flex; gap: 24px; }
 .footer-links a { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--text-2); }

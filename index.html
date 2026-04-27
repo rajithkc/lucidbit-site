@@ -36,7 +36,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#6FA800">
+<meta name="theme-color" content="#7851A9">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,11 +117,15 @@
 </script>
 <style>
 
-/* Per-app arrow accent — overrides the site default (volt green) so each
-   card's hover arrow matches its app's own accent color. */
-.app-card-plum { --card-accent: #7B3F98; }
-.app-card-blue { --card-accent: #4B84BD; }
+/* Per-app arrow accent — overrides the site default so each card's
+   hover arrow matches its app's own product accent color. The brand
+   --volt is plum; ActiveStat keeps its volt-green identity here, so
+   the card needs its own override too. */
+.app-card-plum  { --card-accent: #7B3F98; }
+.app-card-green { --card-accent: #6FA800; }
+.app-card-blue  { --card-accent: #4B84BD; }
 .app-card-plum:hover .card-arrow,
+.app-card-green:hover .card-arrow,
 .app-card-blue:hover .card-arrow {
   background: var(--card-accent);
   border-color: var(--card-accent);
@@ -129,18 +133,26 @@
 }
 
 /* ─────────────────────────────────────────────────────────────
-   Hero radial wash — a subtle three-tone glow behind the hero
-   headline, hinting at the three apps' accent colors (plum, volt,
-   dailyBlue). Very low opacity so it reads as warmth, not blobs.
-   ───────────────────────────────────────────────────────────── */
+   Hero mesh gradient — directional light-to-dark plum that mirrors
+   the LucidBit icon's own top-down gradient, but scaled and rotated
+   so it reads diagonally across the hero. Three stops only:
+     · light plum (#9B72C4) bloom anchored in the top-left
+     · brand plum (#7851A9) soft wash through the middle-right
+     · deep plum  (#5C2E8A) anchor weighting the bottom-right
+   Static, no animation. Pointer-events disabled so the gradient
+   never steals clicks from the headline beneath. */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 55% 45% at 28% 38%, rgba(198, 166, 217, 0.18), transparent 70%),
-    radial-gradient(ellipse 65% 55% at 72% 48%, rgba(155, 210, 70, 0.12), transparent 70%),
-    radial-gradient(ellipse 50% 45% at 50% 80%, rgba(120, 170, 220, 0.12), transparent 65%);
+  /* Option A — vertical fade from light plum at the top down to clear,
+     echoing the LucidBit icon's own top-down gradient direction. */
+  background: linear-gradient(
+    180deg,
+    rgba(155, 114, 196, 0.20) 0%,
+    rgba(120,  81, 169, 0.08) 30%,
+    transparent 60%
+  );
   z-index: 0;
   pointer-events: none;
 }
@@ -245,11 +257,11 @@
         <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <div class="nav-dropdown-panel" role="menu">
-        <a class="nav-dropdown-item" href="GentleLimit/gentlelimit.html" role="menuitem">
-          <img src="Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+        <a class="nav-dropdown-item" href="PeekFocus/peekfocus.html" role="menuitem">
+          <img src="Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
           <span class="nav-dropdown-text">
-            <span class="nav-dropdown-name">GentleLimit</span>
-            <span class="nav-dropdown-sub">Mindful screen time habits</span>
+            <span class="nav-dropdown-name">PeekFocus</span>
+            <span class="nav-dropdown-sub">The calm between windows</span>
           </span>
         </a>
         <a class="nav-dropdown-item" href="ActiveStat/activestat.html" role="menuitem">
@@ -259,11 +271,11 @@
             <span class="nav-dropdown-sub">Performance. Simplified.</span>
           </span>
         </a>
-        <a class="nav-dropdown-item" href="PeekFocus/peekfocus.html" role="menuitem">
-          <img src="Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+        <a class="nav-dropdown-item" href="GentleLimit/gentlelimit.html" role="menuitem">
+          <img src="Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
           <span class="nav-dropdown-text">
-            <span class="nav-dropdown-name">PeekFocus</span>
-            <span class="nav-dropdown-sub">The calm between windows</span>
+            <span class="nav-dropdown-name">GentleLimit</span>
+            <span class="nav-dropdown-sub">Mindful screen time habits</span>
           </span>
         </a>
       </div>
@@ -316,7 +328,7 @@
           </div>
         </a>
 
-        <a class="app-card reveal reveal-d2" href="ActiveStat/activestat.html">
+        <a class="app-card app-card-green reveal reveal-d2" href="ActiveStat/activestat.html">
           <div class="card-inner">
             <div class="card-top">
               <div class="card-icon" style="padding:0;overflow:hidden;">
