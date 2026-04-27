@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-label="LucidBit" width="64" height="64"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description><dc:creator>RealFaviconGenerator</dc:creator><dc:source>https://realfavicongenerator.net</dc:source></rdf:Description></rdf:RDF></metadata><defs>
+    <linearGradient id="plumGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9B72C4"></stop>
+      <stop offset="100%" stop-color="#5C2E8A"></stop>
+    </linearGradient>
+  </defs><rect x="2" y="2" width="28" height="28" rx="5" fill="#E5E6F0" opacity="0.4"></rect><rect x="2" y="34" width="28" height="28" rx="5" fill="#E5E6F0" opacity="0.65"></rect><rect x="34" y="34" width="28" height="28" rx="5" fill="#E5E6F0" opacity="0.9"></rect><rect x="34" y="2" width="28" height="28" rx="5" fill="url(#plumGrad)"></rect></svg>
