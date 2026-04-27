@@ -38,7 +38,7 @@
         -->
         <item>
             <title>Version 1.0</title>
-            <pubDate>Sun, 26 Apr 2026 16:46:46 +0000</pubDate>
+            <pubDate>Mon, 27 Apr 2026 18:56:37 +0000</pubDate>
             <sparkle:version>4</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
@@ -48,7 +48,7 @@
             ]]></description>
             <enclosure
                 url="https://lucidbit.app/downloads/PeekFocus-1.0.dmg"
-                sparkle:edSignature="MHu3xIQw+UsR23mNG0UbYBjcDD3RfzKAQtCjOErcI4dgDkZytxKxmOSnUviaUZnM9yCrBkNVbR4c2uMxQu12CA==" length="7184079"
+                sparkle:edSignature="XLr23wvC/XBqXb3kIXWAOeFxORoi9/hNNboKfxl1mYxk+r1bGQV6FhjnO250CWQQVJQWIKX0M575oyEkXlijBg==" length="7183833"
                 type="application/octet-stream" />
         </item>
     </channel>
