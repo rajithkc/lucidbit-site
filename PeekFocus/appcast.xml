@@ -37,6 +37,26 @@
             </item>
         -->
         <item>
+            <title>Version 1.1</title>
+            <pubDate>Fri, 01 May 2026 04:26:53 +0000</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <h2>What's new in 1.1</h2>
+                <ul>
+                    <li>Smoother animations throughout — panel open, surface switching, and settings transitions now feel more native.</li>
+                    <li>Surface controls card now expands with a subtle scale animation instead of a jarring slide.</li>
+                    <li>Settings panel transition smoothed for a more refined feel.</li>
+                    <li>Various UI refinements and stability improvements.</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://lucidbit.app/downloads/PeekFocus-1.1.dmg"
+                sparkle:edSignature="nRmSVFXfj496ahsgc9P75PeszdfxST++4K3DtPepowTDleAuMF6eZXvUfsV+Skrcu8FDWsp2Lu5yS+y9S9dXCw==" length="7184140"
+                type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 1.0</title>
             <pubDate>Mon, 27 Apr 2026 18:56:37 +0000</pubDate>
             <sparkle:version>4</sparkle:version>
