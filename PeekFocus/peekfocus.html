@@ -212,6 +212,19 @@
 /* Sentence-case meta row — reads like prose rather than a uppercase
    legal strip. The last item is a "Notarized by Apple" seal; the seal
    icon picks up the page's plum accent. */
+.pk-promo-banner {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  color: var(--plum);
+  background: color-mix(in srgb, var(--plum) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--plum) 30%, transparent);
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin-bottom: 16px;
+  animation: pk-rise 0.9s 0.35s var(--ease-out) both;
+}
+
 .pk-meta {
   font-family: 'Outfit', sans-serif;
   font-size: 0.88rem;
@@ -521,6 +534,10 @@
     <p class="detail-tagline pk-tagline-centered">Less Noise. More Clarity.</p>
 
     <p class="detail-desc pk-desc-centered">PeekFocus brings intentional focus to your Mac workflow. When you need to concentrate, it dims or blurs every window except the one you're working in — so your screen matches the clarity you're going for.</p>
+
+    <p class="pk-promo-banner">
+      🎉 Product Hunt launch offer — use code <strong>YZNJIYMA</strong> for $3.49 (30% off). Valid until May 8 · First 50 redemptions.
+    </p>
 
     <div class="pk-cta-row">
       <a class="btn btn-primary" href="../downloads/PeekFocus.dmg">
