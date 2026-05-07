@@ -37,6 +37,24 @@
             </item>
         -->
         <item>
+            <title>Version 1.1.1</title>
+            <pubDate>Thu, 07 May 2026 14:17:33 +0000</pubDate>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>1.1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <h2>What's new in 1.1.1</h2>
+                <ul>
+                    <li>Simplified Reveal modifier options.</li>
+                    <li>Various UI refinements and stability improvements.</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://lucidbit.app/downloads/PeekFocus-1.1.1.dmg"
+                sparkle:edSignature="WeUSWYkeFpWcCVSsSFf5FSPFGgnjoET/4soElmPrVhMwh0qj96IljdZ/R8D22BD1LIfJ6mUaRoUf4V/bRjk3BQ==" length="7201004"
+                type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 1.1</title>
             <pubDate>Fri, 01 May 2026 04:26:53 +0000</pubDate>
             <sparkle:version>5</sparkle:version>
