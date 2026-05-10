@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tesserac — The App Switcher macOS Deserves | LucidBit</title>
+<meta name="description" content="Tesserac replaces Cmd+Tab with a beautiful spatial ring. Hold a key, glance at your apps, release to switch. Menu bar app for macOS.">
+<meta name="keywords" content="Mac app switcher, macOS app switcher, radial app switcher, Cmd+Tab alternative, keyboard app switcher Mac, menu bar app switcher, spatial app switcher macOS">
+<link rel="canonical" href="https://lucidbit.app/Tesserac/tesserac.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LucidBit">
+<meta property="og:title" content="Tesserac — The App Switcher macOS Deserves">
+<meta property="og:description" content="Replaces Cmd+Tab with a beautiful spatial ring. Hold a key, glance at your apps, release to switch.">
+<meta property="og:url" content="https://lucidbit.app/Tesserac/tesserac.html">
+<meta property="og:image" content="https://lucidbit.app/Images/og/og-tesserac.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tesserac — The App Switcher macOS Deserves">
+<meta name="twitter:description" content="Replaces Cmd+Tab with a beautiful spatial ring. Hold a key, glance at your apps, release to switch.">
+<meta name="twitter:image" content="https://lucidbit.app/Images/og/og-tesserac.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#3FA8B8">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lucidbit.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Tesserac", "item": "https://lucidbit.app/Tesserac/tesserac.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Tesserac",
+  "operatingSystem": "macOS 14.0 or later",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Productivity",
+  "softwareVersion": "1.0",
+  "url": "https://lucidbit.app/Tesserac/tesserac.html",
+  "image": "https://lucidbit.app/Images/Tesserac/Icon-macOS-Dark-1024x1024@1x.webp",
+  "screenshot": [
+    "https://lucidbit.app/Images/Tesserac/Ring_poster.webp",
+    "https://lucidbit.app/Images/Tesserac/Orb_poster.webp",
+    "https://lucidbit.app/Images/Tesserac/List_poster.webp",
+    "https://lucidbit.app/Images/Tesserac/Grid_poster.webp",
+    "https://lucidbit.app/Images/Tesserac/Settings.webp",
+    "https://lucidbit.app/Images/Tesserac/Favourites.webp"
+  ],
+  "featureList": [
+    "Spatial radial ring replaces Cmd+Tab",
+    "Hold modifier key or custom shortcut to invoke",
+    "Pinned favourite apps always visible in the ring",
+    "Ignored apps list",
+    "Middle mouse button support",
+    "Tab dwell — hover to launch automatically",
+    "Native arm64 build"
+  ],
+  "description": "Tesserac replaces the flat Cmd+Tab strip with a beautiful spatial ring. Hold a key, glance at your apps, release to switch. Menu bar app for macOS.",
+  "offers": { "@type": "Offer", "price": "9.99", "priceCurrency": "USD", "url": "https://apps.apple.com/app/id6767599856" },
+  "publisher": { "@type": "Organization", "name": "LucidBit", "url": "https://lucidbit.app/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What does Tesserac do?", "acceptedAnswer": { "@type": "Answer", "text": "Tesserac is a spatial app switcher for macOS. Instead of a flat Cmd+Tab strip, your running apps appear around the screen for faster, more visual switching." } },
+    { "@type": "Question", "name": "How is it different from Cmd+Tab?", "acceptedAnswer": { "@type": "Answer", "text": "Cmd+Tab is a flat, linear strip that forces you to scan across a row. Tesserac arranges your apps around the screen center, making them instantly recognisable by position and spatial memory." } },
+    { "@type": "Question", "name": "How do I open Tesserac?", "acceptedAnswer": { "@type": "Answer", "text": "You can choose Control, Option, or Command as your hold key. You can also set a custom keyboard shortcut (e.g. ⌘⇧Space) or use your middle mouse button." } },
+    { "@type": "Question", "name": "Does Tesserac replace Cmd+Tab?", "acceptedAnswer": { "@type": "Answer", "text": "No. Tesserac works alongside macOS and does not modify the system app switcher." } },
+    { "@type": "Question", "name": "Can I pin my favourite apps?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — pin up to 15 apps to always appear in the ring, whether they're running or not. You can also add apps to an Ignored list to hide them permanently." } },
+    { "@type": "Question", "name": "Is Tesserac Apple Silicon native?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — native arm64 build. Runs on macOS 14 (Sonoma) or later." } },
+    { "@type": "Question", "name": "Is it a subscription?", "acceptedAnswer": { "@type": "Answer", "text": "No. Tesserac is a one-time purchase available on the Mac App Store or as a direct download, with a 7-day free trial included." } },
+    { "@type": "Question", "name": "Does Tesserac collect data?", "acceptedAnswer": { "@type": "Answer", "text": "No. Tesserac does not collect analytics, tracking data, or personal information." } }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Tesserac — preview",
+  "description": "Short demonstration of Tesserac, a spatial app switcher for macOS that replaces Cmd+Tab with a beautiful radial ring.",
+  "thumbnailUrl": "https://lucidbit.app/Images/og/og-tesserac.png",
+  "uploadDate": "2026-05-09",
+  "duration": "PT52S",
+  "contentUrl": "https://lucidbit.app/Images/Tesserac/tesserac_preview.mp4",
+  "embedUrl": "https://lucidbit.app/Tesserac/tesserac.html",
+  "publisher": { "@type": "Organization", "name": "LucidBit", "url": "https://lucidbit.app/" }
+}
+</script>
+
+<style>
+:root {
+  --lime:      #3FA8B8;   /* cyan-teal — sampled from app icon   */
+  --lime-text: #247A8A;   /* deep cyan-teal for text on white    */
+  --lime-glow: rgba(63, 168, 184, 0.30);
+  --lime-dim:  rgba(63, 168, 184, 0.15);
+  --lime-soft: rgba(63, 168, 184, 0.20);
+  --page-accent: var(--lime);
+}
+
+/* ── HERO ── */
+.ts-hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 32px 60px;
+  text-align: center;
+  position: relative;
+}
+
+.ts-back-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 56px;
+}
+
+.ts-icon {
+  width: 116px;
+  height: 116px;
+  margin: 0 auto 28px;
+  display: block;
+  border-radius: 26px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  animation: ts-rise 0.9s 0.1s var(--ease-out) both;
+}
+
+/* Icon placeholder shown while no image is available */
+.ts-icon-placeholder {
+  width: 116px;
+  height: 116px;
+  margin: 0 auto 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 26px;
+  background: linear-gradient(145deg, #3FA8B8 0%, #247A8A 100%);
+  box-shadow: 0 20px 50px rgba(106,146,0,0.30);
+  animation: ts-rise 0.9s 0.1s var(--ease-out) both;
+}
+.ts-icon-placeholder svg {
+  width: 56px;
+  height: 56px;
+  opacity: 0.9;
+}
+
+.ts-kicker-centered {
+  justify-content: center;
+  margin-bottom: 28px;
+  color: var(--lime-text);
+  animation: ts-rise 0.9s 0.1s var(--ease-out) both;
+}
+.ts-kicker-centered::before { background: var(--lime); }
+
+.ts-title-centered {
+  font-size: clamp(3.6rem, 9vw, 7rem) !important;
+  margin-bottom: 16px !important;
+  animation: ts-rise 0.9s 0.2s var(--ease-out) both;
+}
+
+.ts-tagline-centered {
+  margin: 0 auto 20px !important;
+  animation: ts-rise 0.9s 0.3s var(--ease-out) both;
+}
+
+.ts-desc-centered {
+  margin: 0 auto 36px !important;
+  max-width: 620px !important;
+  text-align: center;
+  animation: ts-rise 0.9s 0.35s var(--ease-out) both;
+}
+
+.ts-cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  animation: ts-rise 0.9s 0.4s var(--ease-out) both;
+}
+
+/* Blush salmon button — dark text for contrast on light fill */
+.ts-hero .btn-buy,
+.ts-hero .btn-primary {
+  background: var(--lime);
+  color: #fff;
+  box-shadow: 0 4px 24px var(--lime-glow);
+}
+.ts-hero .btn-buy:hover,
+.ts-hero .btn-primary:hover {
+  box-shadow: 0 8px 32px var(--lime-glow);
+  opacity: 1;
+}
+
+.ts-meta {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--text-2);
+  line-height: 1.5;
+  margin-bottom: 28px;
+  animation: ts-rise 0.9s 0.5s var(--ease-out) both;
+}
+.ts-meta .dot {
+  display: inline-block;
+  margin: 0 10px;
+  opacity: 0.4;
+}
+.ts-meta .seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  vertical-align: middle;
+}
+.ts-meta .seal svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: var(--lime);
+}
+
+.ts-mas-wrap {
+  display: flex;
+  justify-content: center;
+  animation: ts-rise 0.9s 0.55s var(--ease-out) both;
+}
+
+@keyframes ts-rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── VIDEO SECTION ── */
+.ts-video {
+  max-width: 1160px;
+  margin: 40px auto 100px;
+  padding: 0 48px;
+  position: relative;
+}
+
+.ts-video-wrap {
+  position: relative;
+  display: block;
+}
+
+.ts-video-wrap video,
+.ts-video-wrap .ts-video-placeholder,
+.ts-video-wrap img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.08),
+    0 30px 70px rgba(0,0,0,0.18),
+    0 80px 140px rgba(0,0,0,0.16);
+  transition: transform 0.35s var(--ease-out),
+              box-shadow 0.35s var(--ease-out);
+}
+.ts-video-wrap:hover video,
+.ts-video-wrap:hover .ts-video-placeholder {
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.10),
+    0 22px 60px rgba(0,0,0,0.20),
+    0 52px 100px rgba(0,0,0,0.15);
+}
+
+.ts-video-placeholder {
+  background:
+    radial-gradient(ellipse 70% 60% at 20% 30%, rgba(180,220,0,0.20), transparent 60%),
+    radial-gradient(ellipse 60% 70% at 80% 70%, rgba(106,146,0,0.30), transparent 65%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(200,224,50,0.18), transparent 60%),
+    linear-gradient(180deg, #1a2000 0%, #0d1200 100%);
+  color: rgba(255,255,255,0.45);
+  font-family: 'Cormorant', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  display: grid;
+  place-items: center;
+}
+
+/* ── FEATURE ROWS ── */
+.feature-rows { padding: 0; }
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 32px 48px;
+  border-top: 1px solid var(--glass-border);
+}
+.feature-row.reverse { direction: rtl; }
+.feature-row.reverse > * { direction: ltr; }
+
+.feature-image {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.feature-image img,
+.feature-image video {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.08),
+    0 14px 40px rgba(0,0,0,0.15),
+    0 40px 80px rgba(0,0,0,0.12);
+  transition: box-shadow 0.5s ease;
+}
+.feature-image:hover img,
+.feature-image:hover video {
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.10),
+    0 22px 60px rgba(0,0,0,0.20),
+    0 52px 100px rgba(0,0,0,0.15);
+}
+.feature-image.placeholder {
+  aspect-ratio: 16 / 10;
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(180,220,0,0.15), transparent 60%),
+    linear-gradient(180deg, #f4f6f0 0%, #e8eedd 100%);
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.06),
+    0 14px 40px rgba(0,0,0,0.15),
+    0 40px 80px rgba(0,0,0,0.12) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-3);
+  font-family: 'Cormorant', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  transition: box-shadow 0.5s ease;
+}
+.feature-image.placeholder:hover {
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.10),
+    0 22px 60px rgba(0,0,0,0.20),
+    0 52px 100px rgba(0,0,0,0.15) !important;
+}
+
+
+.feature-text h2 {
+  font-family: 'Cormorant', serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.feature-text p {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-2);
+  line-height: 1.8;
+  max-width: 380px;
+}
+
+/* ── CORE FEATURES GRID ── */
+.ts-core {
+  max-width: 1160px;
+  margin: 100px auto 0;
+  padding: 0 48px;
+}
+.ts-core-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lime-text);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ts-core-label::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--lime);
+  opacity: 0.7;
+}
+
+.ts-core .feat-icon svg { stroke: var(--lime-text); }
+.ts-core .feat-icon {
+  background: var(--lime-dim);
+  border-color: rgba(242, 171, 163, 0.25);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .ts-hero { padding: 100px 24px 40px; }
+  .ts-icon, .ts-icon-placeholder { width: 96px; height: 96px; }
+  .ts-video { padding: 0 20px; margin-bottom: 60px; }
+  .feature-row { grid-template-columns: 1fr; gap: 40px; padding: 44px 24px; }
+  .feature-row.reverse { direction: ltr; }
+  .ts-core { padding: 0 24px; margin-top: 72px; }
+}
+
+@media (max-width: 640px) {
+  .ts-hero { padding: 90px 20px 32px; }
+  .ts-icon, .ts-icon-placeholder { width: 80px; height: 80px; }
+  .feature-row { padding: 28px 20px; gap: 24px; }
+  .feature-text h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .feature-text p { font-size: 0.95rem; }
+}
+</style>
+</head>
+<body data-reveal-threshold="0.08">
+
+<div class="ambient">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="orb o3"></div>
+</div>
+
+<nav id="main-nav">
+  <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        Apps
+        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-panel" role="menu">
+
+        <a class="nav-dropdown-item" href="../Tesserac/tesserac.html" role="menuitem">
+          <img src="../Images/Tesserac/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">Tesserac</span>
+            <span class="nav-dropdown-sub">The app switcher macOS deserves</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
+          <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">PeekFocus</span>
+            <span class="nav-dropdown-sub">Instantly presentable, one keystroke</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
+          <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">ActiveStat</span>
+            <span class="nav-dropdown-sub">Performance. Simplified.</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
+          <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">GentleLimit</span>
+            <span class="nav-dropdown-sub">Mindful screen time habits</span>
+          </span>
+        </a>
+      </div>
+    </li>
+    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+    <li><a href="../privacy.html">Privacy</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="detail-nav-space"></div>
+
+  <!-- ── HERO ── -->
+  <section class="ts-hero">
+    <div class="ts-back-row">
+      <a class="back-btn" href="../index.html">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All Apps
+      </a>
+    </div>
+
+    <p class="detail-kicker ts-kicker-centered">SPATIAL APP NAVIGATION</p>
+
+    <img src="../Images/Tesserac/Icon-macOS-Dark-1024x1024@1x.webp" alt="Tesserac App Icon" class="ts-icon">
+
+    <h1 class="detail-title ts-title-centered">Tesserac</h1>
+
+    <p class="detail-tagline ts-tagline-centered">The app switcher macOS deserves.</p>
+
+    <p class="detail-desc ts-desc-centered">Switch between apps using immersive spatial layouts designed for speed, focus, and muscle memory — built for keyboard-driven workflows on macOS.</p>
+
+    <div class="ts-cta-row">
+      <a class="btn btn-primary" href="../downloads/Tesserac.dmg">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0"><path d="M7 2v7M4 6.5l3 3 3-3M2 11.5h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Free Download
+      </a>
+      <a class="btn btn-buy"
+         href="https://lucidbit.lemonsqueezy.com/checkout/buy/7439fe9e-37ac-4e0e-9558-2f9429eb4348"
+         target="_blank"
+         rel="noopener">
+        Buy — $9.99
+      </a>
+      <a class="btn btn-ghost" href="changelog.html">Changelog</a>
+    </div>
+
+    <p class="ts-meta">
+      7-day free trial <span class="dot">·</span> One-time payment <span class="dot">·</span>
+      <span class="seal">
+        <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M225.86 102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28 23.51 138.44 16 128 16s-18.27 7.51-25.18 14.14c-3.94 3.77-8 7.67-11.57 9.14C88 40.64 82.56 40.72 77.31 40.8c-9.76.15-20.82.31-28.51 8S41 67.55 40.8 77.31c-.08 5.25-.16 10.67-1.52 13.94-1.47 3.56-5.37 7.63-9.14 11.57C23.51 109.72 16 117.56 16 128s7.51 18.27 14.14 25.18c3.77 3.94 7.67 8 9.14 11.57 1.36 3.27 1.44 8.69 1.52 13.94.15 9.76.31 20.82 8 28.51s18.75 7.85 28.51 8c5.25.08 10.67.16 13.94 1.52 3.56 1.47 7.63 5.37 11.57 9.14C109.72 232.49 117.56 240 128 240s18.27-7.51 25.18-14.14c3.94-3.77 8-7.67 11.57-9.14 3.27-1.36 8.69-1.44 13.94-1.52 9.76-.15 20.82-.31 28.51-8s7.85-18.75 8-28.51c.08-5.25.16-10.67 1.52-13.94 1.47-3.56 5.37-7.63 9.14-11.57C232.49 146.28 240 138.44 240 128S232.49 109.73 225.86 102.82Zm-52.2 6.84-56 56a8 8 0 0 1-11.32 0l-24-24a8 8 0 0 1 11.32-11.32L112 148.69l50.34-50.35a8 8 0 0 1 11.32 11.32Z"/>
+        </svg>
+        Notarized by Apple
+      </span>
+    </p>
+
+    <div class="ts-mas-wrap">
+      <a class="mas-badge-link" href="https://apps.apple.com/app/id6767599856" target="_blank" rel="noopener" aria-label="Download Tesserac on the Mac App Store">
+        <svg class="mas-badge-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 52" role="img">
+          <rect width="172" height="52" rx="9" fill="#000"/>
+          <g transform="translate(12, 4) scale(1.75)">
+            <path fill="white" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </g>
+          <text x="54" y="21" fill="white" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" letter-spacing="0.4">Download on the</text>
+          <text x="54" y="39" fill="white" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="17.5" font-weight="600" letter-spacing="-0.3">Mac App Store</text>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── VIDEO ── -->
+  <section class="ts-video reveal">
+    <div class="ts-video-wrap" data-tilt data-tilt-strength="3">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="../Images/Tesserac/tesserac_preview.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- ── FEATURE ROWS ── -->
+  <section class="feature-rows">
+
+    <div class="feature-row reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <video class="play-on-view" muted playsinline preload="metadata"
+               poster="../Images/Tesserac/Ring_poster.webp"
+               aria-label="Tesserac spatial ring showing running apps around the screen center">
+          <source src="../Images/Tesserac/Ring.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="feature-text">
+        <h2>Switch apps spatially.</h2>
+        <p>Hold a key to summon your apps around the screen center — glance, hover, release.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reverse reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <video class="play-on-view" muted playsinline preload="metadata"
+               poster="../Images/Tesserac/Orb_poster.webp"
+               aria-label="Tesserac Glass Orb layout style">
+          <source src="../Images/Tesserac/Orb.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="feature-text">
+        <h2>Choose your switching style.</h2>
+        <p>Spatial Tile and Glass Orb layouts give Tesserac two distinct visual modes.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <video class="play-on-view" muted playsinline preload="metadata"
+               poster="../Images/Tesserac/List_poster.webp"
+               aria-label="Tesserac compact list layout for keyboard-first app switching">
+          <source src="../Images/Tesserac/List.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="feature-text">
+        <h2>Built for speed.</h2>
+        <p>Prefer precision? Switch instantly using a compact keyboard-first list layout.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reverse reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <video class="play-on-view" muted playsinline preload="metadata"
+               poster="../Images/Tesserac/Grid_poster.webp"
+               aria-label="Tesserac grid layout showing all open apps at once">
+          <source src="../Images/Tesserac/Grid.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="feature-text">
+        <h2>See everything at once.</h2>
+        <p>A clean grid layout for visual memory and rapid app selection.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <img src="../Images/Tesserac/Settings.webp" alt="Tesserac settings window showing customisation options">
+      </div>
+      <div class="feature-text">
+        <h2>Built around muscle memory.</h2>
+        <p>Choose how Tesserac appears — from hold keys to custom shortcuts and instant invoke actions.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reverse reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <img src="../Images/Tesserac/Layout.webp" alt="Tesserac layout options — spatial ring, list, and grid">
+      </div>
+      <div class="feature-text">
+        <h2>Layouts that adapt to how you think.</h2>
+        <p>Choose between immersive spatial layouts, compact lists, and visual grids.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <img src="../Images/Tesserac/Favourites.webp" alt="Tesserac Favourites panel — pin apps to always appear in the switcher">
+      </div>
+      <div class="feature-text">
+        <h2>Keep your favourites close.</h2>
+        <p>Pin the apps you reach for most — they'll always be in the switcher, running or not.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reverse reveal">
+      <div class="feature-image" data-tilt data-tilt-strength="5">
+        <img src="../Images/Tesserac/Ignored.webp" alt="Tesserac Ignored panel — hide apps from the switcher permanently">
+      </div>
+      <div class="feature-text">
+        <h2>Cut the clutter.</h2>
+        <p>Add apps to the Ignored list and they'll stay out of the switcher for good.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── CORE FEATURES GRID ── -->
+  <section class="ts-core reveal">
+    <p class="ts-core-label">Core Features</p>
+
+    <div class="feat-grid">
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="1" width="16" height="16" rx="3.5"/>
+            <circle cx="9" cy="4.8" r="1.05" fill="currentColor" stroke="none"/>
+            <circle cx="11.97" cy="6.03" r="1.05" fill="currentColor" stroke="none"/>
+            <circle cx="13.2" cy="9" r="1.05" fill="currentColor" stroke="none"/>
+            <circle cx="11.97" cy="11.97" r="1.05" fill="currentColor" stroke="none"/>
+            <circle cx="9" cy="13.2" r="1.05" fill="currentColor" stroke="none"/>
+            <circle cx="6.03" cy="11.97" r="1.05" fill="currentColor" stroke="none"/>
+            <circle cx="4.8" cy="9" r="1.05" fill="currentColor" stroke="none"/>
+            <circle cx="6.03" cy="6.03" r="1.05" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Spatial Switching</h3>
+        <p class="feat-desc">Apps arranged around the screen instead of inside a flat strip.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="M7 9h2M7 12h2M7 15h2M12 9h5M12 12h5M12 15h5"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Keyboard-First</h3>
+        <p class="feat-desc">Hold a modifier key or use a custom shortcut to switch instantly.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Multiple Layouts</h3>
+        <p class="feat-desc">Spatial Ring, Grid, and List layouts for different workflows.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Pinned Apps</h3>
+        <p class="feat-desc">Keep your most important apps permanently available in the switcher.</p>
+      </div>
+
+      <!-- Strict Privacy — copied from PeekFocus -->
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l8 4v6c0 4-3 7-8 9-5-2-8-5-8-9V6l8-4z"/>
+          </svg>
+        </div>
+        <h3 class="feat-title">Strict Privacy</h3>
+        <p class="feat-desc">No analytics. No tracking. Everything is local and stays on your Mac.</p>
+      </div>
+
+      <!-- One-Time Purchase — copied from PeekFocus -->
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke-width="1.4" stroke-linecap="round"><rect x="3" y="3" width="12" height="12" rx="2"/><path d="M6 3v12M12 3v12M3 6h12M3 12h12"/></svg>
+        </div>
+        <h3 class="feat-title">One-Time Purchase</h3>
+        <p class="feat-desc">$9.99 once. No subscription. Lifetime access including all future updates.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="app-faq-section" aria-label="Tesserac FAQ">
+    <div class="container">
+      <h2 class="app-faq-title">FAQ</h2>
+      <div class="app-faq-list">
+        <details>
+          <summary>What does Tesserac do?</summary>
+          <p>Tesserac is a spatial app switcher for macOS. Instead of a flat Cmd+Tab strip, your running apps appear around the screen for faster, more visual switching.</p>
+        </details>
+        <details>
+          <summary>How is it different from Cmd+Tab?</summary>
+          <p>Cmd+Tab is a flat, linear strip that forces you to scan across a row. Tesserac arranges your apps around the screen center, making them instantly recognisable by position and spatial memory.</p>
+        </details>
+        <details>
+          <summary>How do I open Tesserac?</summary>
+          <p>You can choose Control, Option, or Command as your hold key. You can also set a custom keyboard shortcut (e.g. ⌘⇧Space) or use your middle mouse button.</p>
+        </details>
+        <details>
+          <summary>Does Tesserac replace Cmd+Tab?</summary>
+          <p>No. Tesserac works alongside macOS and does not modify the system app switcher.</p>
+        </details>
+        <details>
+          <summary>Can I pin my favourite apps?</summary>
+          <p>Yes — pin up to 15 apps to always appear in the ring, whether they're running or not. You can also add apps to an Ignored list to hide them permanently.</p>
+        </details>
+        <details>
+          <summary>Is it Apple Silicon native?</summary>
+          <p>Yes — native arm64 build. Runs on macOS 14 (Sonoma) or later.</p>
+        </details>
+        <details>
+          <summary>Is it a subscription?</summary>
+          <p>No. Tesserac is a one-time purchase available on the Mac App Store or as a direct download, with a 7-day free trial included.</p>
+        </details>
+        <details>
+          <summary>Does Tesserac collect data?</summary>
+          <p>No. Tesserac does not collect analytics, tracking data, or personal information.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEWSLETTER ── -->
+  <div class="section-rule" style="margin-top: 100px;"></div>
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-card reveal">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">A note when there's something new.</h2>
+        </div>
+        <div class="newsletter-form-wrap">
+          <form action="https://app.kit.com/forms/9114040/subscriptions" method="post" class="newsletter-form" target="kit-iframe" id="kit-form">
+            <input type="email" name="email_address" placeholder="your@email.com" required class="newsletter-input">
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-thanks" id="kit-thanks" style="display:none;">Thank you for subscribing!</p>
+          <iframe name="kit-iframe" style="display:none;" aria-hidden="true"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-wordmark" href="../index.html">Lucid<span class="bit">Bit</span></a>
+        <div class="footer-links">
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+        </div>
+        <span class="footer-copy">&#169; 2026 LucidBit</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="../shared.js"></script>
+
+<!-- Play-on-view: feature videos restart from frame 0 each time they scroll into view, hold the last frame after one play (no continuous loop). -->
+<script>
+(() => {
+  const videos = document.querySelectorAll('video.play-on-view');
+  if (!videos.length || !('IntersectionObserver' in window)) return;
+  const obs = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      const v = e.target;
+      if (e.isIntersecting) {
+        v.currentTime = 0;
+        v.play().catch(() => { /* autoplay blocked; user-gesture path will handle it */ });
+      } else {
+        v.pause();
+      }
+    }
+  }, { threshold: 0.5 });
+  videos.forEach(v => obs.observe(v));
+})();
+</script>
+</body>
+</html>

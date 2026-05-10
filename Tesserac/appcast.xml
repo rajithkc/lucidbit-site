@@ -1,0 +1,63 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     version="2.0">
+    <channel>
+        <title>Tesserac Updates</title>
+        <description>Direct-distribution update feed for Tesserac.</description>
+        <language>en</language>
+        <link>https://lucidbit.app/Tesserac/appcast.xml</link>
+        <!--
+            Sparkle reads this feed daily per running app instance.
+            Add new releases as <item> blocks inside <channel>; the
+            order doesn't matter, Sparkle picks the highest
+            sparkle:version it sees. release.sh prints a ready-to-paste
+            block including the EdDSA signature, file length, and pubDate.
+
+            EdDSA public key (matches SUPublicEDKey injected at build time):
+              flxF/Hg9ws46PE3BxiJGtHZ+uPAc/1oRnRlznwKVLyI=
+
+            Item template, for reference:
+
+            <item>
+                <title>Version 1.0</title>
+                <pubDate>Fri, 08 May 2026 12:00:00 +0000</pubDate>
+                <sparkle:version>1</sparkle:version>
+                <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+                <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+                <description><![CDATA[
+                    <h2>What's new</h2>
+                    <ul><li>Initial direct-distribution release of Tesserac.</li></ul>
+                ]]></description>
+                <enclosure
+                    url="https://lucidbit.app/downloads/Tesserac-1.0.dmg"
+                    sparkle:edSignature="…"
+                    length="…"
+                    type="application/octet-stream" />
+            </item>
+        -->
+        <item>
+            <title>Version 1.0</title>
+            <pubDate>Sun, 10 May 2026 09:55:04 +0000</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <h2>What's new in 1.0</h2>
+                <p>Initial release. A spatial app switcher for macOS that lives quietly in the menu bar.</p>
+                <ul>
+                    <li><strong>Multiple layouts:</strong> Spatial Tile, Glass Orb, Grid, and List.</li>
+                    <li><strong>Keyboard-driven navigation:</strong> hold a modifier key or use a custom shortcut to summon Tesserac.</li>
+                    <li><strong>Fuzzy filtering:</strong> type to instantly filter and jump between running apps.</li>
+                    <li><strong>Invoke methods:</strong> hold keys, custom shortcuts, middle mouse button, and Tab dwell launch.</li>
+                    <li><strong>Favourites &amp; Ignored Apps:</strong> pin important apps and hide ones you never want to see.</li>
+                    <li><strong>Privacy:</strong> no analytics, no tracking, no telemetry.</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://lucidbit.app/downloads/Tesserac-1.0.dmg"
+                sparkle:edSignature="illV05j2rkQIx72GzeMV9J8t262Q63Apj7aD/Rwjyi+tZax9UwPsh9KWo/7zTTZyQD+ApsevKnH1MYLJA7JQCQ==" length="4274085"
+                type="application/octet-stream" />
+        </item>
+    </channel>
+</rss>

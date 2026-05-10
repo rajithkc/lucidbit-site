@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tesserac vs Raycast — A Focused App Switcher Alternative for Mac | LucidBit</title>
+<meta name="description" content="Comparing Tesserac and Raycast on macOS. Raycast is a launcher and command runner; Tesserac is a focused spatial app switcher. See which fits your workflow.">
+<meta name="keywords" content="Raycast alternative app switcher, Mac app switcher, Raycast vs Tesserac, spatial app switcher Mac, dedicated app switcher macOS">
+<link rel="canonical" href="https://lucidbit.app/Tesserac/vs/raycast.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LucidBit">
+<meta property="og:title" content="Tesserac vs Raycast">
+<meta property="og:description" content="Comparing Tesserac and Raycast on macOS. Raycast is a launcher and command runner; Tesserac is a focused spatial app switcher. See which fits your workflow.">
+<meta property="og:url" content="https://lucidbit.app/Tesserac/vs/raycast.html">
+<meta property="og:image" content="https://lucidbit.app/Images/og/og-tesserac.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tesserac vs Raycast">
+<meta name="twitter:description" content="Comparing Tesserac and Raycast on macOS. Raycast is a launcher and command runner; Tesserac is a focused spatial app switcher. See which fits your workflow.">
+<meta name="twitter:image" content="https://lucidbit.app/Images/og/og-tesserac.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#3FA8B8">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../comparisons.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lucidbit.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Tesserac", "item": "https://lucidbit.app/Tesserac/tesserac.html" },
+    { "@type": "ListItem", "position": 3, "name": "Tesserac vs Raycast", "item": "https://lucidbit.app/Tesserac/vs/raycast.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Can I use Tesserac and Raycast together?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — they don't conflict. Raycast handles the launcher/automation surface. Tesserac handles the in-flight switching between apps you've already opened. Many users bind Raycast to ⌘Space and Tesserac to a hold key like Control." } },
+    { "@type": "Question", "name": "Why not just use Raycast for switching?", "acceptedAnswer": { "@type": "Answer", "text": "You can. Raycast has a window switcher and an app switcher. They're text-first — you type, you pick. Tesserac is visual-first — you hold, you glance, you release. If your switching is muscle-memory based ('I know Mail is at the 3 o'clock position'), the spatial layout is faster than typing." } },
+    { "@type": "Question", "name": "Does Tesserac have extensions or scripts?", "acceptedAnswer": { "@type": "Answer", "text": "No. Tesserac is intentionally focused on switching — that's its whole job. Raycast is the right pick for AI commands, snippets, calculator, clipboard history, and the long tail of automation." } },
+    { "@type": "Question", "name": "Is Tesserac free like Raycast?", "acceptedAnswer": { "@type": "Answer", "text": "Tesserac is $9.99 once with a 7-day trial. Raycast's core launcher is free; Pro adds AI and team features on a subscription." } },
+    { "@type": "Question", "name": "Apple Silicon native?", "acceptedAnswer": { "@type": "Answer", "text": "Both are native arm64." } }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --accent: #3FA8B8;
+  --accent-glow: rgba(63, 168, 184, 0.22);
+  --accent-dim: rgba(63, 168, 184, 0.09);
+}
+</style>
+</head>
+<body>
+<nav id="main-nav">
+  <a class="nav-logo" href="../../index.html">Lucid<span class="bit">Bit</span></a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        Apps
+        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-panel" role="menu">
+        <a class="nav-dropdown-item" href="../../Tesserac/tesserac.html" role="menuitem">
+          <img src="../../Images/Tesserac/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">Tesserac</span>
+            <span class="nav-dropdown-sub">The app switcher macOS deserves</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../../PeekFocus/peekfocus.html" role="menuitem">
+          <img src="../../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">PeekFocus</span>
+            <span class="nav-dropdown-sub">The calm between windows</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../../ActiveStat/activestat.html" role="menuitem">
+          <img src="../../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">ActiveStat</span>
+            <span class="nav-dropdown-sub">Performance. Simplified.</span>
+          </span>
+        </a>
+        <a class="nav-dropdown-item" href="../../GentleLimit/gentlelimit.html" role="menuitem">
+          <img src="../../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">GentleLimit</span>
+            <span class="nav-dropdown-sub">Mindful screen time habits</span>
+          </span>
+        </a>
+      </div>
+    </li>
+    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+    <li><a href="../../privacy.html">Privacy</a></li>
+  </ul>
+</nav>
+<div class="page-wrap">
+  <div class="detail-nav-space"></div>
+
+  <section class="cmp-hero">
+    <div class="cmp-back-row">
+      <a class="back-btn" href="../tesserac.html">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to Tesserac
+      </a>
+    </div>
+
+    <div class="cmp-icons">
+      <img src="../../Images/Tesserac/Icon-macOS-Dark-1024x1024@1x.webp" alt="Tesserac icon">
+      <span class="cmp-vs">vs</span>
+      <span class="cmp-competitor-tile">Raycast</span>
+    </div>
+
+    <p class="detail-kicker cmp-kicker">Tesserac · A focused app switcher beside Raycast</p>
+    <h1 class="cmp-title">Tesserac <em>vs</em> Raycast</h1>
+    <p class="cmp-lede">Raycast is a powerful launcher and command runner — text-driven, extension-rich, deeply customizable. Tesserac is a focused, visual app switcher. They overlap in "open the app I want" but they're designed for different jobs, and most heavy Raycast users still keep a dedicated switcher around.</p>
+
+    <div class="cmp-cta-row">
+      <a class="btn btn-primary" href="https://apps.apple.com/app/id6767599856" target="_blank" rel="noopener">Try Tesserac free</a>
+      <a class="btn btn-ghost" href="../tesserac.html">Learn more</a>
+    </div>
+    <p class="cmp-meta">7-day free trial <span class="dot">·</span> One-time payment <span class="dot">·</span> Notarized by Apple</p>
+  </section>
+
+  <section class="cmp-body">
+    <div class="container">
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">At a glance</p>
+        <div class="cmp-table-wrap">
+          <table class="cmp-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="cmp-ours-cell">Tesserac</th>
+                <th>Raycast</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Primary purpose</td>
+                <td class="cmp-ours">App switcher</td>
+                <td>Launcher + command runner</td>
+              </tr>
+              <tr>
+                <td>Pricing</td>
+                <td class="cmp-ours">$9.99 once, 7-day trial</td>
+                <td>Free core, Pro subscription</td>
+              </tr>
+              <tr>
+                <td>UI paradigm</td>
+                <td class="cmp-ours">Spatial / visual / hold-to-summon</td>
+                <td>Text-first / type-to-find</td>
+              </tr>
+              <tr>
+                <td>Layouts</td>
+                <td class="cmp-ours">Ring, Orb, List, Grid</td>
+                <td>Flat list</td>
+              </tr>
+              <tr>
+                <td>Extensions</td>
+                <td class="cmp-ours">None — focused tool</td>
+                <td>Hundreds (Store)</td>
+              </tr>
+              <tr>
+                <td>Pinned favourites</td>
+                <td class="cmp-ours">Yes — anchored ring positions</td>
+                <td>Yes — favourites in the launcher</td>
+              </tr>
+              <tr>
+                <td>Hide apps</td>
+                <td class="cmp-ours">Yes — Ignored list</td>
+                <td>Yes — disable in settings</td>
+              </tr>
+              <tr>
+                <td>Trigger</td>
+                <td class="cmp-ours">Hold key, shortcut, middle mouse, Tab dwell</td>
+                <td>Single global shortcut</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">Where they're similar</p>
+        <h2>Both want to make app switching feel fast</h2>
+        <p>Both apps want you to leave the mouse and the dock alone. Both are keyboard-driven, both are fast, both are designed by people who clearly use macOS daily. Both have a focused team and ship updates regularly.</p>
+      </div>
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">Where they differ</p>
+        <h2>Different definitions of what that means</h2>
+
+        <h3>A switcher is not a launcher</h3>
+        <p>Raycast is built around "I want to do something — let me type it". App opening, calculator, clipboard, snippets, AI prompts, scripts — they all flow through the same text input.</p>
+        <p>Tesserac is built around "I want to switch to that app over there". The trigger is a hold key, the layout is visual, the recognition is positional. Different gesture, different muscle memory.</p>
+
+        <h3>How fast "fast" feels</h3>
+        <p>Raycast's app switcher is fast once you can spell the app you want. If your fingers know "saf" → Safari, you're there in under a second.</p>
+        <p>Tesserac is fast in a different way: you don't have to spell, you have to point. Hold the trigger, look at where Safari sits in the ring, release. Once your eye learns the layout, you stop typing entirely.</p>
+
+        <h3>Pricing model</h3>
+        <p>Raycast is free for most users; Pro is a subscription that unlocks AI features, themes, and team functionality.</p>
+        <p>Tesserac is $9.99 once on the Mac App Store. No subscription, no account, no AI.</p>
+      </div>
+
+      <div class="cmp-section">
+        <p class="cmp-section-eyebrow">Pick the right one</p>
+        <h2>Which should you choose?</h2>
+        <p><strong>Choose Raycast</strong> if you want one keystroke that does everything — launches apps, runs commands, prompts AI, manages clipboard, generates snippets. The extension store is a real superpower.</p>
+        <p><strong>Choose Tesserac</strong> if your bottleneck is specifically switching between already-running apps and you want a visual, spatial, hold-to-summon experience instead of a text input. Many people use both: Raycast on ⌘Space for launching and automation, Tesserac on Control-hold for switching.</p>
+      </div>
+
+      <div class="cmp-section cmp-faq">
+        <h2>FAQ</h2>
+
+        <details>
+          <summary>Can I use Tesserac and Raycast together?</summary>
+          <p>Yes — they don't conflict. Raycast handles the launcher/automation surface. Tesserac handles the in-flight switching between apps you've already opened. Many users bind Raycast to ⌘Space and Tesserac to a hold key like Control.</p>
+        </details>
+
+        <details>
+          <summary>Why not just use Raycast for switching?</summary>
+          <p>You can. Raycast has a window switcher and an app switcher. They're text-first — you type, you pick. Tesserac is visual-first — you hold, you glance, you release. If your switching is muscle-memory based ('I know Mail is at the 3 o'clock position'), the spatial layout is faster than typing.</p>
+        </details>
+
+        <details>
+          <summary>Does Tesserac have extensions or scripts?</summary>
+          <p>No. Tesserac is intentionally focused on switching — that's its whole job. Raycast is the right pick for AI commands, snippets, calculator, clipboard history, and the long tail of automation.</p>
+        </details>
+
+        <details>
+          <summary>Is Tesserac free like Raycast?</summary>
+          <p>Tesserac is $9.99 once with a 7-day trial. Raycast's core launcher is free; Pro adds AI and team features on a subscription.</p>
+        </details>
+
+        <details>
+          <summary>Apple Silicon native?</summary>
+          <p>Both are native arm64.</p>
+        </details>
+      </div>
+
+      <div class="cmp-final">
+        <h2>A switcher beside your launcher</h2>
+        <p>If you already use Raycast and your switching still feels slow, Tesserac fills that specific gap. $9.99 once, 7-day trial.</p>
+        <div class="cmp-cta-row">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6767599856" target="_blank" rel="noopener">Try Tesserac free</a>
+          <a class="btn btn-ghost" href="../tesserac.html">See all features</a>
+        </div>
+      </div>
+
+      <div class="cmp-related">
+        <p class="cmp-related-title">Other comparisons</p>
+        <div class="cmp-related-grid">
+          <a class="cmp-related-card" href="cmd-tab.html">
+            <span><span class="cmp-related-name">vs Cmd+Tab</span><br><span class="cmp-related-sub">macOS' built-in switcher</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+          <a class="cmp-related-card" href="contexts.html">
+            <span><span class="cmp-related-name">vs Contexts</span><br><span class="cmp-related-sub">Long-running sidebar switcher</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+          <a class="cmp-related-card" href="alttab.html">
+            <span><span class="cmp-related-name">vs AltTab</span><br><span class="cmp-related-sub">Free Windows-style alt-tab</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+          <a class="cmp-related-card" href="witch.html">
+            <span><span class="cmp-related-name">vs Witch</span><br><span class="cmp-related-sub">Power-user window switcher</span></span>
+            <span class="cmp-related-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-wordmark" href="../../index.html">Lucid<span class="bit">Bit</span></a>
+        <div class="footer-links">
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
+          <a href="../../privacy.html">Privacy</a>
+          <a href="../../terms.html">Terms</a>
+        </div>
+        <span class="footer-copy">&#169; 2026 LucidBit</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="../../shared.js"></script>
+</body>
+</html>
