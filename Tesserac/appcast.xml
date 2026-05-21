@@ -59,5 +59,26 @@
                 sparkle:edSignature="rUKcA0RlbQgPzGv++2YB1YmorqPC9zosp3kAEPFKN45CNTHN/tFemcJ6csCkmPCNtDIOAk9wihwcJRah9runDg==" length="4492685"
                 type="application/octet-stream" />
         </item>
+		<item>
+		    <title>Version 1.1</title>
+		    <pubDate>Thu, 21 May 2026 12:35:44 +0000</pubDate>
+		    <sparkle:version>6</sparkle:version>
+		    <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
+		    <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+		    <description><![CDATA[
+		        <h2>What's new in 1.1</h2>
+		        <ul>
+		            <li>Removed Accessibility permission requirement.</li>
+		            <li>Improved minimized app restoration using native macOS activation behavior.</li>
+		            <li>Simplified onboarding and settings experience.</li>
+		            <li>General performance and stability improvements.</li>
+		        </ul>
+		    ]]></description>
+		    <enclosure
+		        url="https://lucidbit.app/downloads/Tesserac-1.1.dmg"
+		        sparkle:edSignature="kyAKjFPld64a01b8FkP/AYU52QIArZpDYR388svZUhQyVpgloYTXLw9Uef7n2P0YNfv38RrTKJ1cPnDKyq8KBA=="
+		        length="4493896"
+		        type="application/octet-stream" />
+		</item>
     </channel>
 </rss>
