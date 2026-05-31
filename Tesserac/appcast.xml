@@ -80,5 +80,24 @@
 		        length="4493896"
 		        type="application/octet-stream" />
 		</item>
+		<item>
+		    <title>Version 1.2</title>
+		    <pubDate>Sun, 31 May 2026 03:22:52 +0000</pubDate>
+		    <sparkle:version>7</sparkle:version>
+		    <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
+		    <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+		    <description><![CDATA[
+		        <h2>What's new in 1.2</h2>
+		        <ul>
+		            <li>Added two new animation settings: a <strong>Snap</strong> style for instant card animations, and a <strong>Speed</strong> option to choose between Relaxed and Balanced.</li>
+		            <li>Various UI refinements and stability improvements.</li>
+		        </ul>
+		    ]]></description>
+		    <enclosure
+		        url="https://lucidbit.app/downloads/Tesserac-1.2.dmg"
+		        sparkle:edSignature="juEBNm235nYdAlrP4b60FrxP8dInaiN+U4/XKuXCur+9Xlujp/OSSDQFKmf/bftn/Jsp3XqwPpsa/RCJOZRbDA=="
+		        length="4517263"
+		        type="application/octet-stream" />
+		</item>
     </channel>
 </rss>
