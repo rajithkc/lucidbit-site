@@ -38,10 +38,10 @@
         -->
         <item>
             <title>Version 1.4.1</title>
-            <pubDate>Fri, 05 Jun 2026 13:02:05 +0000</pubDate>
-            <sparkle:version>25</sparkle:version>
+            <pubDate>Fri, 05 Jun 2026 13:14:07 +0000</pubDate>
+            <sparkle:version>26</sparkle:version>
             <sparkle:shortVersionString>1.4.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[
                 <h2>What's new in 1.4.1</h2>
                 <ul>
@@ -51,7 +51,7 @@
             ]]></description>
             <enclosure
                 url="https://lucidbit.app/downloads/ActiveStat-1.4.1.dmg"
-                sparkle:edSignature="QKhcylIPHPZTVvLUBwVACxVW6yU103tozp/8akFTRlGpKnBOY4O0G56UcmeeVOiPbg/vsOXFffq0lpOK0ydODQ==" length="4342116"
+                sparkle:edSignature="ifHMuP6gu3kBSXh4TXcnGdxWJAaSbpt3rGjCj+LUKYEK6+/ppy1Fv1c+oA2iRQW5kb/YPvbNC1yIqUOzUBCEAQ==" length="4342050"
                 type="application/octet-stream" />
         </item>
         <item>
