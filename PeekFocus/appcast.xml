@@ -37,6 +37,24 @@
             </item>
         -->
         <item>
+            <title>Version 1.1.2</title>
+            <pubDate>Mon, 29 Jun 2026 13:55:43 +0000</pubDate>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>1.1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <h2>What's new in 1.1.2</h2>
+                <ul>
+                    <li>Shake mouse to toggle mode now works in both directions — shake while active to return to Standard, shake again to jump back to your last mode.</li>
+                    <li>Various UI refinements and stability improvements.</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://lucidbit.app/downloads/PeekFocus-1.1.2.dmg"
+                sparkle:edSignature="9/HCkgsIS5T/rozsWhF3Gr2OAisKrtxrGlq52Yz0ePcarPW9aJROIQKr7uSa3E56UZsOrzdKw9yCpyWRv2SxBA==" length="7209151"
+                type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 1.1.1</title>
             <pubDate>Thu, 07 May 2026 14:17:33 +0000</pubDate>
             <sparkle:version>6</sparkle:version>
