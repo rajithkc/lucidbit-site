@@ -37,6 +37,21 @@
             </item>
         -->
         <item>
+            <title>Version 1.5.2</title>
+            <pubDate>Mon, 29 Jun 2026 14:03:34 +0000</pubDate>
+            <sparkle:version>17</sparkle:version>
+            <sparkle:shortVersionString>1.5.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <h2>What's new in 1.5.2</h2>
+                <ul><li>Various UI refinements and stability improvements.</li></ul>
+            ]]></description>
+            <enclosure
+                url="https://lucidbit.app/downloads/GentleLimit-1.5.2.dmg"
+                sparkle:edSignature="NxPhaW9iLx1DDuQbaUHveEhNSTfasiEYvmcDAa48Tge3GJ2oud4gbbjU1qH0BSGJjCawDvzTY9PWN5O1dZC/Cg==" length="9511231"
+                type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 1.5</title>
             <pubDate>Mon, 27 Apr 2026 19:01:26 +0000</pubDate>
             <sparkle:version>16</sparkle:version>
