@@ -81,6 +81,25 @@
 		        type="application/octet-stream" />
 		</item>
 		<item>
+		    <title>Version 1.3</title>
+		    <pubDate>Thu, 02 Jul 2026 13:12:05 +0000</pubDate>
+		    <sparkle:version>9</sparkle:version>
+		    <sparkle:shortVersionString>1.3</sparkle:shortVersionString>
+		    <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+		    <description><![CDATA[
+		        <h2>What's new in 1.3</h2>
+		        <ul>
+		            <li>Added Layout controls — <strong>App Order</strong> (Most Recent or Alphabetical) and <strong>Start Position</strong> to set where the first app appears on the ring.</li>
+		            <li>Various UI refinements and stability improvements.</li>
+		        </ul>
+		    ]]></description>
+		    <enclosure
+		        url="https://lucidbit.app/downloads/Tesserac-1.3.dmg"
+		        sparkle:edSignature="unsnB52Cf0SftflQxfeA6iFJOImjfO6RGnoOhr0nTxXYVkMA1il0y6iL6x4gGAPOxcxuxMwjanGf+4aKjM0zAA=="
+		        length="4568449"
+		        type="application/octet-stream" />
+		</item>
+		<item>
 		    <title>Version 1.2.1</title>
 		    <pubDate>Mon, 29 Jun 2026 14:15:50 +0000</pubDate>
 		    <sparkle:version>8</sparkle:version>
