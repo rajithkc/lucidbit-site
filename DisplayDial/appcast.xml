@@ -7,6 +7,7 @@
         <description>Direct-distribution update feed for DisplayDial.</description>
         <language>en</language>
         <link>https://lucidbit.app/DisplayDial/appcast.xml</link>
+
         <!--
             Sparkle reads this feed daily per running app instance.
             Add new releases as <item> blocks inside <channel>; the
@@ -36,5 +37,23 @@
                     sparkle:edSignature="ED_SIGNATURE_FROM_RELEASE_SH"/>
             </item>
         -->
+
+        <item>
+            <title>Version 1.0</title>
+            <pubDate>Sun, 05 Jul 2026 05:16:24 +0000</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <h2>What's new in 1.0</h2>
+                <ul><li>The first release of DisplayDial: brightness, contrast, and volume for every display via true DDC hardware control — with silk-smooth transitions, presets, schedules, and Follow the sun.</li></ul>
+            ]]></description>
+            <enclosure
+                url="https://lucidbit.app/downloads/DisplayDial-1.0.dmg"
+                sparkle:edSignature="SdmVOQE7taocmvhgD9oZ161nrqayuxoQI7/d7Kmv8HmLtM4zZnXcZ0KW9cJsNc+4gwHiisFVU8DlKOnMFkwgBA=="
+                length="11458817"
+                type="application/octet-stream"/>
+        </item>
+
     </channel>
 </rss>
