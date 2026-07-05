@@ -164,6 +164,12 @@
   animation: dd-rise 0.9s 0.35s var(--ease-out) both;
 }
 
+/* Reuse the centralised .promo-banner from styles.css but attach the
+   hero rise animation so it lands in tempo between the desc and CTA. */
+.dd-hero .promo-banner {
+  animation: dd-rise 0.9s 0.375s var(--ease-out) both;
+}
+
 .dd-cta-row {
   display: flex;
   gap: 12px;
@@ -486,6 +492,10 @@
     <p class="detail-tagline dd-tagline-centered">Your monitors, finally controllable.</p>
 
     <p class="detail-desc dd-desc-centered">Brightness, contrast, and volume for every connected display — no joystick, no submenus. Hardware control from the menu bar, presets for every context, and brightness that follows the sun.</p>
+
+    <p class="promo-banner">
+      🎉 Launch promo — use code DDLAUNCH for $4.99 (30% off). Valid until July 31 for first 50 redemptions.
+    </p>
 
     <div class="dd-cta-row">
       <a class="btn btn-primary" href="../downloads/DisplayDial.dmg">
