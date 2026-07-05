@@ -3,63 +3,77 @@
 
   <url>
     <loc>https://lucidbit.app/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
+    <loc>https://lucidbit.app/DisplayDial/displaydial.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://lucidbit.app/DisplayDial/changelog.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://lucidbit.app/GentleLimit/gentlelimit.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://lucidbit.app/ActiveStat/activestat.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://lucidbit.app/PeekFocus/peekfocus.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://lucidbit.app/Tesserac/tesserac.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://lucidbit.app/GentleLimit/changelog.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://lucidbit.app/ActiveStat/changelog.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://lucidbit.app/PeekFocus/changelog.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://lucidbit.app/Tesserac/changelog.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -67,31 +81,31 @@
   <!-- Tesserac comparison pages -->
   <url>
     <loc>https://lucidbit.app/Tesserac/vs/cmd-tab.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/Tesserac/vs/raycast.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/Tesserac/vs/contexts.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/Tesserac/vs/alttab.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/Tesserac/vs/witch.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -99,31 +113,31 @@
   <!-- ActiveStat comparison pages -->
   <url>
     <loc>https://lucidbit.app/ActiveStat/vs/istat-menus.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/ActiveStat/vs/menumeters.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/ActiveStat/vs/stats.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/ActiveStat/vs/menubar-stats.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/ActiveStat/vs/sensei.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -131,31 +145,31 @@
   <!-- GentleLimit comparison pages -->
   <url>
     <loc>https://lucidbit.app/GentleLimit/vs/opal.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/GentleLimit/vs/one-sec.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/GentleLimit/vs/cold-turkey.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/GentleLimit/vs/forest.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/GentleLimit/vs/screenzen.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -163,45 +177,45 @@
   <!-- PeekFocus comparison pages -->
   <url>
     <loc>https://lucidbit.app/PeekFocus/vs/hocus-focus.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/PeekFocus/vs/vanilla.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/PeekFocus/vs/hazeover.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/PeekFocus/vs/muzzle.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lucidbit.app/PeekFocus/vs/backdrop.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://lucidbit.app/privacy.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://lucidbit.app/terms.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

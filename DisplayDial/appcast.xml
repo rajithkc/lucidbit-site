@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     version="2.0">
+    <channel>
+        <title>DisplayDial Updates</title>
+        <description>Direct-distribution update feed for DisplayDial.</description>
+        <language>en</language>
+        <link>https://lucidbit.app/DisplayDial/appcast.xml</link>
+        <!--
+            Sparkle reads this feed daily per running app instance.
+            Add new releases as <item> blocks inside <channel>; the
+            order doesn't matter, Sparkle picks the highest
+            sparkle:version it sees. release.sh prints a ready-to-paste
+            block including the EdDSA signature, file length, and pubDate.
+
+            EdDSA public key (matches SUPublicEDKey injected at build):
+              flxF/Hg9ws46PE3BxiJGtHZ+uPAc/1oRnRlznwKVLyI=
+
+            Item template, for reference:
+
+            <item>
+                <title>Version 1.0</title>
+                <pubDate>Sun, 26 Jul 2026 12:00:00 +0000</pubDate>
+                <sparkle:version>1</sparkle:version>
+                <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+                <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+                <description><![CDATA[
+                    <h2>What's new</h2>
+                    <ul><li>First release.</li></ul>
+                ]]></description>
+                <enclosure
+                    url="https://lucidbit.app/downloads/DisplayDial.dmg"
+                    length="FILE_LENGTH_BYTES"
+                    type="application/octet-stream"
+                    sparkle:edSignature="ED_SIGNATURE_FROM_RELEASE_SH"/>
+            </item>
+        -->
+    </channel>
+</rss>

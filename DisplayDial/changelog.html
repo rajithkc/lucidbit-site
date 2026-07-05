@@ -5,22 +5,22 @@
 <meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tesserac Changelog — Every Release, Documented | LucidBit</title>
-<meta name="description" content="Every Tesserac release, documented. See what's new, what's improved, and what's fixed across versions of LucidBit's spatial app switcher for Mac.">
-<link rel="canonical" href="https://lucidbit.app/Tesserac/changelog.html">
+<title>DisplayDial Changelog — Every Release, Documented | LucidBit</title>
+<meta name="description" content="Every DisplayDial release, documented. See what's new, what's improved, and what's fixed across versions of LucidBit's display control app for Mac.">
+<link rel="canonical" href="https://lucidbit.app/DisplayDial/changelog.html">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LucidBit">
-<meta property="og:title" content="Tesserac Changelog">
-<meta property="og:description" content="Every Tesserac release, documented.">
-<meta property="og:url" content="https://lucidbit.app/Tesserac/changelog.html">
-<meta property="og:image" content="https://lucidbit.app/Images/og/og-tesserac.png">
+<meta property="og:title" content="DisplayDial Changelog">
+<meta property="og:description" content="Every DisplayDial release, documented.">
+<meta property="og:url" content="https://lucidbit.app/DisplayDial/changelog.html">
+<meta property="og:image" content="https://lucidbit.app/Images/og/og-displaydial.png">
 
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#3FA8B8">
+<meta name="theme-color" content="#7870A2">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,10 +28,10 @@
 <link rel="stylesheet" href="../styles.css">
 <style>
 
-/* Teal accent, scoped to this page only. */
+/* Haze accent, scoped to this page only. */
 :root {
-  --teal: #3FA8B8;
-  --teal-dim: rgba(63, 168, 184, 0.10);
+  --dial: #7870A2;
+  --dial-dim: rgba(120, 112, 162, 0.10);
 }
 
 .changelog-wrap {
@@ -42,11 +42,11 @@
 .changelog-hero { margin-bottom: 80px; }
 .changelog-app-label {
   font-size: 0.7rem; font-weight: 500; letter-spacing: 0.16em;
-  text-transform: uppercase; color: var(--teal);
+  text-transform: uppercase; color: var(--dial);
   display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
 }
 .changelog-app-label::before {
-  content: ''; width: 20px; height: 1px; background: var(--teal); opacity: 0.7;
+  content: ''; width: 20px; height: 1px; background: var(--dial); opacity: 0.7;
 }
 .changelog-title {
   font-family: 'Cormorant', serif; font-weight: 300;
@@ -69,8 +69,8 @@
 }
 .release-badge {
   font-size: 0.6rem; font-weight: 500; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--teal);
-  background: var(--teal-dim); border: 1px solid rgba(63,168,184,0.20);
+  text-transform: uppercase; color: var(--dial);
+  background: var(--dial-dim); border: 1px solid rgba(120,112,162,0.20);
   padding: 3px 10px; border-radius: 50px;
 }
 .release-note {
@@ -89,15 +89,9 @@
 }
 .change-list li::before {
   content: ''; width: 5px; height: 5px; border-radius: 50%;
-  background: var(--teal); flex-shrink: 0; opacity: 0.7; margin-top: 10px;
+  background: var(--dial); flex-shrink: 0; opacity: 0.7; margin-top: 10px;
 }
 .change-list li > span { flex: 1; }
-.back-btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 0.85rem; color: var(--text-3); text-decoration: none;
-  margin-bottom: 32px; transition: color 0.2s ease;
-}
-.back-btn:hover { color: var(--teal); }
 @media (max-width: 640px) {
   .changelog-wrap { padding: 48px 20px 100px; }
   .changelog-hero { margin-bottom: 56px; }
@@ -117,14 +111,14 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Tesserac",
-      "item": "https://lucidbit.app/Tesserac/tesserac.html"
+      "name": "DisplayDial",
+      "item": "https://lucidbit.app/DisplayDial/displaydial.html"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Changelog",
-      "item": "https://lucidbit.app/Tesserac/changelog.html"
+      "item": "https://lucidbit.app/DisplayDial/changelog.html"
     }
   ]
 }
@@ -191,88 +185,24 @@
   <div class="detail-nav-space"></div>
   <div class="changelog-wrap">
     <div class="changelog-hero">
-      <a class="back-btn" href="tesserac.html">
+      <a class="back-btn" href="displaydial.html">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Tesserac
+        DisplayDial
       </a>
-      <p class="changelog-app-label">Tesserac</p>
+      <p class="changelog-app-label">DisplayDial</p>
       <h1 class="changelog-title">Changelog</h1>
       <p class="changelog-subtitle">Every update documented.</p>
     </div>
-	
-      <div class="release">
-        <div class="release-header">
-          <span class="release-version">1.3</span>
-          <span class="release-date">July 2026</span>
-          <span class="release-badge">Latest</span>
-        </div>
-        <div class="change-group">
-          <ul class="change-list">
-            <li><span>Added Layout controls — <strong>App Order</strong> (Most Recent or Alphabetical) and <strong>Start Position</strong> to set where the first app appears on the ring.</span></li>
-            <li><span>Various UI refinements and stability improvements.</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="release">
-        <div class="release-header">
-          <span class="release-version">1.2.1</span>
-          <span class="release-date">June 2026</span>
-        </div>
-        <div class="change-group">
-          <ul class="change-list">
-            <li><span>Various UI refinements and stability improvements.</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="release">
-        <div class="release-header">
-          <span class="release-version">1.2</span>
-          <span class="release-date">May 2026</span>
-        </div>
-        <div class="change-group">
-          <ul class="change-list">
-            <li><span>Added two new animation settings: a <strong>Snap</strong> style for instant card animations, and a <strong>Speed</strong> option to choose between Relaxed and Balanced.</span></li>
-            <li><span>Various UI refinements and stability improvements.</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="release">
-        <div class="release-header">
-          <span class="release-version">1.1</span>
-          <span class="release-date">May 2026</span>
-        </div>
-        <div class="change-group">
-          <ul class="change-list">
-            <li><span>Minimized windows are now automatically restored when switching to an app.</span></li>
-            <li><span>Fixed an issue where some apps appeared multiple times in the switcher.</span></li>
-            <li><span>Various UI refinements and stability improvements.</span></li>
-          </ul>
-        </div>
-      </div>
 
     <div class="release">
       <div class="release-header">
         <span class="release-version">1.0</span>
-        <span class="release-date">May 2026</span>
+        <span class="release-date">Coming soon</span>
+        <span class="release-badge">In development</span>
       </div>
-      <p class="release-note" style="margin-bottom: 20px;">Initial release. A spatial app switcher for macOS that lives quietly in the menu bar.</p>
-      <div class="change-group">
-        <ul class="change-list">
-          <li><span><strong>Multiple layouts:</strong> Spatial Tile, Glass Orb, Grid, and List — switch between immersive and compact workflows instantly.</span></li>
-          <li><span><strong>Keyboard-driven navigation:</strong> Hold a modifier key or use a custom shortcut to summon Tesserac anywhere.</span></li>
-          <li><span><strong>Fuzzy filtering:</strong> Type to instantly filter and jump between running apps.</span></li>
-          <li><span><strong>Invoke methods:</strong> Supports hold keys, custom shortcuts, middle mouse button, and Tab dwell launch.</span></li>
-          <li><span><strong>Favourites:</strong> Pin important apps so they always appear in the switcher.</span></li>
-          <li><span><strong>Ignored Apps:</strong> Permanently hide apps you never want to see.</span></li>
-          <li><span><strong>Appearance:</strong> Configure layouts, animations, and behaviour with live previews.</span></li>
-          <li><span><strong>Menu-bar home:</strong> No Dock icon, no clutter. Tesserac is always ready when you need it.</span></li>
-          <li><span><strong>Privacy:</strong> No analytics, no tracking, no telemetry. Everything stays local to your Mac.</span></li>
-        </ul>
-      </div>
+      <p class="release-note">The first release of DisplayDial: brightness, contrast, and volume for every display via true DDC hardware control — with silk-smooth transitions, presets, schedules, and Follow the sun.</p>
     </div>
+
   </div>
 
   <footer>
@@ -288,7 +218,9 @@
       </div>
     </div>
   </footer>
+
 </div>
+
 <script src="../shared.js"></script>
 </body>
 </html>
