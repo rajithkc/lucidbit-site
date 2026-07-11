@@ -381,7 +381,7 @@ nav.scrolled {
 .app-card:hover .card-arrow { background: var(--volt); border-color: var(--volt); color: #fff; transform: translate(2px,-2px); }
 
 /* ── DETAIL PAGES ── */
-.detail-nav-space { height: 24px; }
+.detail-nav-space { height: 48px; }
 .detail-hero-inner { max-width: 1160px; margin: 0 auto; padding: 80px 48px 0; }
 .back-btn { display: inline-flex; align-items: center; gap: 8px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3); background: none; border: none; cursor: pointer; margin-bottom: 64px; padding: 0; transition: color 0.2s; text-decoration: none; }
 .back-btn:hover { color: var(--text-2); }
@@ -472,7 +472,7 @@ footer { border-top: 1px solid var(--glass-border); padding: 44px 0; }
   nav { padding: 0 22px 0 20px; height: 56px; top: 10px; width: calc(100% - 24px); }
   .nav-logo { font-size: 1.7rem; }
   .nav-links { gap: 20px; }
-  .hero { padding: 64px 24px 40px; }
+  .hero { padding: 96px 24px 40px; }
   .container { padding: 0 24px; }
   .statement-section { padding: 80px 0; }
   .apps-grid { grid-template-columns: 1fr; }
@@ -551,7 +551,7 @@ footer { border-top: 1px solid var(--glass-border); padding: 44px 0; }
   .feat-card { padding: 28px; }
   .specs-head { padding: 20px 24px; }
   .spec-row { padding: 16px 24px; }
-  .detail-nav-space { height: 20px; }
+  .detail-nav-space { height: 36px; }
   .detail-hero-inner { padding: 40px 20px 0; }
   .back-btn { margin-bottom: 40px; }
   .detail-title { font-size: clamp(2.6rem, 11vw, 4rem); }
@@ -1104,14 +1104,15 @@ footer { border-top: 1px solid var(--glass-border); padding: 44px 0; }
 }
 .app-price-cta {
   display: block;
-  width: 100%;
-  padding: 14px 22px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 11px 20px;
   background: var(--page-accent);
   color: #fff;
   border: none;
-  border-radius: 12px;
+  border-radius: 999px;
   font-family: 'Outfit', sans-serif;
-  font-size: 1.02rem;
+  font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: -0.005em;
   text-align: center;
@@ -1132,10 +1133,244 @@ footer { border-top: 1px solid var(--glass-border); padding: 44px 0; }
   line-height: 1.55;
 }
 
+/* Dual-channel actions row — compact matched pills. White App Store pill
+   (Apple logo + "App Store" text) on the left, accent Buy pill on the
+   right. Both 36 px tall, min-width 140 px, centered as a pair. */
+.app-price-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+  width: fit-content;
+}
+.app-price-cta-mas {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 140px;
+  height: 36px;
+  padding: 0 20px;
+  background: #1c1c1e;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+  flex: 0 0 auto;
+}
+.app-price-cta-mas:hover {
+  transform: translateY(-1px);
+  background: #2c2c2e;
+}
+.app-price-cta-mas svg {
+  width: 12px;
+  height: 14px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+.app-price-actions .app-price-cta {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  height: 36px;
+  padding: 0 20px !important;
+  width: auto !important;
+  margin: 0 !important;
+  border-radius: 999px !important;
+  font-size: 0.88rem;
+  font-weight: 600;
+  flex: 0 0 auto;
+}
+
+/* Secondary channel — small "Also on Mac App Store" text link
+   sitting between the primary Buy CTA and the trust line. */
+.app-price-mas-link {
+  display: block;
+  text-align: center;
+  margin: 14px 0 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.app-price-mas-link svg {
+  width: 12px;
+  height: 14px;
+  vertical-align: -2px;
+  margin-right: 6px;
+  fill: currentColor;
+}
+.app-price-mas-link:hover { color: var(--page-accent); }
+
 @media (max-width: 900px) {
   .app-pricing { padding: 0 24px; margin: 72px auto 40px; }
 }
 @media (max-width: 640px) {
   .app-price-card { padding: 32px 24px; }
   .app-price-now { font-size: 3.6rem; }
+}
+
+/* ── DUAL-VIEW SCROLL-REACTIVE NAV ─────────────────────────────
+   Portable pattern for every app page. Wrap the existing nav
+   content in .nav-view-brand and add a sibling .nav-view-product
+   with the app's icon, wordmark, section anchors, and Buy CTA.
+   An IntersectionObserver on the hero (per page) toggles
+   .product-mode on #main-nav — brand view fades out, product
+   view fades in over 0.7s. Both use var(--page-accent) so each
+   app inherits its own tint automatically.
+   ─────────────────────────────────────────────────────────── */
+html { scroll-padding-top: 100px; }
+
+#main-nav.dual-view { padding: 0 !important; }
+#main-nav.dual-view .nav-view {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px 0 24px;
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#main-nav.dual-view .nav-view-brand { opacity: 1; }
+#main-nav.dual-view .nav-view-product {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-nav.dual-view.product-mode .nav-view-brand {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-nav.dual-view.product-mode .nav-view-product {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-product-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text);
+  line-height: 1;
+}
+.nav-product-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  display: block;
+  flex-shrink: 0;
+}
+.nav-product-name {
+  font-family: 'Cormorant', serif;
+  font-weight: 400;
+  font-size: 1.95rem;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  line-height: 1;
+}
+
+.nav-product-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-product-links a {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.nav-product-links a:hover { color: var(--page-accent); }
+
+.nav-product-cta-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-product-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+  padding: 9px 22px;
+  background: var(--page-accent);
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--page-accent) 30%, transparent);
+}
+.nav-product-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--page-accent) 40%, transparent);
+}
+
+/* App Store CTA — sits next to the primary Buy button in the nav
+   product view for apps that ship on both channels. Charcoal fill
+   to sit calmly next to the accent-color Buy pill. */
+.nav-product-cta-mas {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 130px;
+  padding: 9px 22px;
+  background: #1c1c1e;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.nav-product-cta-mas:hover {
+  transform: translateY(-1px);
+  background: #2c2c2e;
+}
+.nav-product-cta-mas svg {
+  width: 12px;
+  height: 14px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  #main-nav.dual-view .nav-view { padding: 0 20px 0 18px; }
+  .nav-product-links { gap: 20px; }
+  .nav-product-links a { font-size: 0.72rem; letter-spacing: 0.05em; }
+  .nav-product-name { font-size: 1.6rem; }
+  .nav-product-icon { width: 22px; height: 22px; }
+  .nav-product-cta,
+  .nav-product-cta-mas { min-width: 108px; padding: 7px 18px; font-size: 0.82rem; }
+  .nav-product-cta-group { gap: 6px; }
+}
+
+@media (max-width: 640px) {
+  #main-nav.dual-view .nav-view { padding: 0 16px 0 14px; }
+  .nav-product-links { display: none; }
+  .nav-product-name { font-size: 1.4rem; }
+  .nav-product-icon { width: 20px; height: 20px; }
+  .nav-product-cta-mas { display: none; }  /* Buy only on tight screens */
 }

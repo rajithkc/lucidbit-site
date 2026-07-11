@@ -559,14 +559,15 @@
 }
 .dd-price-cta {
   display: block;
-  width: 100%;
-  padding: 14px 22px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 11px 20px;
   background: var(--dial);
   color: #fff;
   border: none;
-  border-radius: 12px;
+  border-radius: 999px;
   font-family: 'Outfit', sans-serif;
-  font-size: 1.02rem;
+  font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: -0.005em;
   text-align: center;
@@ -612,56 +613,70 @@
 </head>
 <body data-reveal-threshold="0.08">
 
-<nav id="main-nav">
-  <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
-  <ul class="nav-links">
-    <li class="nav-dropdown">
-      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
-        Apps
-        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="nav-dropdown-panel" role="menu">
+<nav id="main-nav" class="dual-view">
+  <div class="nav-view nav-view-brand">
+    <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Apps
+          <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-dropdown-panel" role="menu">
 
-        <a class="nav-dropdown-item" href="../DisplayDial/displaydial.html" role="menuitem">
-          <img src="../Images/DisplayDial/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
-          <span class="nav-dropdown-text">
-            <span class="nav-dropdown-name">DisplayDial</span>
-            <span class="nav-dropdown-sub">Every display. One dial.</span>
-          </span>
-        </a>
-        <a class="nav-dropdown-item" href="../Tesserac/tesserac.html" role="menuitem">
-          <img src="../Images/Tesserac/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
-          <span class="nav-dropdown-text">
-            <span class="nav-dropdown-name">Tesserac</span>
-            <span class="nav-dropdown-sub">App switching, reimagined.</span>
-          </span>
-        </a>
-        <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
-          <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
-          <span class="nav-dropdown-text">
-            <span class="nav-dropdown-name">PeekFocus</span>
-            <span class="nav-dropdown-sub">Instantly presentable, one keystroke</span>
-          </span>
-        </a>
-        <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
-          <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
-          <span class="nav-dropdown-text">
-            <span class="nav-dropdown-name">ActiveStat</span>
-            <span class="nav-dropdown-sub">Performance. Simplified.</span>
-          </span>
-        </a>
-        <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
-          <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
-          <span class="nav-dropdown-text">
-            <span class="nav-dropdown-name">GentleLimit</span>
-            <span class="nav-dropdown-sub">Mindful screen time habits</span>
-          </span>
-        </a>
-      </div>
-    </li>
-    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
-    <li><a href="../privacy.html">Privacy</a></li>
-  </ul>
+          <a class="nav-dropdown-item" href="../DisplayDial/displaydial.html" role="menuitem">
+            <img src="../Images/DisplayDial/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">DisplayDial</span>
+              <span class="nav-dropdown-sub">Every display. One dial.</span>
+            </span>
+          </a>
+          <a class="nav-dropdown-item" href="../Tesserac/tesserac.html" role="menuitem">
+            <img src="../Images/Tesserac/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">Tesserac</span>
+              <span class="nav-dropdown-sub">App switching, reimagined.</span>
+            </span>
+          </a>
+          <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
+            <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">PeekFocus</span>
+              <span class="nav-dropdown-sub">Instantly presentable, one keystroke</span>
+            </span>
+          </a>
+          <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
+            <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">ActiveStat</span>
+              <span class="nav-dropdown-sub">Performance. Simplified.</span>
+            </span>
+          </a>
+          <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
+            <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">GentleLimit</span>
+              <span class="nav-dropdown-sub">Mindful screen time habits</span>
+            </span>
+          </a>
+        </div>
+      </li>
+      <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-view nav-view-product">
+    <a class="nav-product-brand" href="#top">
+      <img src="../Images/DisplayDial/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-product-icon">
+      <span class="nav-product-name">DisplayDial</span>
+    </a>
+    <ul class="nav-product-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
 </nav>
 
 <div class="page-wrap">
@@ -733,7 +748,7 @@
   </section-->
 
   <!-- ── FEATURE ROWS ── -->
-  <section class="feature-rows">
+  <section class="feature-rows" id="features">
 
     <div class="feature-row reveal">
       <div class="feature-image" data-tilt data-tilt-strength="5">
@@ -918,7 +933,7 @@
   </section>
 
   <!-- ── PRICING ── -->
-  <section class="dd-pricing reveal">
+  <section class="dd-pricing reveal" id="pricing">
     <p class="dd-pricing-label">Pricing</p>
     <h2>One price. Lifetime access.</h2>
     <p class="lead">One-time payment. No subscription. Get lifetime access to DisplayDial on your Mac.</p>
@@ -952,7 +967,7 @@
   </section>
 
   <!-- ── FAQ ── -->
-  <section class="app-faq-section" aria-label="DisplayDial FAQ">
+  <section class="app-faq-section" aria-label="DisplayDial FAQ" id="faq">
     <div class="container">
       <h2 class="app-faq-title">FAQ</h2>
       <div class="app-faq-list">
@@ -1026,5 +1041,28 @@
 </div>
 
 <script src="../shared.js"></script>
+
+<!-- Dual-view nav observer: swap brand ↔ product view when the hero
+     scrolls past the top of the viewport. Scoped to DisplayDial. -->
+<script>
+(function() {
+  const nav = document.getElementById('main-nav');
+  const hero = document.querySelector('.dd-hero');
+  if (!nav || !hero || !('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          nav.classList.remove('product-mode');
+        } else {
+          nav.classList.add('product-mode');
+        }
+      });
+    },
+    { threshold: 0, rootMargin: '-80px 0px 0px 0px' }
+  );
+  observer.observe(hero);
+})();
+</script>
 </body>
 </html>

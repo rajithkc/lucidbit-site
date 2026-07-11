@@ -40,8 +40,8 @@
 
         <item>
             <title>Version 1.1</title>
-            <pubDate>Fri, 10 Jul 2026 15:50:00 +0000</pubDate>
-            <sparkle:version>2</sparkle:version>
+            <pubDate>Sat, 11 Jul 2026 11:43:00 +0000</pubDate>
+            <sparkle:version>3</sparkle:version>
             <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[
@@ -53,8 +53,8 @@
             ]]></description>
             <enclosure
                 url="https://lucidbit.app/downloads/DisplayDial-1.1.dmg"
-                sparkle:edSignature="IrOXX8KHOguN9/myEpDYtKOMTaW6Bk8NNfqcJHwqTmsc87CEqqU5GOEn6G59Om0WSikyzLX4cmeiPQosQl8yAA=="
-                length="11466253"
+                sparkle:edSignature="cB2+liQ0GCxL0cf9QZEktPDCkXDtdufanz8xjdyqJVSq8ba4pV+ZSU4cH4CIeTV0CmxrfP/fTjwNCycChguQDA=="
+                length="11466462"
                 type="application/octet-stream" />
         </item>
 

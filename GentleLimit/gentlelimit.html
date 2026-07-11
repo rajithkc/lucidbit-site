@@ -396,56 +396,70 @@
 </head>
 <body data-reveal-threshold="0.08">
 
-<nav id="main-nav">
-  <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
-  <ul class="nav-links">
-    <li class="nav-dropdown">
-      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
-        Apps
-        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="nav-dropdown-panel" role="menu">
+<nav id="main-nav" class="dual-view">
+  <div class="nav-view nav-view-brand">
+    <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Apps
+          <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-dropdown-panel" role="menu">
 
-        <a class="nav-dropdown-item" href="../DisplayDial/displaydial.html" role="menuitem">
-          <img src="../Images/DisplayDial/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
-          <span class="nav-dropdown-text">
-            <span class="nav-dropdown-name">DisplayDial</span>
-            <span class="nav-dropdown-sub">Every display. One dial.</span>
-          </span>
-        </a>
-        <a class="nav-dropdown-item" href="../Tesserac/tesserac.html" role="menuitem">
-          <img src="../Images/Tesserac/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
-          <span class="nav-dropdown-text">
-            <span class="nav-dropdown-name">Tesserac</span>
-            <span class="nav-dropdown-sub">App switching, reimagined.</span>
-          </span>
-        </a>
-        <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
-          <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
-          <span class="nav-dropdown-text">
-            <span class="nav-dropdown-name">PeekFocus</span>
-            <span class="nav-dropdown-sub">The calm between windows</span>
-          </span>
-        </a>
-        <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
-          <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
-          <span class="nav-dropdown-text">
-            <span class="nav-dropdown-name">ActiveStat</span>
-            <span class="nav-dropdown-sub">Performance. Simplified.</span>
-          </span>
-        </a>
-        <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
-          <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
-          <span class="nav-dropdown-text">
-            <span class="nav-dropdown-name">GentleLimit</span>
-            <span class="nav-dropdown-sub">Mindful screen time habits</span>
-          </span>
-        </a>
-      </div>
-    </li>
-    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
-    <li><a href="../privacy.html">Privacy</a></li>
-  </ul>
+          <a class="nav-dropdown-item" href="../DisplayDial/displaydial.html" role="menuitem">
+            <img src="../Images/DisplayDial/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">DisplayDial</span>
+              <span class="nav-dropdown-sub">Every display. One dial.</span>
+            </span>
+          </a>
+          <a class="nav-dropdown-item" href="../Tesserac/tesserac.html" role="menuitem">
+            <img src="../Images/Tesserac/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">Tesserac</span>
+              <span class="nav-dropdown-sub">App switching, reimagined.</span>
+            </span>
+          </a>
+          <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
+            <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">PeekFocus</span>
+              <span class="nav-dropdown-sub">The calm between windows</span>
+            </span>
+          </a>
+          <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
+            <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">ActiveStat</span>
+              <span class="nav-dropdown-sub">Performance. Simplified.</span>
+            </span>
+          </a>
+          <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
+            <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">GentleLimit</span>
+              <span class="nav-dropdown-sub">Mindful screen time habits</span>
+            </span>
+          </a>
+        </div>
+      </li>
+      <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-view nav-view-product">
+    <a class="nav-product-brand" href="#top">
+      <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-product-icon">
+      <span class="nav-product-name">GentleLimit</span>
+    </a>
+    <ul class="nav-product-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
 </nav>
 
 <div class="page-wrap">
@@ -464,7 +478,7 @@
       </a>
     </div>
 
-    <p class="detail-kicker gl-kicker-centered">Screen Time · Menu Bar</p>
+    <p class="detail-kicker gl-kicker-centered">Screen Time</p>
 
     <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp"
          alt="GentleLimit Icon"
@@ -521,7 +535,7 @@
   </section>
 
 <!-- FEATURE ROWS -->
-<section class="feature-rows">
+<section class="feature-rows" id="features">
 
   <!-- Floating widgets -->
   <div class="feature-row">
@@ -712,7 +726,7 @@
   </section>
 
   <!-- ── PRICING ── -->
-  <section class="app-pricing reveal">
+  <section class="app-pricing reveal" id="pricing">
     <p class="app-pricing-label">Pricing</p>
     <h2>One price. Lifetime access.</h2>
     <p class="lead">One-time payment. No subscription. Get lifetime access to GentleLimit on your Mac.</p>
@@ -734,13 +748,23 @@
         <li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Fully offline &amp; private</li>
       </ul>
 
-      <a class="app-price-cta"
-         href="https://lucidbit.lemonsqueezy.com/checkout/buy/ddb73247-048b-45f7-9f71-1efc0ba0236c"
-         target="_blank"
-         rel="noopener">
-        Buy GentleLimit
-      </a>
-      <p class="app-price-trust">Secure checkout by Lemon Squeezy, powered by Stripe. Prices in USD.</p>
+      <div class="app-price-actions">
+        <a class="app-price-cta-mas"
+           href="https://apps.apple.com/app/id6758135762"
+           target="_blank"
+           rel="noopener"
+           aria-label="Download GentleLimit on the Mac App Store">
+          <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM256.4 74.3c30.5-36.2 27.7-69.2 26.8-81C255.9 2 224.4 21.3 205.6 44.9c-20.7 25-32.9 55.9-30.3 87.6 29.7 2.3 56.8-13 81.1-58.2z"/></svg>
+          App Store
+        </a>
+        <a class="app-price-cta"
+           href="https://lucidbit.lemonsqueezy.com/checkout/buy/ddb73247-048b-45f7-9f71-1efc0ba0236c"
+           target="_blank"
+           rel="noopener">
+          Buy
+        </a>
+      </div>
+      <p class="app-price-trust">Secure checkout via App Store (local pricing) or Lemon Squeezy (USD, powered by Stripe).</p>
     </div>
   </section>
 
@@ -748,7 +772,7 @@
        Questions answered on the page; mirrored in FAQPage
        JSON-LD in <head> so Google can surface answers as rich
        results in search. -->
-  <section class="app-faq-section" aria-label="GentleLimit FAQ">
+  <section class="app-faq-section" aria-label="GentleLimit FAQ" id="faq">
     <div class="container">
       <h2 class="app-faq-title">FAQ</h2>
       <div class="app-faq-list">
@@ -818,5 +842,28 @@
 </div>
 
 <script src="../shared.js"></script>
+
+<!-- Dual-view nav observer: swap brand ↔ product view when the hero
+     scrolls past the top of the viewport. -->
+<script>
+(function() {
+  const nav = document.getElementById('main-nav');
+  const hero = document.querySelector('.gl-hero');
+  if (!nav || !hero || !('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          nav.classList.remove('product-mode');
+        } else {
+          nav.classList.add('product-mode');
+        }
+      });
+    },
+    { threshold: 0, rootMargin: '-80px 0px 0px 0px' }
+  );
+  observer.observe(hero);
+})();
+</script>
 </body>
 </html>
