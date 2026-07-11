@@ -39,6 +39,26 @@
         -->
 
         <item>
+            <title>Version 1.1</title>
+            <pubDate>Fri, 10 Jul 2026 15:50:00 +0000</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <h2>What's new in 1.1</h2>
+                <ul>
+                    <li>Added <strong>Display controls</strong> mode — switch between Minimal and Advanced in Settings.</li>
+                    <li>Various UI refinements and stability improvements.</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://lucidbit.app/downloads/DisplayDial-1.1.dmg"
+                sparkle:edSignature="IrOXX8KHOguN9/myEpDYtKOMTaW6Bk8NNfqcJHwqTmsc87CEqqU5GOEn6G59Om0WSikyzLX4cmeiPQosQl8yAA=="
+                length="11466253"
+                type="application/octet-stream" />
+        </item>
+
+        <item>
             <title>Version 1.0</title>
             <pubDate>Sun, 05 Jul 2026 05:16:24 +0000</pubDate>
             <sparkle:version>1</sparkle:version>

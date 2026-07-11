@@ -126,7 +126,7 @@
 .ts-hero {
   max-width: 900px;
   margin: 0 auto;
-  padding: 120px 32px 60px;
+  padding: 60px 32px 40px;
   text-align: center;
   position: relative;
 }
@@ -134,7 +134,7 @@
 .ts-back-row {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
 }
 
 .ts-icon {
@@ -425,7 +425,7 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .ts-hero { padding: 100px 24px 40px; }
+  .ts-hero { padding: 52px 24px 40px; }
   .ts-icon, .ts-icon-placeholder { width: 96px; height: 96px; }
   .ts-video { padding: 0 20px; margin-bottom: 60px; }
   .feature-row { grid-template-columns: 1fr; gap: 40px; padding: 44px 24px; }
@@ -434,7 +434,7 @@
 }
 
 @media (max-width: 640px) {
-  .ts-hero { padding: 90px 20px 32px; }
+  .ts-hero { padding: 44px 20px 28px; }
   .ts-icon, .ts-icon-placeholder { width: 80px; height: 80px; }
   .feature-row { padding: 28px 20px; gap: 24px; }
   .feature-text h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
@@ -443,12 +443,6 @@
 </style>
 </head>
 <body data-reveal-threshold="0.08">
-
-<div class="ambient">
-  <div class="orb o1"></div>
-  <div class="orb o2"></div>
-  <div class="orb o3"></div>
-</div>
 
 <nav id="main-nav">
   <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
@@ -763,6 +757,39 @@
         <p class="feat-desc">$6.99 once. No subscription. Lifetime access including all future updates.</p>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ── PRICING ── -->
+  <section class="app-pricing reveal">
+    <p class="app-pricing-label">Pricing</p>
+    <h2>One price. Lifetime access.</h2>
+    <p class="lead">One-time payment. No subscription. Get lifetime access to Tesserac on your Mac.</p>
+
+    <div class="app-price-card">
+      <span class="app-price-eyebrow">One-time purchase</span>
+
+      <div class="app-price-row">
+        <span class="app-price-now">$6.99</span>
+      </div>
+      <p class="app-price-note">No subscription. No account required.</p>
+
+      <ul class="app-price-list">
+        <li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>7-day free trial</li>
+        <li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>One-time payment</li>
+        <li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Lifetime updates included</li>
+        <li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Every feature unlocked from day one</li>
+        <li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Native macOS app (Apple Silicon)</li>
+        <li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Fully offline &amp; private</li>
+      </ul>
+
+      <a class="app-price-cta"
+         href="https://lucidbit.lemonsqueezy.com/checkout/buy/7439fe9e-37ac-4e0e-9558-2f9429eb4348"
+         target="_blank"
+         rel="noopener">
+        Buy Tesserac
+      </a>
+      <p class="app-price-trust">Secure checkout by Lemon Squeezy, powered by Stripe. Prices in USD.</p>
     </div>
   </section>
 

@@ -132,7 +132,7 @@
 .pk-hero {
   max-width: 900px;
   margin: 0 auto;
-  padding: 120px 32px 60px;
+  padding: 60px 32px 40px;
   text-align: center;
   position: relative;
 }
@@ -140,7 +140,7 @@
 .pk-back-row {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
 }
 
 /* Matches ActiveStat's icon pattern — single <img> with border-radius
@@ -444,7 +444,7 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .pk-hero { padding: 100px 24px 40px; }
+  .pk-hero { padding: 52px 24px 40px; }
   .pk-icon { width: 96px; height: 96px; }
   .pk-video { padding: 0 20px; margin-bottom: 60px; }
   .feature-row { grid-template-columns: 1fr; gap: 40px; padding: 44px 24px; }
@@ -453,7 +453,7 @@
 }
 
 @media (max-width: 640px) {
-  .pk-hero { padding: 90px 20px 32px; }
+  .pk-hero { padding: 44px 20px 28px; }
   .pk-icon { width: 80px; height: 80px; }
   .pk-tagline { font-size: 1.02rem; }
   .pk-subtag { font-size: 1.1rem; }
@@ -465,12 +465,6 @@
 </style>
 </head>
 <body data-reveal-threshold="0.08">
-
-<div class="ambient">
-  <div class="orb o1"></div>
-  <div class="orb o2"></div>
-  <div class="orb o3"></div>
-</div>
 
 <nav id="main-nav">
   <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
@@ -773,6 +767,39 @@
        Questions answered on the page; mirrored in FAQPage
        JSON-LD in <head> so Google can surface answers as rich
        results in search. -->
+  <!-- ── PRICING ── -->
+  <section class="app-pricing reveal">
+    <p class="app-pricing-label">Pricing</p>
+    <h2>One price. Lifetime access.</h2>
+    <p class="lead">One-time payment. No subscription. Get lifetime access to PeekFocus on your Mac.</p>
+
+    <div class="app-price-card">
+      <span class="app-price-eyebrow">One-time purchase</span>
+
+      <div class="app-price-row">
+        <span class="app-price-now">$4.99</span>
+      </div>
+      <p class="app-price-note">No subscription. No account required.</p>
+
+      <ul class="app-price-list">
+        <li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>7-day free trial</li>
+        <li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>One-time payment</li>
+        <li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Lifetime updates included</li>
+        <li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Every feature unlocked from day one</li>
+        <li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Native macOS app (Apple Silicon)</li>
+        <li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Fully offline &amp; private</li>
+      </ul>
+
+      <a class="app-price-cta"
+         href="https://lucidbit.lemonsqueezy.com/checkout/buy/98dba67f-db04-4ff5-877d-9a1dcd053c79"
+         target="_blank"
+         rel="noopener">
+        Buy PeekFocus
+      </a>
+      <p class="app-price-trust">Secure checkout by Lemon Squeezy, powered by Stripe. Prices in USD.</p>
+    </div>
+  </section>
+
   <section class="app-faq-section" aria-label="PeekFocus FAQ">
     <div class="container">
       <h2 class="app-faq-title">FAQ</h2>
