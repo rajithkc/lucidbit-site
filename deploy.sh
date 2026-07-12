@@ -92,6 +92,9 @@ git add -A
 echo -e "${DIM}→ Committing…${RESET}"
 git commit -m "$COMMIT_MSG"
 
+echo -e "${DIM}→ Pulling remote changes (rebase) before push…${RESET}"
+git pull --rebase origin main
+
 echo -e "${DIM}→ Pushing to origin/main…${RESET}"
 git push origin main
 
