@@ -1369,8 +1369,15 @@ html { scroll-padding-top: 100px; }
 
 @media (max-width: 640px) {
   #main-nav.dual-view .nav-view { padding: 0 16px 0 14px; }
-  .nav-product-links { display: none; }
-  .nav-product-name { font-size: 1.4rem; }
+  .nav-product-links { gap: 14px; }
+  .nav-product-links a { font-size: 0.66rem; letter-spacing: 0.04em; }
+  .nav-product-name { font-size: 1.35rem; }
   .nav-product-icon { width: 20px; height: 20px; }
-  .nav-product-cta-mas { display: none; }  /* Buy only on tight screens */
+  .nav-product-brand { gap: 6px; }
+}
+
+@media (max-width: 420px) {
+  .nav-product-name { display: none; }  /* icon-only wordmark on very small screens */
+  .nav-product-links { gap: 12px; }
+  .nav-product-links a { font-size: 0.62rem; }
 }
