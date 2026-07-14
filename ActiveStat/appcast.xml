@@ -36,6 +36,23 @@
                     type="application/octet-stream" />
             </item>
         -->
+		<item>
+            <title>Version 1.5</title>
+		    <pubDate>Tue, 14 Jul 2026 00:45:55 +0000</pubDate>
+	        <sparkle:version>29</sparkle:version>
+            <sparkle:shortVersionString>1.5</sparkle:shortVersionString>
+	        <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+			<description><![CDATA[
+				<h2>What's new in 1.5</h2>
+                <li>Menu width reduced for a more compact, focused layout.</li>
+                <li>Various UI refinements and stability improvements.</li>
+		    ]]></description>
+		    <enclosure
+			   url="https://lucidbit.app/downloads/ActiveStat-1.5.dmg"
+			                sparkle:edSignature="oYFFhrldfGnm9Us3ZBdl9kLgeQHiwopnrlGGxV39N+ABsPoDUlLx+4k2Lbff8k9kl3azGNp57VQB0w90Wx7IBw==" length="4371655"
+            type="application/octet-stream" />
+		</item>
+
         <item>
             <title>Version 1.5</title>
             <pubDate>Sun, 12 Jul 2026 02:02:42 +0000</pubDate>
