@@ -227,7 +227,7 @@
 /* ── VIDEO SECTION ── */
 .dd-video {
   max-width: 1160px;
-  margin: 40px auto 100px;
+  margin: 32px auto 72px;
   padding: 0 48px;
   position: relative;
 }
@@ -277,43 +277,6 @@
   place-items: center;
 }
 
-/* ── FEATURE ROWS (ActiveStat pattern, haze-tinted placeholders) ── */
-.feature-rows { padding: 0; }
-.feature-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 80px;
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 32px 48px;
-  border-top: 1px solid var(--glass-border);
-}
-.feature-row.reverse { direction: rtl; }
-.feature-row.reverse > * { direction: ltr; }
-
-.feature-image {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-.feature-image img {
-  width: 100%;
-  display: block;
-  border-radius: 16px;
-  box-shadow:
-    0 2px 6px rgba(0,0,0,0.08),
-    0 14px 40px rgba(0,0,0,0.15),
-    0 40px 80px rgba(0,0,0,0.12);
-  transition: box-shadow 0.5s ease;
-}
-.feature-image:hover img {
-  box-shadow:
-    0 4px 10px rgba(0,0,0,0.10),
-    0 22px 60px rgba(0,0,0,0.20),
-    0 52px 100px rgba(0,0,0,0.15);
-}
 .feature-image.placeholder {
   aspect-ratio: 16 / 10;
   border-radius: 16px;
@@ -340,47 +303,8 @@
     0 52px 100px rgba(0,0,0,0.15) !important;
 }
 
-.feature-text h2 {
-  font-family: 'Cormorant', serif;
-  font-weight: 300;
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  color: var(--text);
-  margin-bottom: 20px;
-}
-.feature-text p {
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: var(--text-2);
-  line-height: 1.8;
-  max-width: 380px;
-}
 
 /* ── CORE FEATURES GRID ── */
-.dd-core {
-  max-width: 1160px;
-  margin: 100px auto 0;
-  padding: 0 48px;
-}
-.dd-core-label {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--dial);
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.dd-core-label::before {
-  content: '';
-  width: 20px;
-  height: 1px;
-  background: var(--dial);
-  opacity: 0.7;
-}
 
 .dd-core .feat-icon svg { stroke: var(--dial); }
 .dd-core .feat-icon {
@@ -436,7 +360,7 @@
 /* ── PRICING CARD ── */
 .dd-pricing {
   max-width: 1160px;
-  margin: 100px auto 60px;
+  margin: 72px auto 48px;
   padding: 0 48px;
   text-align: center;
 }
@@ -592,26 +516,20 @@
 @media (max-width: 900px) {
   .dd-hero { padding: 52px 24px 40px; }
   .dd-icon { width: 96px; height: 96px; }
-  .dd-video { padding: 0 20px; margin-bottom: 60px; }
+  .dd-video { padding: 0 20px; margin-bottom: 48px; }
   .dd-pills-section { padding: 0 24px; margin-bottom: 72px; }
-  .feature-row { grid-template-columns: 1fr; gap: 40px; padding: 44px 24px; }
-  .feature-row.reverse { direction: ltr; }
-  .dd-core { padding: 0 24px; margin-top: 72px; }
   .dd-pricing { padding: 0 24px; margin: 72px auto 40px; }
 }
 
 @media (max-width: 640px) {
   .dd-hero { padding: 44px 20px 28px; }
   .dd-icon { width: 80px; height: 80px; }
-  .feature-row { padding: 28px 20px; gap: 24px; }
-  .feature-text h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
-  .feature-text p { font-size: 0.95rem; }
   .dd-price-card { padding: 32px 24px; }
   .dd-price-now { font-size: 3.6rem; }
 }
 </style>
 </head>
-<body data-reveal-threshold="0.08">
+<body id="top" data-reveal-threshold="0.08">
 
 <nav id="main-nav" class="dual-view">
   <div class="nav-view nav-view-brand">
@@ -793,8 +711,8 @@
   </section>
 
   <!-- ── CORE FEATURES GRID ── -->
-  <section class="dd-core reveal">
-    <p class="dd-core-label">Core Features</p>
+  <section class="dd-core reveal product-core">
+    <p class="dd-core-label product-core-label">Core Features</p>
 
     <div class="feat-grid">
 

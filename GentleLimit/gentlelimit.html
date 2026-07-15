@@ -251,7 +251,7 @@
    uses aspect-ratio 16:9 with width capped for a balanced hero. */
 .gl-video {
   max-width: 1160px;
-  margin: 40px auto 100px;
+  margin: 32px auto 72px;
   padding: 0 48px;
   position: relative;
 }
@@ -283,69 +283,9 @@
     0 52px 100px rgba(0,0,0,0.15);
 }
 
-/* ── FEATURE ROWS ──
-   Per-row padding (32px top/bottom) sets the rhythm between rows; the
-   site-wide .feature-rows gap is 0, so adjacent rows are separated by
-   the sum of their paddings only (~64px), not paddings + flex gap. */
-.feature-rows { padding: 0; }
 
-.feature-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 80px;
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 32px 48px;
-  border-top: 1px solid var(--glass-border);
-}
 
-.feature-row:last-child {
-  padding-bottom: 20px;
-}
 
-.feature-row.reverse { direction: rtl; }
-.feature-row.reverse > * { direction: ltr; }
-
-.feature-image {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-.feature-image img {
-  width: 100%;
-  display: block;
-  border-radius: 14px;
-  box-shadow:
-    0 2px 6px  rgba(0,0,0,0.08),
-    0 14px 40px rgba(0,0,0,0.15),
-    0 40px 80px rgba(0,0,0,0.12);
-  transition: box-shadow 0.5s ease;
-}
-.feature-image:hover img {
-  box-shadow:
-    0 4px 10px  rgba(0,0,0,0.10),
-    0 22px 60px rgba(0,0,0,0.20),
-    0 52px 100px rgba(0,0,0,0.15);
-}
-
-.feature-text h2 {
-  font-family: 'Cormorant', serif;
-  font-weight: 300;
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  color: var(--text);
-  margin-bottom: 20px;
-}
-.feature-text p {
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: var(--text-2);
-  line-height: 1.8;
-  max-width: 380px;
-}
 
 /* ── CORE FEATURES GRID — re-tint the site-default .feat-card volt
    accent to dailyBlue, scoped to this page only via .gl-core. ── */
@@ -362,17 +302,16 @@
   background: var(--daily-blue-dim);
   border-color: rgba(75, 132, 189, 0.18);
 }
-.gl-core .detail-section-label {
-  color: var(--daily-blue);
+.gl-pricing {
+  margin-top: 72px;
 }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .gl-hero { padding: 52px 24px 40px; }
   .gl-hero-icon { width: 96px; height: 96px; }
-  .gl-video { padding: 0 20px; margin-bottom: 60px; }
-  .feature-row { grid-template-columns: 1fr; gap: 40px; padding: 44px 24px; }
-  .feature-row.reverse { direction: ltr; }
+  .gl-video { padding: 0 20px; margin-bottom: 48px; }
+  .gl-pricing { margin: 72px auto 40px; padding: 0 24px; }
 
   .newsletter-form {
     display: flex;
@@ -387,14 +326,11 @@
 @media (max-width: 640px) {
   .gl-hero { padding: 44px 20px 28px; }
   .gl-hero-icon { width: 80px; height: 80px; border-radius: 19px; }
-  .feature-row { padding: 28px 20px; gap: 24px; }
-  .feature-text h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
-  .feature-text p { font-size: 0.95rem; }
   .gl-video::before { inset: -40px -40px -40px -40px; filter: blur(24px); }
 }
 </style>
 </head>
-<body data-reveal-threshold="0.08">
+<body id="top" data-reveal-threshold="0.08">
 
 <nav id="main-nav" class="dual-view">
   <div class="nav-view nav-view-brand">
@@ -611,9 +547,9 @@
 </section>
 
   <!-- CORE FEATURES (dailyBlue-tinted via .gl-core) -->
-  <section class="detail-body gl-core">
+  <section class="detail-body gl-core product-core">
     <div class="container">
-      <p class="detail-section-label">Core Features</p>
+      <p class="detail-section-label product-core-label">Core Features</p>
       <!-- ── CORE FEATURES — 6 cards, no duplication with feature rows above.
            Floating Widgets, Daily Limit Overlay, and Insights are removed
            here because they're already shown as feature rows. The remaining
@@ -726,7 +662,7 @@
   </section>
 
   <!-- ── PRICING ── -->
-  <section class="app-pricing reveal" id="pricing">
+  <section class="app-pricing reveal gl-pricing" id="pricing">
     <p class="app-pricing-label">Pricing</p>
     <h2>One price. Lifetime access.</h2>
     <p class="lead">One-time payment. No subscription. Get lifetime access to GentleLimit on your Mac.</p>

@@ -271,7 +271,7 @@
 /* ── VIDEO SECTION (plum glow halo) ── */
 .pk-video {
   max-width: 1160px;
-  margin: 40px auto 100px;
+  margin: 32px auto 72px;
   padding: 0 48px;
   position: relative;
 }
@@ -326,45 +326,6 @@
   place-items: center;
 }
 
-/* ── FEATURE ROWS (ActiveStat pattern, plum-themed placeholders) ──
-   Per-row 32px top/bottom padding sets the rhythm; .feature-rows gap is
-   0 site-wide, so adjacent rows are separated by paddings only (~64px). */
-.feature-rows { padding: 0; }
-.feature-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 80px;
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 32px 48px;
-  border-top: 1px solid var(--glass-border);
-}
-.feature-row.reverse { direction: rtl; }
-.feature-row.reverse > * { direction: ltr; }
-
-.feature-image {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-.feature-image img {
-  width: 100%;
-  display: block;
-  border-radius: 16px;
-  box-shadow:
-    0 2px 6px rgba(0,0,0,0.08),
-    0 14px 40px rgba(0,0,0,0.15),
-    0 40px 80px rgba(0,0,0,0.12);
-  transition: box-shadow 0.5s ease;
-}
-.feature-image:hover img {
-  box-shadow:
-    0 4px 10px rgba(0,0,0,0.10),
-    0 22px 60px rgba(0,0,0,0.20),
-    0 52px 100px rgba(0,0,0,0.15);
-}
 .feature-image.placeholder {
   aspect-ratio: 16 / 10;
   border-radius: 16px;
@@ -391,47 +352,8 @@
     0 52px 100px rgba(0,0,0,0.15) !important;
 }
 
-.feature-text h2 {
-  font-family: 'Cormorant', serif;
-  font-weight: 300;
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  color: var(--text);
-  margin-bottom: 20px;
-}
-.feature-text p {
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: var(--text-2);
-  line-height: 1.8;
-  max-width: 380px;
-}
 
 /* ── CORE FEATURES GRID — ActiveStat pattern, tinted with plum ── */
-.pk-core {
-  max-width: 1160px;
-  margin: 100px auto 0;
-  padding: 0 48px;
-}
-.pk-core-label {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--plum);
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.pk-core-label::before {
-  content: '';
-  width: 20px;
-  height: 1px;
-  background: var(--plum);
-  opacity: 0.7;
-}
 
 /* Reuse the site's .feat-grid / .feat-card structure, but scope the plum
    accent using --volt-overrides inside .pk-core. This re-tints the SVG
@@ -446,10 +368,7 @@
 @media (max-width: 900px) {
   .pk-hero { padding: 52px 24px 40px; }
   .pk-icon { width: 96px; height: 96px; }
-  .pk-video { padding: 0 20px; margin-bottom: 60px; }
-  .feature-row { grid-template-columns: 1fr; gap: 40px; padding: 44px 24px; }
-  .feature-row.reverse { direction: ltr; }
-  .pk-core { padding: 0 24px; margin-top: 72px; }
+  .pk-video { padding: 0 20px; margin-bottom: 48px; }
 }
 
 @media (max-width: 640px) {
@@ -457,14 +376,11 @@
   .pk-icon { width: 80px; height: 80px; }
   .pk-tagline { font-size: 1.02rem; }
   .pk-subtag { font-size: 1.1rem; }
-  .feature-row { padding: 28px 20px; gap: 24px; }
-  .feature-text h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
-  .feature-text p { font-size: 0.95rem; }
   .pk-video::before { inset: -40px -40px -40px -40px; filter: blur(24px); }
 }
 </style>
 </head>
-<body data-reveal-threshold="0.08">
+<body id="top" data-reveal-threshold="0.08">
 
 <nav id="main-nav" class="dual-view">
   <div class="nav-view nav-view-brand">
@@ -657,8 +573,8 @@
   </section>
 
   <!-- ── CORE FEATURES GRID ── -->
-  <section class="pk-core reveal">
-    <p class="pk-core-label">Core Features</p>
+  <section class="pk-core reveal product-core">
+    <p class="pk-core-label product-core-label">Core Features</p>
 
     <div class="feat-grid">
 

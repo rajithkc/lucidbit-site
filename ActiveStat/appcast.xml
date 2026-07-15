@@ -44,33 +44,16 @@
 	        <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
 			<description><![CDATA[
 				<h2>What's new in 1.5</h2>
-                <li>Menu width reduced for a more compact, focused layout.</li>
-                <li>Various UI refinements and stability improvements.</li>
+                <ul>
+                    <li>Menu width reduced for a more compact, focused layout.</li>
+                    <li>Various UI refinements and stability improvements.</li>
+                </ul>
 		    ]]></description>
 		    <enclosure
 			   url="https://lucidbit.app/downloads/ActiveStat-1.5.dmg"
 			                sparkle:edSignature="oYFFhrldfGnm9Us3ZBdl9kLgeQHiwopnrlGGxV39N+ABsPoDUlLx+4k2Lbff8k9kl3azGNp57VQB0w90Wx7IBw==" length="4371655"
             type="application/octet-stream" />
 		</item>
-
-        <item>
-            <title>Version 1.5</title>
-            <pubDate>Sun, 12 Jul 2026 02:02:42 +0000</pubDate>
-            <sparkle:version>28</sparkle:version>
-            <sparkle:shortVersionString>1.5</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[
-                <h2>What's new in 1.5</h2>
-                <ul>
-                    <li>Menu width reduced for a more compact, focused layout.</li>
-                    <li>Various UI refinements and stability improvements.</li>
-                </ul>
-            ]]></description>
-            <enclosure
-                url="https://lucidbit.app/downloads/ActiveStat-1.5.dmg"
-                sparkle:edSignature="pBzHjaLtn1fOr3zjSc37VfOILIcKathbX7TOHCV3Sl8yhXpuigOV6jGxJmYaezEYsesgfVqti7QNgNII29TUDw==" length="4369836"
-                type="application/octet-stream" />
-        </item>
         <item>
             <title>Version 1.4.2</title>
             <pubDate>Sun, 28 Jun 2026 15:57:05 +0000</pubDate>

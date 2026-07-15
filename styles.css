@@ -404,7 +404,7 @@ nav.scrolled {
   background-image: linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px);
   background-size: 48px 48px;
 }
-.detail-body { padding: 72px 0 96px; }
+.detail-body { padding: 0; }
 .detail-section-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-3); margin-bottom: 48px; display: flex; align-items: center; gap: 12px; }
 .detail-section-label::after { content: ''; flex: 1; height: 1px; background: var(--glass-border); }
 .feat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-bottom: 80px; }
@@ -468,6 +468,11 @@ footer { border-top: 1px solid var(--glass-border); padding: 44px 0; }
 /* ═══════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════ */
+@media (max-width: 1200px) {
+/*  .hero-eyebrow { gap: 0; } */
+/*  .hero-eyebrow::before { display: none; } */
+}
+
 @media (max-width: 900px) {
   nav { padding: 0 22px 0 20px; height: 56px; top: 10px; width: calc(100% - 24px); }
   .nav-logo { font-size: 1.7rem; }
@@ -648,61 +653,160 @@ footer { border-top: 1px solid var(--glass-border); padding: 44px 0; }
   box-shadow: 0 20px 50px rgba(0,0,0,0.4);
 }
 
-/* ── FEATURE ROWS ──
-   Each app page re-declares `.feature-row` locally (with its own padding
-   and border-top divider), so the per-row vertical rhythm comes from that
-   padding alone. Site-wide we just provide the section bookends.
-   Setting gap:0 here is intentional — adding a flex gap on top of each
-   row's padding caused the 180+px visual gap between rows that the
-   "lots of empty space" complaint was about. */
+/* ── PRODUCT FEATURE ROWS ─────────────────────────────────────
+   Shared rhythm for every app page. The first feature flows directly
+   from the video; subsequent rows get a soft, centered separator so
+   the page has structure without restoring a hard line under the video. */
+:root {
+  --feature-row-gap: 96px;
+  --feature-row-gap-mobile: 60px;
+  --feature-media-text-gap: 64px;
+  --feature-media-text-gap-mobile: 32px;
+  --feature-row-x: 48px;
+}
 .feature-rows {
   max-width: 1200px;
-  margin: 64px auto;
-  padding: 0 40px;
+  margin: 48px auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: var(--feature-row-gap);
 }
-
 .feature-row {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 64px;
+  gap: var(--feature-media-text-gap);
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 var(--feature-row-x);
 }
-
-.feature-row.reverse {
-  direction: rtl;
+.feature-row + .feature-row::before {
+  content: '';
+  position: absolute;
+  top: calc(var(--feature-row-gap) / -2);
+  left: var(--feature-row-x);
+  right: var(--feature-row-x);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.13), transparent);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.65);
 }
-
-.feature-row.reverse .feature-text {
-  direction: ltr;
+.feature-row.reverse { direction: rtl; }
+.feature-row.reverse > *,
+.feature-row.reverse .feature-text { direction: ltr; }
+.feature-image {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
-
-.feature-image img {
+.feature-image img,
+.feature-image video {
   width: 100%;
-  border-radius: 28px;
-  box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+  display: block;
+  border-radius: 16px;
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.08),
+    0 14px 40px rgba(0,0,0,0.15),
+    0 40px 80px rgba(0,0,0,0.12);
+  transition: box-shadow 0.5s ease;
 }
-
+.feature-image:hover img,
+.feature-image:hover video {
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.10),
+    0 22px 60px rgba(0,0,0,0.20),
+    0 52px 100px rgba(0,0,0,0.15);
+}
+.feature-image.narrow img {
+  max-width: 360px;
+  margin: 0 auto;
+}
 .feature-text h2 {
-  font-size: 2.4rem;
+  font-family: 'Cormorant', serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text);
   margin-bottom: 20px;
 }
-
 .feature-text p {
-  opacity: 0.8;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-2);
+  line-height: 1.8;
+  max-width: 380px;
 }
-
 @media (max-width: 900px) {
-  .feature-rows { margin: 40px auto; padding: 0 24px; }
+  .feature-rows {
+    margin: 32px auto;
+    gap: var(--feature-row-gap-mobile);
+  }
+  .feature-row {
+    grid-template-columns: 1fr;
+    gap: var(--feature-media-text-gap-mobile);
+    padding: 0 24px;
+  }
+  .feature-row + .feature-row::before {
+    top: calc(var(--feature-row-gap-mobile) / -2);
+    left: 24px;
+    right: 24px;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.18), transparent);
+  }
+  .feature-row.reverse { direction: ltr; }
+  .feature-image { margin-bottom: 4px; }
+}
+@media (max-width: 640px) {
+  .feature-row { padding: 0 20px; gap: 22px; }
+  .feature-row + .feature-row::before { left: 20px; right: 20px; }
+  .feature-image { margin-bottom: 6px; }
+  .feature-text h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .feature-text p { font-size: 0.95rem; }
+  .feature-image.narrow img { max-width: 280px; }
 }
 
 .glass {
   perspective: 1000px;
   transition: transform 0.15s ease;
+}
+
+
+/* ── PRODUCT CORE SECTIONS ────────────────────────────────────
+   Shared layout for the Core Features grids. App pages set their
+   accent through --page-accent and keep icon tint overrides local. */
+.product-core {
+  max-width: 1160px;
+  margin: 72px auto 0;
+  padding: 0 48px;
+}
+.product-core .container { padding: 0; }
+.product-core-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--page-accent, var(--volt));
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-core-label::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--page-accent, var(--volt));
+  opacity: 0.7;
+}
+.product-core-label::after { display: none; }
+.product-core .feat-grid { margin-bottom: 0; }
+@media (max-width: 900px) {
+  .product-core { padding: 0 24px; margin-top: 72px; }
+}
+@media (max-width: 640px) {
+  .product-core { padding: 0 20px; }
 }
 
 /* ── APP FAQ ──
@@ -979,7 +1083,7 @@ footer { border-top: 1px solid var(--glass-border); padding: 44px 0; }
    ──────────────────────────────────────────────────────────── */
 .app-pricing {
   max-width: 1160px;
-  margin: 100px auto 60px;
+  margin: 60px auto;
   padding: 0 48px;
   text-align: center;
 }
