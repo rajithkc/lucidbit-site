@@ -37,24 +37,24 @@
 .changelog-wrap {
   max-width: 720px;
   margin: 0 auto;
-  padding: 80px 48px 140px;
+  padding: 40px 48px 100px;
 }
-.changelog-hero { margin-bottom: 80px; }
-.changelog-app-label {
-  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.16em;
-  text-transform: uppercase; color: var(--plum);
-  display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
-}
-.changelog-app-label::before {
-  content: ''; width: 20px; height: 1px; background: var(--plum); opacity: 0.7;
-}
+.changelog-hero { margin-bottom: 48px; }
 .changelog-title {
   font-family: 'Cormorant', serif; font-weight: 300;
   font-size: clamp(2.8rem, 6vw, 5rem); letter-spacing: -0.03em;
   line-height: 1; color: var(--text); margin-bottom: 16px;
 }
 .changelog-subtitle { font-size: 0.95rem; color: var(--text-3); font-weight: 400; }
-.release { padding: 52px 0; border-top: 1px solid var(--glass-border); }
+.release { padding: 52px 0; position: relative; }
+.release::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+}
+.release:first-of-type::before { display: none; }
 .release-header {
   display: flex; align-items: baseline; gap: 16px;
   margin-bottom: 28px; flex-wrap: wrap;
@@ -93,10 +93,29 @@
 }
 .change-list li > span { flex: 1; }
 @media (max-width: 640px) {
-  .changelog-wrap { padding: 48px 20px 100px; }
-  .changelog-hero { margin-bottom: 56px; }
+  .changelog-wrap { padding: 28px 20px 72px; }
+  .changelog-hero { margin-bottom: 36px; }
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "PeekFocus release notes and changelog",
+  "description": "The version history of PeekFocus — a Mac app that dims background windows so the app you're in stays in focus.",
+  "image": "https://lucidbit.app/Images/og/og-peekfocus.png",
+  "author": { "@type": "Organization", "name": "LucidBit", "url": "https://lucidbit.app/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "LucidBit",
+    "url": "https://lucidbit.app/",
+    "logo": { "@type": "ImageObject", "url": "https://lucidbit.app/favicon.png" }
+  },
+  "datePublished": "2025-10-01",
+  "dateModified": "2026-07-15",
+  "mainEntityOfPage": "https://lucidbit.app/PeekFocus/changelog.html"
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -125,6 +144,7 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <nav id="main-nav">
   <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
   <ul class="nav-links">
@@ -136,35 +156,35 @@
       <div class="nav-dropdown-panel" role="menu">
 
         <a class="nav-dropdown-item" href="../DisplayDial/displaydial.html" role="menuitem">
-          <img src="../Images/DisplayDial/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <img src="../Images/DisplayDial/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
           <span class="nav-dropdown-text">
             <span class="nav-dropdown-name">DisplayDial</span>
             <span class="nav-dropdown-sub">Every display. One dial.</span>
           </span>
         </a>
         <a class="nav-dropdown-item" href="../Tesserac/tesserac.html" role="menuitem">
-          <img src="../Images/Tesserac/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <img src="../Images/Tesserac/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
           <span class="nav-dropdown-text">
             <span class="nav-dropdown-name">Tesserac</span>
             <span class="nav-dropdown-sub">App switching, reimagined.</span>
           </span>
         </a>
         <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
-          <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
           <span class="nav-dropdown-text">
             <span class="nav-dropdown-name">PeekFocus</span>
             <span class="nav-dropdown-sub">The calm between windows</span>
           </span>
         </a>
         <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
-          <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
           <span class="nav-dropdown-text">
             <span class="nav-dropdown-name">ActiveStat</span>
             <span class="nav-dropdown-sub">Performance. Simplified.</span>
           </span>
         </a>
         <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
-          <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+          <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
           <span class="nav-dropdown-text">
             <span class="nav-dropdown-name">GentleLimit</span>
             <span class="nav-dropdown-sub">Mindful screen time habits</span>
@@ -176,7 +196,7 @@
     <li><a href="../privacy.html">Privacy</a></li>
   </ul>
 </nav>
-<div class="page-wrap">
+<div class="page-wrap" id="main">
   <div class="detail-nav-space"></div>
   <div class="changelog-wrap">
     <div class="changelog-hero">
@@ -184,7 +204,6 @@
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         PeekFocus
       </a>
-      <p class="changelog-app-label">PeekFocus</p>
       <h1 class="changelog-title">Changelog</h1>
       <p class="changelog-subtitle">Every update documented.</p>
     </div>

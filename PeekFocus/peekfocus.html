@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PeekFocus — Make your screen instantly presentable | LucidBit</title>
-<meta name="description" content="PeekFocus makes your screen instantly presentable. One keystroke removes visual noise before screen sharing or presentations — blur, dim, or replace the background. Menu bar app for macOS.">
+<meta name="description" content="PeekFocus makes your Mac screen presentable in one keystroke. Blur, dim, or replace background windows before presentations. Native menu bar app.">
 <meta name="keywords" content="Mac focus app, macOS focus mode, window dimming Mac, distraction blocker Mac, menu bar focus app, ambient desktop Mac, Mac concentration app, blur background Mac, focus mode macOS">
 <link rel="canonical" href="https://lucidbit.app/PeekFocus/peekfocus.html">
 
@@ -143,7 +143,7 @@
   margin-bottom: 32px;
 }
 
-/* Matches ActiveStat's icon pattern — single <img> with border-radius
+/* Matches ActiveStat's icon pattern — single <img loading="lazy"> with border-radius
    applied directly. Avoids the brief unmasked flash that the previous
    div+SVG-mask approach caused, since the mask data URI was decoding
    AFTER the image first painted. */
@@ -381,7 +381,7 @@
 </style>
 </head>
 <body id="top" data-reveal-threshold="0.08">
-
+<a class="skip-link" href="#main">Skip to main content</a>
 <nav id="main-nav" class="dual-view">
   <div class="nav-view nav-view-brand">
     <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
@@ -394,35 +394,35 @@
         <div class="nav-dropdown-panel" role="menu">
 
           <a class="nav-dropdown-item" href="../DisplayDial/displaydial.html" role="menuitem">
-            <img src="../Images/DisplayDial/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <img src="../Images/DisplayDial/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
             <span class="nav-dropdown-text">
               <span class="nav-dropdown-name">DisplayDial</span>
               <span class="nav-dropdown-sub">Every display. One dial.</span>
             </span>
           </a>
           <a class="nav-dropdown-item" href="../Tesserac/tesserac.html" role="menuitem">
-            <img src="../Images/Tesserac/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <img src="../Images/Tesserac/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
             <span class="nav-dropdown-text">
               <span class="nav-dropdown-name">Tesserac</span>
               <span class="nav-dropdown-sub">App switching, reimagined.</span>
             </span>
           </a>
           <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
-            <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
             <span class="nav-dropdown-text">
               <span class="nav-dropdown-name">PeekFocus</span>
               <span class="nav-dropdown-sub">Instantly presentable, one keystroke</span>
             </span>
           </a>
           <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
-            <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
             <span class="nav-dropdown-text">
               <span class="nav-dropdown-name">ActiveStat</span>
               <span class="nav-dropdown-sub">Performance. Simplified.</span>
             </span>
           </a>
           <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
-            <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon">
+            <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
             <span class="nav-dropdown-text">
               <span class="nav-dropdown-name">GentleLimit</span>
               <span class="nav-dropdown-sub">Mindful screen time habits</span>
@@ -437,7 +437,7 @@
 
   <div class="nav-view nav-view-product">
     <a class="nav-product-brand" href="#top">
-      <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-product-icon">
+      <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-product-icon" loading="lazy">
       <span class="nav-product-name">PeekFocus</span>
     </a>
     <ul class="nav-product-links">
@@ -448,7 +448,7 @@
   </div>
 </nav>
 
-<div class="page-wrap">
+<div class="page-wrap" id="main">
 
   <div class="detail-nav-space"></div>
 
@@ -532,7 +532,7 @@
 
     <div class="feature-row reveal">
       <div class="feature-image" data-tilt data-tilt-strength="5">
-        <img src="../Images/PeekFocus/ThreeModes.webp" alt="PeekFocus in Focus mode — only the active Safari window stays sharp, every window behind it is softly blurred">
+        <img src="../Images/PeekFocus/ThreeModes.webp" alt="PeekFocus in Focus mode — only the active Safari window stays sharp, every window behind it is softly blurred" loading="lazy">
       </div>
       <div class="feature-text">
         <h2>Ready to share in one keystroke.</h2>
@@ -542,7 +542,7 @@
 
     <div class="feature-row reverse reveal">
       <div class="feature-image" data-tilt data-tilt-strength="5">
-        <img src="../Images/PeekFocus/ambience.webp" alt="PeekFocus Ambience mode replacing the desktop with a calm wallpaper behind the active windows">
+        <img src="../Images/PeekFocus/ambience.webp" alt="PeekFocus Ambience mode replacing the desktop with a calm wallpaper behind the active windows" loading="lazy">
       </div>
       <div class="feature-text">
         <h2>Calm without hiding your workspace.</h2>
@@ -552,7 +552,7 @@
 
     <div class="feature-row reveal">
       <div class="feature-image" data-tilt data-tilt-strength="5">
-        <img src="../Images/PeekFocus/Surfaces.webp" alt="PeekFocus surface controls — choose Blur, Dim with Subtle / Balanced / Strong intensity, or Wallpaper">
+        <img src="../Images/PeekFocus/Surfaces.webp" alt="PeekFocus surface controls — choose Blur, Dim with Subtle / Balanced / Strong intensity, or Wallpaper" loading="lazy">
       </div>
       <div class="feature-text">
         <h2>Beautiful Surfaces.</h2>
@@ -562,7 +562,7 @@
 
     <div class="feature-row reverse reveal">
       <div class="feature-image" data-tilt data-tilt-strength="5">
-        <img src="../Images/PeekFocus/MenuBarWidget.webp" alt="PeekFocus Settings panel — General, Shortcuts, Lifetime license — alongside two desktop widget variants for quick mode switching">
+        <img src="../Images/PeekFocus/MenuBarWidget.webp" alt="PeekFocus Settings panel — General, Shortcuts, Lifetime license — alongside two desktop widget variants for quick mode switching" loading="lazy">
       </div>
       <div class="feature-text">
         <h2>Always ready. Never in the way.</h2>

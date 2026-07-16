@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Journal — Notes on Mac software, one at a time | LucidBit</title>
+<meta name="description" content="LucidBit's journal — longform notes on Mac software, quiet design, and the craft of building menu-bar apps that stay out of your way.">
+<link rel="canonical" href="https://lucidbit.app/Journal/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LucidBit">
+<meta property="og:title" content="LucidBit Journal">
+<meta property="og:description" content="Notes on Mac software, quiet design, and the craft of building apps that stay out of your way.">
+<meta property="og:url" content="https://lucidbit.app/Journal/">
+<meta property="og:image" content="https://lucidbit.app/Images/og/og-lucidbit.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#7851A9">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "LucidBit Journal",
+  "url": "https://lucidbit.app/Journal/",
+  "description": "Notes on Mac software, quiet design, and the craft of building menu-bar apps that stay out of your way.",
+  "publisher": { "@type": "Organization", "name": "LucidBit", "url": "https://lucidbit.app/" }
+}
+</script>
+
+<style>
+.journal-wrap { max-width: 780px; margin: 0 auto; padding: 40px 48px 100px; }
+.journal-hero { margin-bottom: 56px; }
+.journal-title {
+  font-family: 'Cormorant', serif; font-weight: 300;
+  font-size: clamp(2.8rem, 6vw, 5rem); letter-spacing: -0.03em;
+  line-height: 1; color: var(--text); margin-bottom: 16px;
+}
+.journal-subtitle { font-size: 0.95rem; color: var(--text-3); font-weight: 400; }
+
+.post-card {
+  padding: 40px 0; position: relative;
+  text-decoration: none; display: block;
+  transition: opacity 0.25s ease;
+}
+.post-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+}
+.post-card:first-of-type::before { display: none; }
+.post-card:hover { opacity: 0.7; }
+
+.post-meta {
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-3);
+  margin-bottom: 12px;
+}
+.post-title {
+  font-family: 'Cormorant', serif; font-weight: 400;
+  font-size: clamp(1.6rem, 3vw, 2.2rem); letter-spacing: -0.02em;
+  line-height: 1.15; color: var(--text); margin-bottom: 12px;
+}
+.post-excerpt {
+  font-size: 1rem; font-weight: 400; color: var(--text-2);
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .journal-wrap { padding: 28px 20px 72px; }
+  .journal-hero { margin-bottom: 40px; }
+  .post-card { padding: 32px 0; }
+}
+</style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<nav id="main-nav">
+  <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        Apps
+        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-panel" role="menu">
+        <a class="nav-dropdown-item" href="../DisplayDial/displaydial.html" role="menuitem">
+          <img src="../Images/DisplayDial/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+          <span class="nav-dropdown-text"><span class="nav-dropdown-name">DisplayDial</span><span class="nav-dropdown-sub">Every display. One dial.</span></span>
+        </a>
+        <a class="nav-dropdown-item" href="../Tesserac/tesserac.html" role="menuitem">
+          <img src="../Images/Tesserac/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+          <span class="nav-dropdown-text"><span class="nav-dropdown-name">Tesserac</span><span class="nav-dropdown-sub">App switching, reimagined.</span></span>
+        </a>
+        <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
+          <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+          <span class="nav-dropdown-text"><span class="nav-dropdown-name">PeekFocus</span><span class="nav-dropdown-sub">The calm between windows</span></span>
+        </a>
+        <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
+          <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+          <span class="nav-dropdown-text"><span class="nav-dropdown-name">ActiveStat</span><span class="nav-dropdown-sub">Performance. Simplified.</span></span>
+        </a>
+        <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
+          <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+          <span class="nav-dropdown-text"><span class="nav-dropdown-name">GentleLimit</span><span class="nav-dropdown-sub">Mindful screen time habits</span></span>
+        </a>
+      </div>
+    </li>
+    <li><a href="../Journal/">Journal</a></li>
+    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+    <li><a href="../privacy.html">Privacy</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap" id="main">
+  <div class="detail-nav-space"></div>
+  <div class="journal-wrap">
+    <div class="journal-hero">
+      <h1 class="journal-title">Journal</h1>
+      <p class="journal-subtitle">Notes on Mac software, quiet design, and the craft of menu-bar apps that stay out of your way.</p>
+    </div>
+
+    <a class="post-card" href="how-to-control-external-monitor-brightness-mac.html">
+      <p class="post-meta">14 Jul 2026 · 8 min read</p>
+      <h2 class="post-title">How to control external monitor brightness on Mac (2026 guide)</h2>
+      <p class="post-excerpt">macOS won't dim your external display natively — Apple only wires brightness sliders to internal panels. Here's what actually works: DDC/CI, gamma dimmers, and the trade-offs between each approach.</p>
+    </a>
+
+    <a class="post-card" href="cmd-tab-alternatives-mac.html">
+      <p class="post-meta">10 Jul 2026 · 7 min read</p>
+      <h2 class="post-title">The best Cmd+Tab alternatives for Mac — and why linear switching is broken</h2>
+      <p class="post-excerpt">Cmd+Tab has been the same since 1984. It's a flat strip that forces linear scanning. We tried the main alternatives — AltTab, Contexts, Witch, Raycast — and mapped the trade-offs.</p>
+    </a>
+
+    <a class="post-card" href="mac-menu-bar-system-monitor-guide.html">
+      <p class="post-meta">5 Jul 2026 · 9 min read</p>
+      <h2 class="post-title">Menu bar system monitors on Mac: what to look for in 2026</h2>
+      <p class="post-excerpt">iStat Menus set the standard fifteen years ago. What should a menu-bar monitor do today? A framework for evaluating them, plus how the main options stack up on Apple Silicon.</p>
+    </a>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-wordmark" href="../index.html">Lucid<span class="bit">Bit</span></a>
+        <div class="footer-links">
+          <a href="../Journal/">Journal</a>
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+        </div>
+        <span class="footer-copy">&#169; 2026 LucidBit</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="../shared.js"></script>
+</body>
+</html>
