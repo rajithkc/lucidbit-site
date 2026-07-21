@@ -1512,3 +1512,48 @@ a:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* ── FROM-THE-JOURNAL cross-link (portable, uses --page-accent) ── */
+.from-journal { padding: 80px 24px 40px; }
+.from-journal-inner { max-width: 780px; margin: 0 auto; }
+.from-journal-label {
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text-3);
+  text-align: center; margin-bottom: 40px;
+}
+.from-journal-grid {
+  display: grid; grid-template-columns: 1fr; gap: 0;
+}
+.from-journal-item {
+  display: block; text-decoration: none;
+  padding: 28px 0; position: relative;
+  transition: opacity 0.25s ease;
+}
+.from-journal-item + .from-journal-item::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+}
+.from-journal-item:hover { opacity: 0.7; }
+.from-journal-item-title {
+  font-family: 'Cormorant', serif; font-weight: 400;
+  font-size: 1.35rem; letter-spacing: -0.01em; line-height: 1.25;
+  color: var(--text); margin-bottom: 6px;
+}
+.from-journal-item-excerpt {
+  font-size: 0.9rem; color: var(--text-2); line-height: 1.6; font-weight: 400;
+}
+.from-journal-more {
+  text-align: center; margin-top: 32px;
+}
+.from-journal-more a {
+  font-size: 0.85rem; font-weight: 400; letter-spacing: 0.02em;
+  color: var(--page-accent, var(--volt)); text-decoration: none;
+  border-bottom: 1px solid color-mix(in oklab, var(--page-accent, var(--volt)) 40%, transparent);
+  padding-bottom: 2px; transition: opacity 0.2s;
+}
+.from-journal-more a:hover { opacity: 0.7; }
+@media (max-width: 640px) {
+  .from-journal { padding: 56px 20px 24px; }
+  .from-journal-label { margin-bottom: 28px; }
+}

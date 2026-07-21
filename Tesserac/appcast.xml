@@ -136,5 +136,26 @@
 		        length="4517263"
 		        type="application/octet-stream" />
 		</item>
+		<item>
+		    <title>Version 1.4</title>
+		    <pubDate>Tue, 21 Jul 2026 13:43:28 +0000</pubDate>
+		    <sparkle:version>10</sparkle:version>
+		    <sparkle:shortVersionString>1.4</sparkle:shortVersionString>
+		    <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+		    <description><![CDATA[
+		        <h2>What's new in 1.4</h2>
+		        <ul>
+		            <li>Fixed stale apps remaining in the switcher after being closed.</li>
+		            <li>Fixed Grid view appearing only in the center of the screen instead of following the cursor.</li>
+		            <li>New tile style start position picker supports all 12 clock positions.</li>
+		            <li>Various UI refinements and stability improvements.</li>
+		        </ul>
+		    ]]></description>
+		    <enclosure
+		        url="https://lucidbit.app/downloads/Tesserac-1.4.dmg"
+		        sparkle:edSignature="G3RpTjUDaCAvUT4hkPranV8jksvvwXG6EcNsR8zrGZU6IHtGR3RcaUgfnPezWjpqQXr/asU8xeCsCoo9R8a0CQ=="
+		        length="4599040"
+		        type="application/octet-stream" />
+		</item>
     </channel>
 </rss>

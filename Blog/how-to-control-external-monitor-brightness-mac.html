@@ -7,13 +7,13 @@
 
 <title>How to control external monitor brightness on Mac (2026 guide) | LucidBit</title>
 <meta name="description" content="macOS won't dim external displays natively. Here's what actually works in 2026 — DDC/CI, gamma dimmers, and the trade-offs between each.">
-<link rel="canonical" href="https://lucidbit.app/Journal/how-to-control-external-monitor-brightness-mac.html">
+<link rel="canonical" href="https://lucidbit.app/Blog/how-to-control-external-monitor-brightness-mac.html">
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="LucidBit">
 <meta property="og:title" content="How to control external monitor brightness on Mac (2026 guide)">
 <meta property="og:description" content="macOS won't dim external displays natively. Here's what actually works in 2026 — DDC/CI, gamma dimmers, and the trade-offs.">
-<meta property="og:url" content="https://lucidbit.app/Journal/how-to-control-external-monitor-brightness-mac.html">
+<meta property="og:url" content="https://lucidbit.app/Blog/how-to-control-external-monitor-brightness-mac.html">
 <meta property="og:image" content="https://lucidbit.app/Images/DisplayDial/screenshots/hero.webp">
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -43,7 +43,7 @@
   },
   "datePublished": "2026-07-14",
   "dateModified": "2026-07-14",
-  "mainEntityOfPage": "https://lucidbit.app/Journal/how-to-control-external-monitor-brightness-mac.html"
+  "mainEntityOfPage": "https://lucidbit.app/Blog/how-to-control-external-monitor-brightness-mac.html"
 }
 </script>
 <script type="application/ld+json">
@@ -52,8 +52,8 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lucidbit.app/" },
-    { "@type": "ListItem", "position": 2, "name": "Journal", "item": "https://lucidbit.app/Journal/" },
-    { "@type": "ListItem", "position": 3, "name": "How to control external monitor brightness on Mac", "item": "https://lucidbit.app/Journal/how-to-control-external-monitor-brightness-mac.html" }
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://lucidbit.app/Blog/" },
+    { "@type": "ListItem", "position": 3, "name": "How to control external monitor brightness on Mac", "item": "https://lucidbit.app/Blog/how-to-control-external-monitor-brightness-mac.html" }
   ]
 }
 </script>
@@ -165,9 +165,9 @@
         </a>
       </div>
     </li>
-    <li><a href="../Journal/">Journal</a></li>
-    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
     <li><a href="../privacy.html">Privacy</a></li>
+    <li><a href="../Blog/index.html">Blog</a></li>
+    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
   </ul>
 </nav>
 
@@ -175,7 +175,7 @@
   <div class="detail-nav-space"></div>
   <article class="article-wrap">
     <header class="article-hero">
-      <p class="article-crumbs"><a href="../Journal/">Journal</a> · Displays</p>
+      <p class="article-crumbs"><a href="../Blog/index.html">Blog</a> · Displays</p>
       <h1 class="article-title">How to control external monitor brightness on Mac (2026 guide)</h1>
       <p class="article-meta">14 Jul 2026 · 8 min read</p>
     </header>
@@ -210,7 +210,7 @@
       </ul>
 
       <div class="article-callout">
-        <p><strong>The shortcut:</strong> <a href="../DisplayDial/displaydial.html">DisplayDial</a> is a menu-bar app I built that handles DDC/CI for every attached display, with one slider each — brightness, contrast, colour temperature, volume. It lives in the menu bar, uses the same brightness keys macOS ignores, and syncs multiple monitors together if you want them to move as one. It's the reason this post exists — I got tired of fighting this problem on other people's machines.</p>
+        <p><strong>The shortcut:</strong> <a href="../DisplayDial/displaydial.html">DisplayDial</a> is a menu-bar app I built that handles DDC/CI for every attached display. Three sliders per external display — brightness, contrast, volume — plus resolution, refresh rate, rotation, and input control folded into the same card. It uses the brightness keys macOS ignores on third-party displays, and Sync Displays makes one slider move all your monitors together when you want them locked. Extended Dimming takes over with a software layer if you need to go darker than the panel's hardware minimum. Presets, schedules, and Follow the Sun handle the "night vs work vs movie" case without you touching a slider.</p>
       </div>
 
       <h2>Method 2: Gamma dimming (the software fake)</h2>
@@ -247,7 +247,7 @@
 
       <p>If DDC/CI fails, check the physical connection — swap cables, bypass the hub, try a different port on the Mac. Nine times out of ten, that fixes it. If it still doesn't work, fall back to gamma dimming.</p>
 
-      <p>And if you'd rather not think about any of this: <a href="../DisplayDial/displaydial.html">DisplayDial</a> handles the plumbing, gives you one slider per display, syncs multi-monitor setups, and gets out of the way. It's on the App Store and available direct.</p>
+      <p>And if you'd rather not think about any of this: <a href="../DisplayDial/displaydial.html">DisplayDial</a> handles the DDC plumbing, gives you brightness/contrast/volume per display in one card, syncs multi-monitor setups, and can follow the sun so you barely touch a slider. Extended Dimming keeps working when the hardware bottoms out. It's on the App Store and available direct.</p>
 
       <div class="related-block">
         <p class="related-title">Related</p>
@@ -264,7 +264,7 @@
       <div class="footer-inner">
         <a class="footer-wordmark" href="../index.html">Lucid<span class="bit">Bit</span></a>
         <div class="footer-links">
-          <a href="../Journal/">Journal</a>
+          <a href="../Blog/index.html">Blog</a>
           <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
           <a href="../privacy.html">Privacy</a>
           <a href="../terms.html">Terms</a>
