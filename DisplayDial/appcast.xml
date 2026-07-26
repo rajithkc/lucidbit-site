@@ -38,26 +38,13 @@
             </item>
         -->
 
-        <item>
-            <title>Version 1.2</title>
-            <pubDate>Sun, 26 Jul 2026 14:59:18 +0000</pubDate>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[
-                <h2>What's new in 1.2</h2>
-                <ul>
-                    <li>Added an <strong>Auto</strong> badge to the built-in display — see whether macOS auto-brightness is running, and switch it off with a click when you want your own brightness to stay put.</li>
-                    <li>Fixed <strong>Extended Dimming</strong> keeping a warm cast after Night Shift switched off.</li>
-                    <li>Various UI refinements and stability improvements.</li>
-                </ul>
-            ]]></description>
-            <enclosure
-                url="https://lucidbit.app/downloads/DisplayDial-1.2.dmg"
-                sparkle:edSignature="IWjpCtXQTPgpKTI9/tjo7DWYXthFOOWXNry5sSM1wbH30V5YfWEhUZnBWBgIiyOtAxHsfMCdYUeYjT/O1f2jCg=="
-                length="7890337"
-                type="application/octet-stream" />
-        </item>
+        <!--
+            1.2 build 4 was pulled: a duplicate width constraint at the
+            MenuBarExtra scene root threw inside
+            NSHostingView.updateAnimatedWindowSize() whenever the window
+            animated to a new size (dismissing the activation card), aborting
+            the app on macOS 26.1. Re-released as 1.2 build 5.
+        -->
 
         <item>
             <title>Version 1.1</title>
