@@ -61,7 +61,7 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "DisplayDial",
-  "operatingSystem": "macOS 14.0 or later",
+  "operatingSystem": "macOS 14.0 or later, Apple Silicon Mac required",
   "applicationCategory": "UtilitiesApplication",
   "applicationSubCategory": "Display",
   "softwareVersion": "1.0",
@@ -93,7 +93,7 @@
     { "@type": "Question", "name": "Does DisplayDial really change the monitor's hardware brightness?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. On supported monitors DisplayDial speaks DDC/CI — the same protocol the buttons on the monitor use — so the backlight itself changes, not a software overlay. Displays that don't support DDC fall back to a high-quality gamma dimmer automatically." } },
     { "@type": "Question", "name": "What is Follow the sun?", "acceptedAnswer": { "@type": "Answer", "text": "A built-in schedule that moves brightness along the solar curve: dimmer at sunrise, brightest at solar noon, easing back down by sunset, holding your night level after dark. You choose the night and day anchors; the curve does the rest. Any manual adjustment pauses it until the next sunrise." } },
     { "@type": "Question", "name": "Will DisplayDial work with multiple monitors?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — every connected display gets its own card with independent controls, and you can designate one display as the sync leader so the others follow its brightness." } },
-    { "@type": "Question", "name": "Is DisplayDial Apple Silicon native?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — native arm64 build. Runs on macOS 14 (Sonoma) or later." } },
+    { "@type": "Question", "name": "Is DisplayDial Apple Silicon native?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — native arm64 build, and an Apple Silicon Mac is required. Monitor control over DDC/CI uses the Apple Silicon display path, so external monitor brightness, contrast and volume are not available on Intel Macs. Runs on macOS 14 (Sonoma) or later." } },
     { "@type": "Question", "name": "Is DisplayDial a subscription?", "acceptedAnswer": { "@type": "Answer", "text": "No. $6.99 once, with a 7-day free trial. One purchase, all future updates." } }
   ]
 }
@@ -871,7 +871,7 @@
         <li>One-time payment</li>
         <li>Lifetime updates included</li>
         <li>Every feature unlocked from day one</li>
-        <li>Native macOS app (Apple Silicon)</li>
+        <li>Native macOS app — Apple Silicon required</li>
         <li>Fully offline &amp; private</li>
       </ul>
 
@@ -912,7 +912,7 @@
         </details>
         <details>
           <summary>Is it Apple Silicon native?</summary>
-          <p>Yes — native arm64. No Rosetta, no background services, no login items beyond the menu bar icon. Runs on macOS 14 (Sonoma) or later.</p>
+          <p>Yes — native arm64, and an Apple Silicon Mac is required. External monitor control over DDC/CI uses the Apple Silicon display path, so brightness, contrast and volume for external monitors are not available on Intel Macs. No Rosetta, no background services, no login items beyond the menu bar icon. Runs on macOS 14 (Sonoma) or later.</p>
         </details>
         <details>
           <summary>Is it a subscription?</summary>
