@@ -47,6 +47,27 @@
         -->
 
         <item>
+            <title>Version 1.2</title>
+            <pubDate>Sun, 26 Jul 2026 15:26:37 +0000</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <h2>What's new in 1.2</h2>
+                <ul>
+                    <li>Added an <strong>Auto</strong> badge to the built-in display — see whether macOS auto-brightness is running, and switch it off with a click when you want your own brightness to stay put.</li>
+                    <li>Fixed <strong>Extended Dimming</strong> keeping a warm cast after Night Shift switched off.</li>
+                    <li>Various UI refinements and stability improvements.</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://lucidbit.app/downloads/DisplayDial-1.2.dmg"
+                sparkle:edSignature="yzWTywNThmlSV0R/0bkTaGeYIAgVeRfIBvlg6Llm36OAE3s9CGq2qYV7QS5I0jHCIuPKxrTXBCgHuK8ZDREUDw=="
+                length="7889665"
+                type="application/octet-stream" />
+        </item>
+
+        <item>
             <title>Version 1.1</title>
             <pubDate>Sat, 11 Jul 2026 11:43:00 +0000</pubDate>
             <sparkle:version>3</sparkle:version>
