@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The best clipboard managers for Mac (2026) | LucidBit</title>
+<meta name="description" content="Paste, Maccy, Raycast, Alfred, PeekPaste — how the main Mac clipboard managers actually work, and which model fits which kind of work.">
+<link rel="canonical" href="https://lucidbit.app/Blog/best-clipboard-managers-for-mac.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="LucidBit">
+<meta property="og:title" content="The best clipboard managers for Mac (2026)">
+<meta property="og:description" content="How the main Mac clipboard managers actually work, and which model fits which kind of work.">
+<meta property="og:url" content="https://lucidbit.app/Blog/best-clipboard-managers-for-mac.html">
+<meta property="og:image" content="https://lucidbit.app/Images/og/og-peekpaste.png">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#7851A9">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The best clipboard managers for Mac (2026)",
+  "description": "How the main Mac clipboard managers actually work, and which model fits which kind of work.",
+  "image": "https://lucidbit.app/Images/og/og-peekpaste.png",
+  "author": { "@type": "Organization", "name": "LucidBit", "url": "https://lucidbit.app/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "LucidBit",
+    "url": "https://lucidbit.app/",
+    "logo": { "@type": "ImageObject", "url": "https://lucidbit.app/favicon.png" }
+  },
+  "datePublished": "2026-08-22",
+  "dateModified": "2026-08-22",
+  "mainEntityOfPage": "https://lucidbit.app/Blog/best-clipboard-managers-for-mac.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lucidbit.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://lucidbit.app/Blog/" },
+    { "@type": "ListItem", "position": 3, "name": "The best clipboard managers for Mac", "item": "https://lucidbit.app/Blog/best-clipboard-managers-for-mac.html" }
+  ]
+}
+</script>
+
+<style>
+:root { --page-accent: #585DC1; }
+
+.article-wrap { max-width: 720px; margin: 0 auto; padding: 40px 48px 100px; }
+.article-hero { margin-bottom: 48px; }
+.article-crumbs {
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-3);
+  margin-bottom: 20px;
+}
+.article-crumbs a { color: var(--text-3); text-decoration: none; }
+.article-crumbs a:hover { color: var(--page-accent); }
+.article-title {
+  font-family: 'Cormorant', serif; font-weight: 400;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem); letter-spacing: -0.02em;
+  line-height: 1.1; color: var(--text); margin-bottom: 20px;
+}
+.article-meta { font-size: 0.85rem; color: var(--text-3); }
+
+.article-body { font-size: 1.02rem; line-height: 1.75; color: var(--text-2); }
+.article-body p { margin: 0 0 24px; }
+.article-body h2 {
+  font-family: 'Cormorant', serif; font-weight: 400;
+  font-size: 1.9rem; letter-spacing: -0.02em; line-height: 1.2;
+  color: var(--text); margin: 56px 0 20px;
+}
+.article-body h3 {
+  font-family: 'Outfit', sans-serif; font-weight: 500;
+  font-size: 1.15rem; color: var(--text); margin: 36px 0 12px;
+}
+.article-body ul { margin: 0 0 24px; padding-left: 24px; }
+.article-body li { margin-bottom: 8px; }
+.article-body a { color: var(--page-accent); text-decoration: underline; text-underline-offset: 3px; }
+.article-body strong { color: var(--text); font-weight: 500; }
+
+.article-callout {
+  margin: 32px 0; padding: 24px 28px;
+  background: color-mix(in oklab, var(--page-accent) 8%, transparent);
+  border-left: 3px solid var(--page-accent);
+  border-radius: 8px;
+}
+.article-callout p { margin: 0; font-size: 0.98rem; }
+.article-callout a { color: var(--page-accent); font-weight: 500; }
+
+.related-block {
+  margin-top: 80px; padding-top: 40px;
+  border-top: 1px solid var(--glass-border);
+}
+.related-title {
+  font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-3);
+  margin-bottom: 20px;
+}
+.related-links a {
+  display: block; padding: 16px 0; text-decoration: none;
+  color: var(--text); font-family: 'Cormorant', serif;
+  font-size: 1.2rem; font-weight: 400; letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--glass-border);
+  transition: color 0.2s;
+}
+.related-links a:last-child { border-bottom: none; }
+.related-links a:hover { color: var(--page-accent); }
+
+@media (max-width: 640px) {
+  .article-wrap { padding: 28px 20px 72px; }
+}
+</style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<nav id="main-nav">
+  <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        Apps
+        <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-dropdown-panel" role="menu">
+        <a class="nav-dropdown-item" href="../PeekPaste/peekpaste.html" role="menuitem">
+          <img src="../Images/PeekPaste/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+          <span class="nav-dropdown-text"><span class="nav-dropdown-name">PeekPaste</span><span class="nav-dropdown-sub">Your clipboard, within reach</span></span>
+        </a>
+        <a class="nav-dropdown-item" href="../DisplayDial/displaydial.html" role="menuitem">
+          <img src="../Images/DisplayDial/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+          <span class="nav-dropdown-text"><span class="nav-dropdown-name">DisplayDial</span><span class="nav-dropdown-sub">Every display. One dial.</span></span>
+        </a>
+        <a class="nav-dropdown-item" href="../Tesserac/tesserac.html" role="menuitem">
+          <img src="../Images/Tesserac/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+          <span class="nav-dropdown-text"><span class="nav-dropdown-name">Tesserac</span><span class="nav-dropdown-sub">App switching, reimagined.</span></span>
+        </a>
+        <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
+          <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+          <span class="nav-dropdown-text"><span class="nav-dropdown-name">PeekFocus</span><span class="nav-dropdown-sub">The calm between windows</span></span>
+        </a>
+        <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
+          <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+          <span class="nav-dropdown-text"><span class="nav-dropdown-name">ActiveStat</span><span class="nav-dropdown-sub">Performance. Simplified.</span></span>
+        </a>
+        <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
+          <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+          <span class="nav-dropdown-text"><span class="nav-dropdown-name">GentleLimit</span><span class="nav-dropdown-sub">Mindful screen time habits</span></span>
+        </a>
+      </div>
+    </li>
+    <li><a href="../privacy.html">Privacy</a></li>
+    <li><a href="../Blog/index.html">Blog</a></li>
+    <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap" id="main">
+  <div class="detail-nav-space"></div>
+  <article class="article-wrap">
+    <header class="article-hero">
+      <p class="article-crumbs"><a href="../Blog/index.html">Blog</a> · Productivity</p>
+      <h1 class="article-title">The best clipboard managers for Mac (2026)</h1>
+      <p class="article-meta">22 Aug 2026 · 9 min read</p>
+    </header>
+
+    <div class="article-body">
+      <p>The Mac clipboard, out of the box, holds one thing. You copy the second thing, the first thing is gone. This is fine for a machine from 1984 with a fraction of a megabyte of RAM. It's absurd in 2026 on a machine with 16 gigabytes and a Neural Engine that can transcribe video in real time. Nobody who has installed a clipboard manager has ever gone back.</p>
+
+      <p>Which one you should install, though, depends on how you actually work. The category has quietly split into three tribes with genuinely different philosophies, and picking the wrong tribe means either paying for features you'll never touch or bouncing off ergonomics that don't fit your hands. This is the field in 2026 — what each option actually does, and how to choose.</p>
+
+      <h2>Three tribes, one problem</h2>
+
+      <p>Before the tools: every clipboard manager solves the same base problem — remember more than one thing — but they solve it in one of three ways.</p>
+
+      <h3>1. Shortcut-driven history</h3>
+
+      <p>You press a hotkey, a list appears, you pick a clip. This is the original clipboard-manager UI and it's still the most common. Fast for people who live in shortcuts; a small speed bump for people who don't. Every tool in the category can do this; some are exclusively this.</p>
+
+      <h3>2. Launcher-integrated</h3>
+
+      <p>Your launcher (Alfred, Raycast, Spotlight replacements) already lives at Cmd+Space. Clipboard history becomes one more thing you can pull up from that same summoning gesture. Great if you already use a launcher heavily; overhead if you don't.</p>
+
+      <h3>3. Ambient / edge-triggered</h3>
+
+      <p>Instead of a shortcut, a gesture: push your pointer to a screen edge, or the panel is docked somewhere always-visible. Newer category, smaller but growing. Good for pointer-heavy workflows and for people who forget shortcuts.</p>
+
+      <h2>The main options</h2>
+
+      <h3>Paste</h3>
+
+      <p><strong>Paste</strong> (by Fiplab) is the polished veteran. Horizontal shelf of clip cards that slides in from the bottom on a hotkey, iCloud sync across your Apple devices, pinboards for organising snippets, rich previews. Interface is genuinely nice — cards render text, code, colours, links with previews. Subscription model ($14.99/yr as of writing), which is the friction point for a lot of people.</p>
+
+      <p>Pick Paste if you want the cleanest shortcut-driven experience, use multiple Apple devices, and don't mind paying yearly.</p>
+
+      <h3>Maccy</h3>
+
+      <p><strong>Maccy</strong> is the developer's choice: open source, free, keyboard-first, minimal. Menu-bar icon opens a searchable list. Zero fluff. Written in Swift, actively maintained on GitHub, respects the OS. If your bar for a clipboard manager is "just show me the history when I press a hotkey," Maccy is exactly that and nothing more.</p>
+
+      <p>The trade-off is intentional bareness. No rich previews, no floating shelves, no sync, no OCR. If plain-text and text-adjacent snippets are 95% of what you copy, that's a feature, not a limitation.</p>
+
+      <h3>Raycast</h3>
+
+      <p><strong>Raycast</strong> is a Spotlight replacement whose clipboard-history extension is one of the best-integrated in the category. You already summon Raycast for launching apps, running commands, doing math; clipboard history is right there under the same hotkey. Free for personal use.</p>
+
+      <p>The bet with Raycast is that you're already using it as your launcher. If you are, its clipboard is essentially free. If you're not, installing Raycast just for clipboard is overkill — you're loading a whole launcher framework for one feature.</p>
+
+      <h3>Alfred</h3>
+
+      <p><strong>Alfred</strong> plus its Powerpack (£34, one-time, roughly $42) is the classic power-user launcher, and its clipboard history is mature and reliable. Same logic as Raycast: worth it if Alfred is already your launcher, overhead if not. Powerpack is a one-time purchase rather than a subscription, which some people prefer.</p>
+
+      <h3>Copy 'Em Paste</h3>
+
+      <p><strong>Copy 'Em</strong> (by Apollonian Labs) has been around forever and is deeply featured — filters, groups, previews, editing, iCloud sync, snippet management. Feels a bit like a Mac utility from 2015 in its interface but does more than most of the newer entrants. One-time purchase on the Mac App Store.</p>
+
+      <p>Pick Copy 'Em if you want maximum features for a one-off price and don't mind that the UI hasn't been rethought in a while.</p>
+
+      <h3>PastePal</h3>
+
+      <p><strong>PastePal</strong> is a newer indie contender with a floating window, rich previews, iCloud sync, and a generous free tier. Sits between Paste and Maccy in feature weight. Nice pick if you find Paste too polished and Maccy too spare.</p>
+
+      <h3>CopyClip</h3>
+
+      <p><strong>CopyClip</strong> is free, tiny, and lives in the menu bar with a text-only history list. Zero fanfare, does the job, uses 8 MB of RAM. Worth mentioning because the category doesn't have to be complicated — if your requirement is "let me get back the URL I copied five minutes ago," this suffices.</p>
+
+      <h3>PeekPaste</h3>
+
+      <p><strong><a href="../PeekPaste/peekpaste.html">PeekPaste</a></strong> is the app we built and it's the edge-triggered pick. Instead of pressing a shortcut, you push your pointer to the side of the screen and the clipboard panel slides in over your work. Release the edge, it goes away. Choose the edge, set a dwell delay, or use a keyboard shortcut if you prefer.</p>
+
+      <p>Two things make PeekPaste different from the shortcut-driven side of the field:</p>
+
+      <ul>
+        <li><strong>The edge trigger itself.</strong> Nobody forgets the edge of the screen. Muscle memory for a hotkey erodes; muscle memory for "flick right" doesn't. This is the main reason someone would pick PeekPaste over Maccy or Paste — the summoning gesture is more resilient.</li>
+        <li><strong>Search inside screenshots.</strong> On-device text recognition means text captured inside images is searchable alongside text you actually copied. If you screenshot receipts, error messages, or slides, they're in the same searchable index. Nothing is uploaded.</li>
+      </ul>
+
+      <p>Plus the usual: rich card types (code with syntax highlighting, links with previews, colours as swatches, files as files), Space to preview any clip before you paste, Library window for the long view, per-app rules for privacy (blur or ignore sensitive apps).</p>
+
+      <div class="article-callout">
+        <p><a href="../PeekPaste/peekpaste.html">PeekPaste</a> is on the App Store and available direct — $9.99 once, no subscription, 7-day free trial. Menu-bar native, everything stays on your Mac.</p>
+      </div>
+
+      <h2>How to choose</h2>
+
+      <p>Answer three questions and the choice narrows:</p>
+
+      <h3>1. Do you already use a launcher (Alfred or Raycast)?</h3>
+
+      <p>Yes → use its built-in clipboard. Installing a second clipboard manager on top of a launcher that already has one is redundant.</p>
+
+      <p>No → keep reading.</p>
+
+      <h3>2. Do you like keyboard shortcuts or dislike them?</h3>
+
+      <p>Like them → <strong>Paste</strong> (if you want polish + sync and don't mind subscription), <strong>Copy 'Em</strong> (feature-rich, one-time), <strong>PastePal</strong> (middle ground), or <strong>Maccy</strong> (free, minimal). All shortcut-driven.</p>
+
+      <p>Prefer a gesture, or you keep forgetting your clipboard shortcut → <strong><a href="../PeekPaste/peekpaste.html">PeekPaste</a></strong> is the pick. The edge trigger is what the category was missing.</p>
+
+      <h3>3. Do you copy from screenshots often?</h3>
+
+      <p>If yes — you take a lot of screenshots and later want to find text inside them — <strong><a href="../PeekPaste/peekpaste.html">PeekPaste</a></strong>'s on-device OCR is genuinely differentiated. Most other clipboard managers treat images as opaque blobs.</p>
+
+      <h2>The pricing landscape, honestly</h2>
+
+      <p>Free: Maccy, CopyClip, Raycast (personal), PastePal (limited tier).<br>
+      One-time: Copy 'Em (~$15), Alfred Powerpack (~$42), PeekPaste ($9.99).<br>
+      Subscription: Paste ($14.99/yr), Raycast Pro/Team.</p>
+
+      <p>The one-time-payment options have quietly become more competitive as the subscription-fatigue reaction sets in. If you're allergic to yearly bills for a utility this small, PeekPaste, Copy 'Em, or Maccy (free) are the three to look at.</p>
+
+      <h2>What you actually need</h2>
+
+      <p>The honest answer for 80% of people: any competent clipboard manager will change your Mac more than any other utility you install this year. The difference between having one and not having one is enormous. The difference between the good ones is small. Pick the one whose ergonomics fit your hands and stop optimising.</p>
+
+      <p>If nothing on this list appeals: install Maccy. It's free, it works, and it'll teach you what you actually want from the category. Come back to this list when you know.</p>
+
+      <div class="related-block">
+        <p class="related-title">Related</p>
+        <div class="related-links">
+          <a href="cmd-tab-alternatives-mac.html">The best Cmd+Tab alternatives for Mac — and why linear switching is broken</a>
+          <a href="how-to-calm-a-busy-mac-desktop.html">How to calm a busy Mac desktop (2026 guide)</a>
+          <a href="mac-menu-bar-system-monitor-guide.html">Menu bar system monitors on Mac: what to look for in 2026</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-wordmark" href="../index.html">Lucid<span class="bit">Bit</span></a>
+        <div class="footer-links">
+          <a href="../Blog/index.html">Blog</a>
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+        </div>
+        <span class="footer-copy">&#169; 2026 LucidBit</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="../shared.js"></script>
+</body>
+</html>
