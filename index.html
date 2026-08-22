@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>LucidBit — Minimal, high-quality apps for the Apple ecosystem.</title>
-<meta name="description" content="LucidBit builds minimal, native menu-bar apps for macOS: DisplayDial, Tesserac, PeekFocus, ActiveStat, GentleLimit. Private. One-time purchase.">
+<meta name="description" content="LucidBit builds minimal, native menu-bar apps for macOS: PeekPaste, DisplayDial, Tesserac, PeekFocus, ActiveStat, GentleLimit. Private. One-time purchase.">
 <meta name="keywords" content="macOS apps, Mac menu bar apps, minimal Mac apps, indie Mac apps, screen time app Mac, system monitor Mac, focus app Mac, Apple Silicon apps, native Mac apps, one-time purchase">
 <meta name="author" content="LucidBit">
 <link rel="canonical" href="https://lucidbit.app/">
@@ -78,6 +78,18 @@
     },
     {
       "@type": "SoftwareApplication",
+      "name": "PeekPaste",
+      "operatingSystem": "macOS",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Productivity",
+      "url": "https://lucidbit.app/PeekPaste/peekpaste.html",
+      "image": "https://lucidbit.app/Images/PeekPaste/Icon-macOS-Default-1024x1024@1x.webp",
+      "description": "PeekPaste keeps a thoughtful history of everything you copy — text, code, links, images, colours and files — and brings it back when you move your pointer to the edge of the screen.",
+      "offers": { "@type": "Offer", "price": "9.99", "priceCurrency": "USD" },
+      "publisher": { "@id": "https://lucidbit.app/#org" }
+    },
+    {
+      "@type": "SoftwareApplication",
       "name": "GentleLimit",
       "operatingSystem": "macOS",
       "applicationCategory": "UtilitiesApplication",
@@ -133,11 +145,13 @@
    hover arrow matches its app's own product accent color. The brand
    --volt is plum; ActiveStat keeps its volt-green identity here, so
    the card needs its own override too. */
+.app-card-indigo { --card-accent: #585DC1; }
 .app-card-plum  { --card-accent: #7B3F98; }
 .app-card-green { --card-accent: #6FA800; }
 .app-card-blue  { --card-accent: #4B84BD; }
 .app-card-lime  { --card-accent: #3D9C96; }
 .app-card-dial  { --card-accent: #7870A2; }
+.app-card-indigo:hover .card-arrow,
 .app-card-plum:hover .card-arrow,
 .app-card-green:hover .card-arrow,
 .app-card-blue:hover .card-arrow,
@@ -273,6 +287,13 @@
         <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <div class="nav-dropdown-panel" role="menu">
+        <a class="nav-dropdown-item" href="PeekPaste/peekpaste.html" role="menuitem">
+          <img src="Images/PeekPaste/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+          <span class="nav-dropdown-text">
+            <span class="nav-dropdown-name">PeekPaste</span>
+            <span class="nav-dropdown-sub">Your clipboard, within reach</span>
+          </span>
+        </a>
         <a class="nav-dropdown-item" href="DisplayDial/displaydial.html" role="menuitem">
           <img src="Images/DisplayDial/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
           <span class="nav-dropdown-text">
@@ -333,7 +354,33 @@
       </div>
       <div class="apps-grid">
 
-        <a class="app-card app-card-dial reveal reveal-d1" id="displaydial" href="DisplayDial/displaydial.html">
+        <a class="app-card app-card-indigo reveal reveal-d1" id="peekpaste" href="PeekPaste/peekpaste.html">
+          <div class="card-inner">
+            <div class="card-top">
+              <div class="card-icon" style="padding:0;overflow:hidden;">
+                <img src="Images/PeekPaste/Icon-macOS-Default-1024x1024@1x.webp"
+                     alt="PeekPaste"
+                     style="width:100%;height:100%;object-fit:cover;border-radius:13px;display:block;" loading="lazy">
+              </div>
+              <span class="card-badge">Available</span>
+            </div>
+            <h3 class="card-name">PeekPaste</h3>
+            <p class="card-sub">CLIPBOARD · WORKFLOW</p>
+            <p class="card-desc">Keep what you copy close at hand. PeekPaste gives text, code, links, images, colours and files a thoughtful history, then brings them back from the edge of your screen.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-pills">
+              <span class="pill">Edge Trigger</span>
+              <span class="pill">Searchable Screenshots</span>
+              <span class="pill">Private by Design</span>
+            </div>
+            <div class="card-arrow">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a class="app-card app-card-dial reveal reveal-d2" id="displaydial" href="DisplayDial/displaydial.html">
           <div class="card-inner">
             <div class="card-top">
               <div class="card-icon" style="padding:0;overflow:hidden;">
@@ -359,7 +406,7 @@
           </div>
         </a>
 
-        <a class="app-card app-card-lime reveal reveal-d2" href="Tesserac/tesserac.html">
+        <a class="app-card app-card-lime reveal reveal-d3" href="Tesserac/tesserac.html">
           <div class="card-inner">
             <div class="card-top">
               <div class="card-icon" style="padding:0;overflow:hidden;border-radius:13px;">
@@ -383,7 +430,7 @@
           </div>
         </a>
 
-        <a class="app-card app-card-plum reveal reveal-d3" href="PeekFocus/peekfocus.html">
+        <a class="app-card app-card-plum reveal reveal-d4" href="PeekFocus/peekfocus.html">
           <div class="card-inner">
             <div class="card-top">
               <div class="card-icon" style="padding:0;overflow:hidden;">
@@ -409,7 +456,7 @@
           </div>
         </a>
 
-        <a class="app-card app-card-green reveal reveal-d4" href="ActiveStat/activestat.html">
+        <a class="app-card app-card-green reveal reveal-d5" href="ActiveStat/activestat.html">
           <div class="card-inner">
             <div class="card-top">
               <div class="card-icon" style="padding:0;overflow:hidden;">
@@ -435,7 +482,7 @@
           </div>
         </a>
 
-        <a class="app-card app-card-blue reveal reveal-d5" href="GentleLimit/gentlelimit.html">
+        <a class="app-card app-card-blue reveal reveal-d6" href="GentleLimit/gentlelimit.html">
           <div class="card-inner">
             <div class="card-top">
               <div class="card-icon" style="padding:0;overflow:hidden;">

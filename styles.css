@@ -1557,3 +1557,37 @@ a:focus-visible {
   .from-journal { padding: 56px 20px 24px; }
   .from-journal-label { margin-bottom: 28px; }
 }
+
+/* ── Animated app hero icon — three-beat reveal + float loop ─────────
+   Port of PeekPaste's SwiftUI AnimatedAppIconView. Fades and scales the
+   icon in dark, warms it to full brightness while an accent halo blooms
+   behind it, then settles into a slow levitation whose shadow breathes
+   inversely — wider and softer as the icon rises. Expects the page's
+   :root to set --page-accent. ─────────────────────────────────────── */
+img.app-hero-icon-anim.app-hero-icon-anim {
+  animation: app-hero-reveal 0.9s ease-out both;
+  will-change: transform, filter, opacity, box-shadow;
+}
+
+@keyframes app-hero-reveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(6px);
+    filter: brightness(0.6) saturate(0.6) drop-shadow(0 4px 10px rgba(0,0,0,0.22));
+    box-shadow: 0 0 0 0 transparent;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.0) translateY(0);
+    filter: brightness(1.0) saturate(1.0) drop-shadow(0 6px 14px rgba(0,0,0,0.18));
+    box-shadow: 0 0 48px 10px color-mix(in oklab, var(--page-accent, #7851A9) 22%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  img.app-hero-icon-anim.app-hero-icon-anim {
+    animation: none;
+    box-shadow: 0 0 48px 10px color-mix(in oklab, var(--page-accent, #7851A9) 20%, transparent);
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.18));
+  }
+}

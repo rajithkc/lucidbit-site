@@ -1,0 +1,65 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     version="2.0">
+    <channel>
+        <title>PeekPaste Updates</title>
+        <description>Direct-distribution update feed for PeekPaste.</description>
+        <language>en</language>
+        <link>https://lucidbit.app/PeekPaste/appcast.xml</link>
+        <!--
+            Sparkle reads this feed daily per running app instance.
+            Add new releases as <item> blocks inside <channel>; the
+            order doesn't matter, Sparkle picks the highest
+            sparkle:version it sees. release.sh prints a ready-to-paste
+            block including the EdDSA signature, file length, and pubDate.
+
+            EdDSA public key (matches SUPublicEDKey injected at build time,
+            shared across LucidBit apps):
+              flxF/Hg9ws46PE3BxiJGtHZ+uPAc/1oRnRlznwKVLyI=
+
+            Item template, for reference:
+
+            <item>
+                <title>Version 1.0</title>
+                <pubDate>Sat, 22 Aug 2026 14:21:48 +0000</pubDate>
+                <sparkle:version>2</sparkle:version>
+                <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+                <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+                <description><![CDATA[
+                    <h2>What's new</h2>
+                    <ul><li>Initial release of PeekPaste.</li></ul>
+                ]]></description>
+                <enclosure
+                    url="https://lucidbit.app/downloads/PeekPaste-1.0.dmg"
+                    sparkle:edSignature="…"
+                    length="…"
+                    type="application/octet-stream" />
+            </item>
+        -->
+        <item>
+            <title>Version 1.0</title>
+            <pubDate>Sat, 22 Aug 2026 14:21:48 +0000</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <h2>What's new in 1.0</h2>
+                <p>Initial release. Your clipboard, within reach — a screen-edge clipboard for macOS that lives quietly out of the way until you push your pointer to the edge.</p>
+                <ul>
+                    <li><strong>Edge panel:</strong> push your pointer to the edge of the screen to reveal recent clips over your work. Choose the edge, set a dwell delay, or use a keyboard shortcut.</li>
+                    <li><strong>Rich card types:</strong> code is syntax-highlighted, links carry their title and preview, colours become swatches, files remain files, screenshots keep their preview.</li>
+                    <li><strong>Search inside screenshots:</strong> on-device text recognition finds text captured inside images.</li>
+                    <li><strong>Space to preview:</strong> press Space on any card to see the whole clip in detail before you paste.</li>
+                    <li><strong>Library window:</strong> full search, filters, categories, pins, edit mode, and preview.</li>
+                    <li><strong>Private by design:</strong> everything stays on your Mac. No analytics, no sync service, no phone-home. Per-app rules let you blur or ignore sensitive apps.</li>
+                    <li><strong>One-time purchase:</strong> $9.99 with a 7-day free trial.</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://lucidbit.app/downloads/PeekPaste-1.0.dmg"
+                sparkle:edSignature="SZekF6gRf7Ru5ynKjn+P68VYCpbLWCdB28BSJoF72fTxB7Unqtfj15TQemc6qw1XNCPuIoNWhzF6JyDXKcImCw==" length="11043220"
+                type="application/octet-stream" />
+        </item>
+    </channel>
+</rss>
