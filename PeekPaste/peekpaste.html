@@ -68,9 +68,9 @@
   "url": "https://lucidbit.app/PeekPaste/peekpaste.html",
   "image": "https://lucidbit.app/Images/PeekPaste/Icon-macOS-Default-1024x1024@1x.webp",
   "screenshot": [
-    "https://lucidbit.app/Images/PeekPaste/EdgePanel.webp",
-    "https://lucidbit.app/Images/PeekPaste/Library.webp",
-    "https://lucidbit.app/Images/PeekPaste/Categories.webp"
+    "https://lucidbit.app/Images/PeekPaste/CardTypes.webp",
+    "https://lucidbit.app/Images/PeekPaste/Settings.webp",
+    "https://lucidbit.app/Images/PeekPaste/Privacy.webp"
   ],
   "featureList": [
     "Screen-edge trigger with configurable side and dwell delay",
@@ -255,11 +255,26 @@
 }
 
 .pp-video-wrap video,
-.pp-video-wrap .pp-video-placeholder,
 .pp-video-wrap img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: auto;                 /* the video's own shape decides the height */
+  border-radius: 20px;
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.08),
+    0 30px 70px rgba(0,0,0,0.18),
+    0 80px 140px rgba(0,0,0,0.16);
+  transition: transform 0.35s var(--ease-out),
+              box-shadow 0.35s var(--ease-out);
+}
+
+/* The placeholder still needs a shape of its own — it has no intrinsic one.
+   Kept at the hero video's ratio so the page doesn't jump when the video
+   loads over it. */
+.pp-video-wrap .pp-video-placeholder {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   border-radius: 20px;
   object-fit: cover;
   box-shadow:

@@ -5,12 +5,25 @@
       <stop offset="100%" stop-color="#5C2E8A"/>
     </linearGradient>
   </defs>
-  <!-- 2x2 grid of squares; bottom row + top-left in fading grey, top-right
+  <!-- 2x2 grid of squares; bottom row + top-left stepping darker, top-right
        in plum gradient. Mirrors the LucidBit logo icon. Tight 2px padding
        so the icon fills its container — needed when the same SVG is used
-       both as the browser-tab favicon AND as the nav/footer wordmark icon. -->
-  <rect x="2"  y="2"  width="28" height="28" rx="5" fill="#E5E6F0" opacity="0.4"/>
-  <rect x="2"  y="34" width="28" height="28" rx="5" fill="#E5E6F0" opacity="0.65"/>
-  <rect x="34" y="34" width="28" height="28" rx="5" fill="#E5E6F0" opacity="0.9"/>
+       both as the browser-tab favicon AND as the nav/footer wordmark icon.
+
+       The three quiet tiles are TINTS OF THE BRAND PLUM (#7851A9 mixed 32 /
+       46 / 60% toward white), not neutral grey, so the whole mark sits in one
+       hue family and the plum tile reads as the deepest step of a ladder
+       rather than the only coloured thing present.
+
+       They are also flat values, not a light grey faded with opacity. Opacity
+       was the original approach and it made the mark almost invisible: over
+       the site's page (#FAFAFB) a 40%-opacity #E5E6F0 composites to roughly
+       #F7F7FA — a contrast ratio of 1.03:1. Only the plum tile read, so the
+       logo looked like a single floating square. These are 1.54 / 1.94 /
+       2.49:1, and being flat they also render predictably against a dark
+       browser-tab strip instead of dissolving into it. -->
+  <rect x="2"  y="2"  width="28" height="28" rx="5" fill="#D4C7E3"/>
+  <rect x="2"  y="34" width="28" height="28" rx="5" fill="#C1AFD7"/>
+  <rect x="34" y="34" width="28" height="28" rx="5" fill="#AE97CB"/>
   <rect x="34" y="2"  width="28" height="28" rx="5" fill="url(#plumGrad)"/>
 </svg>

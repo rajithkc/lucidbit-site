@@ -2,3 +2,14 @@
 Thumbs.db
 node_modules/
 .env
+
+# Python bytecode from the asset generators (Images/make-logo.py,
+# Images/og/make-og.py). Never useful in the repo, and because the deploy
+# workflow uploads the repo root as-is, anything committed is also served.
+__pycache__/
+*.pyc
+
+# Backups of the previous Open Graph cards, kept locally while iterating on
+# the design. Same reason: committing them would publish them at
+# lucidbit.app/Images/og/.before/.
+Images/og/.before/
