@@ -63,6 +63,28 @@ find . -name "*.bak"         -type f -not -path "./.git/*" -delete 2>/dev/null |
 find . -name "*.swp"         -type f -not -path "./.git/*" -delete 2>/dev/null || true
 find . -name "sitemap.xml.bak" -delete 2>/dev/null || true
 
+# ── Which python runs the generators ─────────────────────────────────────
+# Prefer a repo-local .venv if one exists. Recent macOS Pythons are marked
+# externally-managed and refuse `pip install`, so the natural place for this
+# repo's one dependency (Pillow) is a virtualenv beside the code rather than
+# the system interpreter:
+#
+#     python3 -m venv .venv
+#     .venv/bin/python3 -m pip install Pillow
+#
+# Falling back to system python3 keeps the script working on a machine that
+# has Pillow installed globally, or that only needs --skip-build.
+if [ -x ".venv/bin/python3" ]; then
+    PY="$REPO_DIR/.venv/bin/python3"
+    PY_LABEL=".venv"
+elif command -v python3 >/dev/null 2>&1; then
+    PY="$(command -v python3)"
+    PY_LABEL="system python3"
+else
+    PY=""
+    PY_LABEL="none"
+fi
+
 # ── Stage 2: regenerate generated assets, and stop if any were stale ─────
 #
 # The staleness test is "did regenerating change the file?", which is only
@@ -77,12 +99,12 @@ find . -name "sitemap.xml.bak" -delete 2>/dev/null || true
 if [ "$SKIP_BUILD" = "1" ]; then
     echo -e "${YELLOW}⚠ Skipping asset regeneration (--skip-build).${RESET}"
     echo -e "${DIM}  Generated files will be pushed exactly as they are on disk.${RESET}"
-elif ! command -v python3 >/dev/null 2>&1; then
+elif [ -z "$PY" ]; then
     # Don't fail the deploy over a missing interpreter — say so and move on,
     # so a machine without python3 can still push a text-only change.
     echo -e "${YELLOW}⚠ python3 not found — skipping asset regeneration.${RESET}"
 else
-    echo -e "${DIM}→ Regenerating assets…${RESET}"
+    echo -e "${DIM}→ Regenerating assets… ${RESET}${DIM}($PY_LABEL)${RESET}"
 
     # Fingerprint the generated files BEFORE regenerating. `git stash list`-free
     # approach: just ask git what differs afterwards.
@@ -97,23 +119,32 @@ else
     # aborts — but it aborts with the two ways out, because the usual cause is
     # a missing dependency on a new machine rather than anything wrong with
     # the assets themselves.
+    # The generator's own traceback is printed above this, and it is the
+    # authoritative account of what went wrong. This only adds the Pillow hint
+    # when the failure actually WAS a missing Pillow — an earlier version
+    # asserted that unconditionally and sent the reader off installing a
+    # package that was already there while the real fault (a missing font) sat
+    # in plain sight two lines up.
     generator_failed() {
         echo ""
         echo -e "${RED}✗ $1 failed. Nothing pushed.${RESET}"
+        echo -e "${DIM}  The traceback above says why.${RESET}"
         echo ""
-        echo -e "${YELLOW}  Most likely Pillow isn't installed for this python3:${RESET}"
-        echo -e "      python3 -m pip install --user Pillow"
-        echo -e "${DIM}      (add --break-system-packages if macOS refuses)${RESET}"
-        echo ""
-        echo -e "${DIM}  Or skip the check if the assets are already current:${RESET}"
+        if ! "$PY" -c "import PIL" >/dev/null 2>&1; then
+            echo -e "${YELLOW}  Pillow is not installed for ${PY_LABEL}:${RESET}"
+            echo -e "      python3 -m venv .venv && .venv/bin/python3 -m pip install Pillow"
+            echo -e "${DIM}      (deploy.sh prefers .venv automatically once it exists)${RESET}"
+            echo ""
+        fi
+        echo -e "${DIM}  To push anyway, if the assets are already current:${RESET}"
         echo -e "${DIM}      ./deploy.sh \"your message\" --skip-build${RESET}"
         echo ""
         exit 1
     }
 
-    ( cd Images     && python3 make-logo.py >/dev/null ) \
+    ( cd Images     && "$PY" make-logo.py >/dev/null ) \
         || generator_failed "Images/make-logo.py"
-    ( cd Images/og  && python3 make-og.py  >/dev/null ) \
+    ( cd Images/og  && "$PY" make-og.py  >/dev/null ) \
         || generator_failed "Images/og/make-og.py"
 
     AFTER=$(git diff --name-only -- "${GENERATED_PATHS[@]}" 2>/dev/null || true)

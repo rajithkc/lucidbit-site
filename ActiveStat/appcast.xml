@@ -37,6 +37,25 @@
             </item>
         -->
 		<item>
+            <title>Version 1.5.1</title>
+		    <pubDate>Sat, 29 Aug 2026 05:09:47 +0000</pubDate>
+	        <sparkle:version>30</sparkle:version>
+            <sparkle:shortVersionString>1.5.1</sparkle:shortVersionString>
+	        <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+			<description><![CDATA[
+				<h2>What's new in 1.5.1</h2>
+                <ul>
+                    <li>Fixed battery details showing incorrect capacity, health, and temperature on macOS 27.</li>
+                    <li>Battery temperature now shows one decimal place.</li>
+                    <li>Refreshed the CPU activity graph for clearer readings at low load.</li>
+                </ul>
+		    ]]></description>
+		    <enclosure
+			   url="https://lucidbit.app/downloads/ActiveStat-1.5.1.dmg"
+			                sparkle:edSignature="bve/zzf50piTUZvE8E+uiwNJqOejoeoKq+5/hDanEciy4GPxnODow9AlSRN1qrvG4c0LuJs+/izkF1DgqlnvBg==" length="4372191"
+            type="application/octet-stream" />
+		</item>
+		<item>
             <title>Version 1.5</title>
 		    <pubDate>Tue, 14 Jul 2026 00:45:55 +0000</pubDate>
 	        <sparkle:version>29</sparkle:version>

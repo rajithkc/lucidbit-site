@@ -13,3 +13,8 @@ __pycache__/
 # the design. Same reason: committing them would publish them at
 # lucidbit.app/Images/og/.before/.
 Images/og/.before/
+
+# Local virtualenv for the asset generators' one dependency (Pillow).
+# deploy.sh picks it up automatically when present. Never committed —
+# it's machine-specific, and the deploy workflow serves the repo root.
+.venv/

@@ -23,10 +23,17 @@ the index page, run this, and the social card agrees with it.
 
 # Typefaces
 
-The site uses Cormorant for headings and Outfit for everything else. Neither is
-installed here, so this falls back to Lora (serif) and Poppins (geometric sans),
-which are the closest available. Drop `Cormorant-Light.ttf` and
-`Outfit-Regular.ttf` beside this script and it will prefer them.
+Fonts live in `fonts/` next to this script and are committed with the repo, so
+the cards render identically on any machine. They are NOT looked up in system
+font directories — that would make the output depend on what each machine
+happens to have installed, and deploy.sh reads "the generator changed a file"
+as a stale-asset error, so a machine-dependent font would fail every deploy.
+
+The site itself sets headings in Cormorant and everything else in Outfit, both
+served from Google's CDN rather than installed locally. The vendored fallbacks
+are Lora (serif) and Poppins (geometric sans), the closest equivalents to hand.
+Drop `Cormorant-Light.ttf` and `Outfit-Regular.ttf` into `fonts/` and the cards
+switch to the real brand faces with no code change — see FACES below.
 
 # Sizes are cap heights, not point sizes
 
@@ -98,16 +105,43 @@ def apps() -> dict:
     return found
 
 
+FONTS = HERE / "fonts"
+
+# Faces are looked up in order and the first one present wins. The vendored
+# files in fonts/ are last-resort fallbacks that ship with the repo; drop the
+# site's real Cormorant and Outfit alongside them and the cards upgrade to the
+# actual brand faces with no code change.
+FACES = {
+    "serif":       ["Cormorant-Light.ttf", "Cormorant-Regular.ttf",
+                    "Lora-Variable.ttf"],
+    "sans":        ["Outfit-Regular.ttf", "Poppins-Regular.ttf"],
+    "sans-medium": ["Outfit-Medium.ttf", "Poppins-Medium.ttf"],
+}
+
+
 def font(kind: str, cap_height: int) -> ImageFont.FreeTypeFont:
-    candidates = {
-        "serif": [HERE / "Cormorant-Light.ttf", HERE / "Cormorant-Regular.ttf",
-                  "/usr/share/fonts/truetype/google-fonts/Lora-Variable.ttf"],
-        "sans":  [HERE / "Outfit-Regular.ttf",
-                  "/usr/share/fonts/truetype/google-fonts/Poppins-Regular.ttf"],
-        "sans-medium": [HERE / "Outfit-Medium.ttf",
-                        "/usr/share/fonts/truetype/google-fonts/Poppins-Medium.ttf"],
-    }[kind]
-    path = next(str(p) for p in candidates if Path(p).exists())
+    """
+    A face at a given CAP HEIGHT, resolved from fonts/ next to this script.
+
+    Fonts are vendored rather than looked up in system directories on purpose.
+    An earlier version searched /usr/share/fonts, which meant the script only
+    ran on Linux — and worse, would have produced different cards on different
+    machines depending on what happened to be installed. deploy.sh treats "the
+    generator changed a file" as a stale-asset error, so a font that varies by
+    machine turns every deploy into a false alarm. Shipping the exact files
+    makes the output byte-identical anywhere.
+    """
+    for name in FACES[kind]:
+        p = FONTS / name
+        if p.exists():
+            path = str(p)
+            break
+    else:
+        raise SystemExit(
+            f"No '{kind}' font found. Looked for {', '.join(FACES[kind])} "
+            f"in {FONTS}.\nThe repo ships fallbacks there — if they are "
+            f"missing, restore them from git."
+        )
 
     size = cap_height * 2
     for _ in range(24):
