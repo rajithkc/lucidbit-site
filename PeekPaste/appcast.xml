@@ -39,8 +39,26 @@
         -->
         <item>
             <title>Version 1.0</title>
-            <pubDate>Sat, 22 Aug 2026 14:21:48 +0000</pubDate>
-            <sparkle:version>2</sparkle:version>
+            <pubDate>Fri, 04 Sep 2026 00:37:37 +0000</pubDate>
+            <!--
+                Build 3 REPLACED build 2 rather than being added beside it.
+
+                Both builds ship as PeekPaste-1.0.dmg — the filename carries the
+                marketing version, not the build — so uploading build 3
+                overwrote the file build 2's item pointed at. Its edSignature and
+                length then described bytes that no longer existed, and Sparkle
+                would have rejected the download it was being told to trust.
+                Leaving a superseded item in place is only safe when its
+                enclosure is still there.
+
+                Nobody was on build 2, so replacing costs nothing. If a future
+                release needs to keep older items alive, the DMG filename has to
+                include the build number.
+
+                Description unchanged: build 3 is still 1.0 to anyone reading
+                this, and the notes below still describe it accurately.
+            -->
+            <sparkle:version>3</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[
@@ -58,7 +76,7 @@
             ]]></description>
             <enclosure
                 url="https://lucidbit.app/downloads/PeekPaste-1.0.dmg"
-                sparkle:edSignature="SZekF6gRf7Ru5ynKjn+P68VYCpbLWCdB28BSJoF72fTxB7Unqtfj15TQemc6qw1XNCPuIoNWhzF6JyDXKcImCw==" length="11043220"
+                sparkle:edSignature="m7NK1ZQrqA8ZXvu8W2i0ifEmaniH5cxyhSTPVJues5EXATg6J6BU6jdrwoYLb9ci+HZx6mEby2UWHIwk7ZHzAw==" length="11082675"
                 type="application/octet-stream" />
         </item>
     </channel>
