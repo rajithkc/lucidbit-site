@@ -39,44 +39,28 @@
         -->
         <item>
             <title>Version 1.0</title>
-            <pubDate>Fri, 04 Sep 2026 00:37:37 +0000</pubDate>
+            <pubDate>Mon, 07 Sep 2026 15:43:39 +0000</pubDate>
             <!--
-                Build 3 REPLACED build 2 rather than being added beside it.
+                Build 4 replaces build 3 rather than being added beside it.
 
-                Both builds ship as PeekPaste-1.0.dmg — the filename carries the
-                marketing version, not the build — so uploading build 3
-                overwrote the file build 2's item pointed at. Its edSignature and
-                length then described bytes that no longer existed, and Sparkle
-                would have rejected the download it was being told to trust.
-                Leaving a superseded item in place is only safe when its
-                enclosure is still there.
-
-                Nobody was on build 2, so replacing costs nothing. If a future
-                release needs to keep older items alive, the DMG filename has to
-                include the build number.
-
-                Description unchanged: build 3 is still 1.0 to anyone reading
-                this, and the notes below still describe it accurately.
+                Both builds use PeekPaste-1.0.dmg, so the new upload replaced the
+                bytes referenced by build 3. Keeping the old item would leave an
+                invalid signature and length in the feed.
             -->
-            <sparkle:version>3</sparkle:version>
+            <sparkle:version>4</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description><![CDATA[
                 <h2>What's new in 1.0</h2>
-                <p>Initial release. Your clipboard, within reach — a screen-edge clipboard for macOS that lives quietly out of the way until you push your pointer to the edge.</p>
                 <ul>
-                    <li><strong>Edge panel:</strong> push your pointer to the edge of the screen to reveal recent clips over your work. Choose the edge, set a dwell delay, or use a keyboard shortcut.</li>
-                    <li><strong>Rich card types:</strong> code is syntax-highlighted, links carry their title and preview, colours become swatches, files remain files, screenshots keep their preview.</li>
-                    <li><strong>Search inside screenshots:</strong> on-device text recognition finds text captured inside images.</li>
-                    <li><strong>Space to preview:</strong> press Space on any card to see the whole clip in detail before you paste.</li>
-                    <li><strong>Library window:</strong> full search, filters, categories, pins, edit mode, and preview.</li>
-                    <li><strong>Private by design:</strong> everything stays on your Mac. No analytics, no sync service, no phone-home. Per-app rules let you blur or ignore sensitive apps.</li>
-                    <li><strong>One-time purchase:</strong> $9.99 with a 7-day free trial.</li>
+                    <li>Single-click now selects a clip and double-click pastes it.</li>
+                    <li>Image cards can be selected consistently in both the edge panel and Library.</li>
+                    <li>Direct Paste setup and the manual Command-V fallback are clearer.</li>
                 </ul>
             ]]></description>
             <enclosure
                 url="https://lucidbit.app/downloads/PeekPaste-1.0.dmg"
-                sparkle:edSignature="m7NK1ZQrqA8ZXvu8W2i0ifEmaniH5cxyhSTPVJues5EXATg6J6BU6jdrwoYLb9ci+HZx6mEby2UWHIwk7ZHzAw==" length="11082675"
+                sparkle:edSignature="xtQPn2v0BbOFpQxl+39Ala0IuYHwhrTgxf05heVYx3yiI4leHJygnDzL87koLFbDhhJOxR1AYbiqHYp+uH2BAw==" length="11087664"
                 type="application/octet-stream" />
         </item>
     </channel>
