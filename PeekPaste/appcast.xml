@@ -38,6 +38,24 @@
             </item>
         -->
         <item>
+            <title>Version 1.0.1</title>
+            <pubDate>Thu, 24 Sep 2026 16:17:08 +0000</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <h2>What's new in 1.0.1</h2>
+                <ul>
+                    <li>Settings and Library now open on the display where you invoke them.</li>
+                    <li>Improved window focus when opening PeekPaste from the menu bar.</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://lucidbit.app/downloads/PeekPaste-1.0.1.dmg"
+                sparkle:edSignature="CV4OwnFDeZOzoLbIcPQ85EVBfCkj8OekY9+IjzXsctYKX1isrhpWe4PC+0niqh2zCwugYc/J45uQvmgF3VXJCA==" length="11004700"
+                type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 1.0</title>
             <pubDate>Mon, 07 Sep 2026 15:43:39 +0000</pubDate>
             <!--
