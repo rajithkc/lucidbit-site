@@ -1,0 +1,46 @@
+/* Shared LucidBit layout, with Subscription Calendar's signature accent. */
+:root{--page-accent:#70B042;--sc-accent:#70B042;--sc-accent-glow:rgba(112,176,66,.2)}
+.sc-mac .feature-image img{height:auto;max-width:100%}
+.sc-hero{max-width:900px;margin:0 auto;padding:60px 32px 40px;text-align:center;position:relative}.sc-back-row{display:flex;justify-content:flex-start;margin-bottom:32px}.sc-kicker{justify-content:center;color:var(--sc-accent);margin-bottom:28px}.sc-kicker:before{background:var(--sc-accent)}.sc-hero-icon{width:116px;height:116px;display:block;margin:0 auto 28px;border-radius:22%;box-shadow:0 20px 50px #0002}.sc-title{font-size:clamp(3.6rem,8vw,7rem);margin-bottom:16px}.sc-tagline{margin:0 auto 20px;text-transform:none;letter-spacing:.02em}.sc-description{margin:0 auto 36px;max-width:620px}.sc-cta-row{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:22px}.sc-hero .btn-primary{background:var(--sc-accent);color:#182411;box-shadow:0 4px 24px var(--sc-accent-glow)}.sc-meta{font-size:.88rem;color:var(--text-2);line-height:1.5;margin-bottom:28px}.sc-meta span{margin:0 10px}.sc-caption{text-align:center;color:var(--text-3);font-size:11px;line-height:1.6;margin-top:22px}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #70B042;outline-offset:5px}section[id],div[id]{scroll-margin-top:96px}
+/* Continuous iPhone gallery; pause while a visitor inspects a screenshot. */
+.sc-ios{margin:32px 0 72px;padding:0 0 36px}
+.sc-ios .container{max-width:1160px}
+.sc-gallery-heading{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:24px}
+.sc-gallery-heading #sc-ios-title{display:block;margin:0;font:inherit;font-size:12px;letter-spacing:.12em}
+.sc-gallery{overflow:hidden;scrollbar-width:none}
+.sc-gallery::-webkit-scrollbar{display:none}
+.sc-gallery-track{display:flex;width:max-content;animation:sc-gallery-scroll 65s linear infinite}
+.sc-gallery-group{display:flex;gap:24px;padding-right:24px}
+.sc-phone{width:clamp(240px,26vw,340px);flex-shrink:0;margin:0}
+.sc-phone img{width:100%;height:auto;display:block;border-radius:18px;background:#e8f0dd}
+.sc-gallery:hover .sc-gallery-track,.sc-gallery:focus-within .sc-gallery-track{animation-play-state:paused}
+@keyframes sc-gallery-scroll{to{transform:translateX(-50%)}}
+@media(max-width:640px){.sc-gallery-heading{gap:12px}.sc-gallery-group{gap:16px;padding-right:16px}.sc-phone{width:78vw;max-width:320px}}
+@media(prefers-reduced-motion:reduce){.sc-gallery{overflow-x:auto}.sc-gallery-track{animation:none}.sc-gallery-group[aria-hidden=true]{display:none}}
+
+.sc-ios{margin:32px 0 72px;padding:0 0 36px;background:none}.sc-ios .container>h2,.sc-ios-copy{display:none}.sc-mac>.container{width:100%;max-width:1160px;margin:auto}.sc-pricing{--price-accent:#70B042;--price-accent-glow:rgba(112,176,66,.2)}.sc-hero .sc-meta{margin-bottom:0}
+@media(max-width:900px){.sc-hero{padding:52px 24px 40px}.sc-hero-icon{width:96px;height:96px}.sc-title{font-size:clamp(3rem,9vw,6rem)}}@media(max-width:640px){.sc-hero{padding:44px 20px 28px}.sc-hero-icon{width:80px;height:80px}.sc-title{font-size:clamp(2.6rem,11vw,4rem)}.sc-description{font-size:.95rem}.sc-meta{font-size:12px}.sc-ios{margin:20px 0 48px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+.sc-core .feat-icon{color:var(--sc-accent);background:rgba(112,176,66,.08)}.sc-core .product-core-label:before{background:var(--sc-accent)}
+
+/* Cards and store buttons use the shared app-page styles without overrides. */
+.sc-pricing{max-width:1160px}
+.sc-tier-label{font-size:1rem;color:var(--text-2);align-self:flex-end;margin-bottom:10px}
+.sc-price-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;max-width:1072px;margin:auto}
+.sc-price-cards .app-price-card{width:100%;margin:0 auto}
+@media(max-width:760px){.sc-price-cards{grid-template-columns:1fr}}
+.sc-hero .btn-buy{background:var(--sc-accent);color:#fff;box-shadow:0 4px 24px var(--sc-accent-glow)}
+
+.sc-hero .btn-buy:hover{box-shadow:0 8px 32px var(--sc-accent-glow)}
+
+/* Device-specific hero badge; both platform pricing cards remain available. */
+html[data-store-platform="ios"] .sc-cta-row [data-platform="macos"],
+html[data-store-platform="macos"] .sc-cta-row [data-platform="ios"]{display:none}
+.sc-other-platform{display:none;margin:-6px 0 20px;font-size:.82rem;color:var(--text-3)}
+.sc-other-platform a{color:var(--text-2);text-decoration:underline;text-underline-offset:3px}
+.sc-other-platform a:hover{color:var(--page-accent)}
+.sc-other-platform a{display:none}
+html[data-store-platform="ios"] .sc-other-platform,
+html[data-store-platform="macos"] .sc-other-platform{display:block}
+html[data-store-platform="ios"] .sc-also-macos,
+html[data-store-platform="macos"] .sc-also-ios{display:inline}

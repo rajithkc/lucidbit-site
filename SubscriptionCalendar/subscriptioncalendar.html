@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<script>
+// Choose the hero badge before the page renders; unknown devices retain both.
+(function () {
+  var ua = navigator.userAgent || '';
+  var ios = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1);
+  document.documentElement.dataset.storePlatform = ios ? 'ios' : /Macintosh|Mac OS X/i.test(ua) ? 'macos' : 'both';
+})();
+</script><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light">
+<title>Subscription Calendar — All your subscriptions. One clear view. | LucidBit</title>
+<meta name="description" content="A thoughtful subscription tracker for iPhone and Mac. See renewals in a visual calendar, track spending, and stay ahead with reminders and widgets.">
+<meta name="theme-color" content="#70B042">
+<link rel="canonical" href="https://lucidbit.app/SubscriptionCalendar/subscriptioncalendar.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="LucidBit"><meta property="og:title" content="Subscription Calendar — All your subscriptions. One clear view."><meta property="og:description" content="Your subscriptions, upcoming renewals, and recurring spending. One clear calendar."><meta property="og:image" content="https://lucidbit.app/SubscriptionCalendar/assets/app-icon.png"><meta property="og:url" content="https://lucidbit.app/SubscriptionCalendar/subscriptioncalendar.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/app-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="subscriptioncalendar.css?v=16">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Subscription Calendar","operatingSystem":"iOS 18 or later; macOS 15 or later","applicationCategory":"FinanceApplication","description":"A visual subscription tracker with renewal reminders, spending insights, widgets, currency conversion, and optional iCloud sync.","publisher":{"@type":"Organization","name":"LucidBit","url":"https://lucidbit.app/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does it cancel subscriptions for me?","acceptedAnswer":{"@type":"Answer","text":"No. Subscription Calendar tracks plans and important dates. Cancellations still happen with the service provider or through the App Store."}},{"@type":"Question","name":"Can I track subscriptions in different currencies?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each subscription keeps its billing currency, while summaries use your chosen main currency."}},{"@type":"Question","name":"How does importing work?","acceptedAnswer":{"@type":"Answer","text":"Choose App Store subscription screenshots or a supported file, review the detected details, and choose what to save. Essential includes one completed import; Pro unlocks unlimited imports."}},{"@type":"Question","name":"Does it work on both iPhone and Mac?","acceptedAnswer":{"@type":"Answer","text":"Yes. Subscription Calendar supports iOS 18 and later and macOS 15 and later. Each platform is sold separately. Pro includes optional iCloud sync between them."}}]}</script>
+</head><body id="top"><a class="skip-link" href="#main">Skip to main content</a>
+<nav id="main-nav" class="dual-view">
+  <div class="nav-view nav-view-brand">
+    <a class="nav-logo" href="../index.html">Lucid<span class="bit">Bit</span></a>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Apps
+          <svg class="nav-chevron" width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-dropdown-panel" role="menu">
+          <a class="nav-dropdown-item" href="../SubscriptionCalendar/subscriptioncalendar.html" role="menuitem">
+            <img src="../SubscriptionCalendar/assets/app-icon.png" alt="" class="nav-dropdown-icon" loading="lazy">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">Subscription Calendar</span>
+              <span class="nav-dropdown-sub">All your subscriptions. One clear view.</span>
+            </span>
+          </a>
+
+          <a class="nav-dropdown-item" href="../PeekPaste/peekpaste.html" role="menuitem">
+            <img src="../Images/PeekPaste/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">PeekPaste</span>
+              <span class="nav-dropdown-sub">Your clipboard, within reach</span>
+            </span>
+          </a>
+          <a class="nav-dropdown-item" href="../DisplayDial/displaydial.html" role="menuitem">
+            <img src="../Images/DisplayDial/Icon-macOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">DisplayDial</span>
+              <span class="nav-dropdown-sub">Every display. One dial.</span>
+            </span>
+          </a>
+          <a class="nav-dropdown-item" href="../Tesserac/tesserac.html" role="menuitem">
+            <img src="../Images/Tesserac/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">Tesserac</span>
+              <span class="nav-dropdown-sub">App switching, reimagined.</span>
+            </span>
+          </a>
+          <a class="nav-dropdown-item" href="../PeekFocus/peekfocus.html" role="menuitem">
+            <img src="../Images/PeekFocus/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">PeekFocus</span>
+              <span class="nav-dropdown-sub">The calm between windows</span>
+            </span>
+          </a>
+          <a class="nav-dropdown-item" href="../ActiveStat/activestat.html" role="menuitem">
+            <img src="../Images/ActiveStat/Icon-iOS-Dark-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">ActiveStat</span>
+              <span class="nav-dropdown-sub">Performance. Simplified.</span>
+            </span>
+          </a>
+          <a class="nav-dropdown-item" href="../GentleLimit/gentlelimit.html" role="menuitem">
+            <img src="../Images/GentleLimit/Icon-macOS-Default-1024x1024@1x.webp" alt="" class="nav-dropdown-icon" loading="lazy">
+            <span class="nav-dropdown-text">
+              <span class="nav-dropdown-name">GentleLimit</span>
+              <span class="nav-dropdown-sub">Mindful screen time habits</span>
+            </span>
+          </a>
+        </div>
+      </li>
+      <li><a href="../privacy.html">Privacy</a></li>
+      <li><a href="../Blog/index.html">Blog</a></li>
+      <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-view nav-view-product">
+    <a class="nav-product-brand" href="#top">
+      <img src="assets/app-icon.png" alt="" class="nav-product-icon" loading="lazy">
+      <span class="nav-product-name">Subscription Calendar</span>
+    </a>
+    <ul class="nav-product-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+</nav><main id="main" class="page-wrap"><div class="detail-nav-space"></div>
+<section class="sc-hero">
+<div class="sc-back-row"><a class="back-btn" href="../index.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>All Apps</a></div>
+<p class="detail-kicker sc-kicker">Subscriptions & Renewals</p>
+<img src="assets/app-icon.png" alt="Subscription Calendar icon" class="sc-hero-icon app-hero-icon-anim" width="116" height="116">
+<h1 class="detail-title sc-title">Subscription Calendar</h1>
+<p class="detail-tagline sc-tagline">All your subscriptions. One clear view.</p>
+<p class="detail-desc sc-description">Your subscriptions, upcoming renewals, and recurring spending in one clear calendar. Stay ahead with reminders, insights, and widgets on iPhone and Mac.</p>
+<div class="sc-cta-row">
+<a class="mas-badge-link" data-platform="ios" href="https://apps.apple.com/app/id6806599466" data-store-url="https://apps.apple.com/app/id6806599466" aria-label="Download on the iOS App Store"><svg class="mas-badge-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 52" role="img">
+          <rect width="172" height="52" rx="9" fill="#000"/>
+          <g transform="translate(12, 4) scale(1.75)">
+            <path fill="white" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </g>
+          <text x="54" y="21" fill="white" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" letter-spacing="0.4">Download on the</text>
+          <text x="54" y="39" fill="white" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="17.5" font-weight="600" letter-spacing="-0.3">App Store</text>
+        </svg></a>
+<a class="mas-badge-link" data-platform="macos" href="https://apps.apple.com/app/id6806599466" data-store-url="https://apps.apple.com/app/id6806599466" aria-label="Download on the Mac App Store"><svg class="mas-badge-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 52" role="img">
+          <rect width="172" height="52" rx="9" fill="#000"/>
+          <g transform="translate(12, 4) scale(1.75)">
+            <path fill="white" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </g>
+          <text x="54" y="21" fill="white" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" letter-spacing="0.4">Download on the</text>
+          <text x="54" y="39" fill="white" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="17.5" font-weight="600" letter-spacing="-0.3">Mac App Store</text>
+        </svg></a>
+<a class="btn btn-ghost" href="changelog.html">Changelog</a>
+</div>
+<p class="sc-other-platform"><a class="sc-also-ios" href="#price-ios">Also available for iPhone</a><a class="sc-also-macos" href="#price-macos">Also available for Mac</a></p>
+<p class="sc-meta">Essential: 5 active subscriptions and one completed import <span>·</span> Separate one-time Pro purchases for iPhone and Mac</p>
+</section>
+<section class="sc-ios" id="ios" aria-labelledby="sc-ios-title">
+  <div class="container">
+    <div class="sc-gallery-heading">
+      <h2 id="sc-ios-title" class="detail-section-label product-core-label">Subscription Calendar for iOS</h2>
+    </div>
+  </div>
+  <div class="sc-gallery" id="sc-gallery" tabindex="0" role="region" aria-label="iPhone screenshots">
+    <div class="sc-gallery-track">
+      <div class="sc-gallery-group">
+        <figure class="sc-phone"><img src="assets/screenshots/01-home.jpg" alt="Calendar with subscription renewals and spending summary" width="800" height="1739" loading="lazy" decoding="async"></figure>
+        <figure class="sc-phone"><img src="assets/screenshots/02-insights.jpg" alt="Spending insights with annual forecast and categories" width="800" height="1739" loading="lazy" decoding="async"></figure>
+        <figure class="sc-phone"><img src="assets/screenshots/03-add.jpg" alt="Service catalogue for adding a subscription" width="800" height="1739" loading="lazy" decoding="async"></figure>
+        <figure class="sc-phone"><img src="assets/screenshots/04-detail.jpg" alt="Subscription dates, amounts and reminder details" width="800" height="1739" loading="lazy" decoding="async"></figure>
+        <figure class="sc-phone"><img src="assets/screenshots/05-import.jpg" alt="Import App Store screenshots or subscription files" width="800" height="1739" loading="lazy" decoding="async"></figure>
+        <figure class="sc-phone"><img src="assets/screenshots/06-library.jpg" alt="Subscription library with search and filters" width="800" height="1739" loading="lazy" decoding="async"></figure>
+      </div>
+    </div>
+  </div>
+</section><section class="feature-rows sc-mac" id="macos"><div class="container"><p class="detail-section-label product-core-label">A closer look</p></div><div class="feature-row">
+<div class="feature-image"><img src="assets/screenshots/macos/home.jpg" alt="Monthly renewal calendar and spending summary in Subscription Calendar for Mac" width="1600" height="1386" loading="lazy" decoding="async"></div>
+<div class="feature-text"><h2>Your month.<br>In one clear view.</h2><p>Every renewal has its place. Recognisable service logos turn your calendar into a clear picture of what’s coming, so you can see a busy week before it arrives.</p></div>
+</div><div class="feature-row reverse">
+<div class="feature-image"><img src="assets/screenshots/macos/detail.jpg" alt="Netflix subscription with billing dates, spending, category and reminders on Mac" width="1600" height="1280" loading="lazy" decoding="async"></div>
+<div class="feature-text"><h2>The little details.<br>All together.</h2><p>From a new service to an old favourite, keep the price, billing cycle, payment method, and notes in one place. Track trial ends, planned cancellations, and how long your access lasts.</p></div>
+</div><div class="feature-row">
+<div class="feature-image"><img src="assets/screenshots/macos/add.jpg" alt="Service catalogue with recognisable logos and search on Mac" width="1600" height="1333" loading="lazy" decoding="async"></div>
+<div class="feature-text"><h2>Every service.<br>Right at home.</h2><p>Choose a familiar name from the catalogue or add one of your own. Keep its logo, amount, currency and billing schedule together from the start.</p></div>
+</div><div class="feature-row reverse">
+<div class="feature-image"><img src="assets/screenshots/macos/insights.jpg" alt="Annual spending forecast and category insights on Mac" width="1600" height="1386" loading="lazy" decoding="async"></div>
+<div class="feature-text"><h2>Small payments.<br>The bigger picture.</h2><p>A few subscriptions can add up quickly. See monthly equivalents, total spending, and upcoming costs together, with insights that help you understand where your money goes.</p></div>
+</div><div class="feature-row">
+<div class="feature-image"><img src="assets/screenshots/macos/import.jpg" alt="On-device file import reading subscription names, prices and renewal dates on Mac" width="1600" height="1490" loading="lazy" decoding="async"></div>
+<div class="feature-text"><h2>Less typing.<br>More keeping track.</h2><p>Bring your subscriptions in from App Store screenshots or supported files. Review the amounts, currencies, dates, and possible duplicates before adding them to your calendar.</p></div>
+</div><div class="feature-row reverse">
+<div class="feature-image"><img src="assets/screenshots/macos/library.jpg" alt="Subscription library with lists, currencies, search and filters on Mac" width="1600" height="1386" loading="lazy" decoding="async"></div>
+<div class="feature-text"><h2>Everything in place.<br>Across your day.</h2><p>Separate work from personal subscriptions with lists and categories. Find a service with search, narrow the view with filters, and, with Pro, use optional iCloud sync to keep your subscriptions with you on iPhone and Mac.</p></div>
+</div></section><section class="detail-body product-core sc-core" id="features"><div class="container"><p class="detail-section-label product-core-label">Core Features</p><div class="feat-grid"><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="14" height="13" rx="3"/><path d="M2 7h14M6 2v3M12 2v3M6 11h2M10 11h2"/></svg></div><h3 class="feat-title">Visual renewal calendar</h3><p class="feat-desc">See upcoming payments by date with recognisable service logos. Select a day to review its renewals or add a subscription.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 5 5"/></svg></div><h3 class="feat-title">Service catalogue & custom services</h3><p class="feat-desc">Search for a service in the catalogue, or add one of your own with a resolved logo. Keep the name and billing details together.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5a6 6 0 1 0 1 6M14 2v4h-4"/></svg></div><h3 class="feat-title">Flexible billing cycles</h3><p class="feat-desc">Track weekly, monthly, every two months, quarterly, half-yearly, yearly, and custom billing periods.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12V8a5 5 0 0 1 10 0v4l1 2H3l1-2ZM7 16h4"/></svg></div><h3 class="feat-title">Renewal reminders</h3><p class="feat-desc">Choose first and second reminders, their timing, and which subscriptions should notify you.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="7"/><path d="M12 5H8a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4H6M9 3v12"/></svg></div><h3 class="feat-title">Multiple currencies</h3><p class="feat-desc">Record each service in its billing currency and view converted equivalents in your main currency.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15V9h3v6M8 15V3h3v12M13 15V6h3v9"/></svg></div><h3 class="feat-title">Spending insights</h3><p class="feat-desc">Review monthly equivalents, total spending, and upcoming costs. Pro adds Worth Knowing findings based on your renewal schedule.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="6" height="6" rx="2"/><rect x="10" y="2" width="6" height="6" rx="2"/><rect x="2" y="10" width="14" height="6" rx="2"/></svg></div><h3 class="feat-title">Widgets on both platforms</h3><p class="feat-desc">Keep your next renewal, upcoming list, or renewal calendar in view with small, medium, and large widgets.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2v9M6 8l3 3 3-3M3 11v5h12v-5"/></svg></div><h3 class="feat-title">Review before importing</h3><p class="feat-desc">Bring in App Store subscription screenshots and CSV, TSV, TXT, or XLSX files. Review everything before saving. Essential includes one completed import; Pro unlocks unlimited imports.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h14l-5 6v6l-4-2V9L2 3Z"/></svg></div><h3 class="feat-title">Search & status filters</h3><p class="feat-desc">Find a service quickly and filter your library by status. Keep active, cancelled, and archived subscriptions organised.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 4h8M7 9h8M7 14h8"/><circle cx="3" cy="4" r="1"/><circle cx="3" cy="9" r="1"/><circle cx="3" cy="14" r="1"/></svg></div><h3 class="feat-title">Lists & categories</h3><p class="feat-desc">Separate personal and work subscriptions, group services by category, and filter your calendar.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2" y="4" width="14" height="10" rx="2"/><path d="M2 8h14M5 11h3"/></svg></div><h3 class="feat-title">Payment methods & notes</h3><p class="feat-desc">Keep the payment method and useful notes alongside each subscription.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M9 5v4l3 2"/></svg></div><h3 class="feat-title">Trials & cancellations</h3><p class="feat-desc">Track trial ends, cancellation dates, and how long access lasts. Cancel the service with its provider; the app helps you track it.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 14h8a3 3 0 0 0 1-6 5 5 0 0 0-9-2 4 4 0 0 0 0 8Z"/></svg></div><h3 class="feat-title">iCloud sync</h3><p class="feat-desc">Available with Pro, optional iCloud sync keeps your subscriptions available across your Apple devices.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M9 2.5v13"/><path d="M9 2.5a6.5 6.5 0 0 0 0 13Z" fill="currentColor"/></svg></div><h3 class="feat-title">Light & dark</h3><p class="feat-desc">A considered appearance in both modes, with recognisable service logos and clear date indicators.</p></article><article class="feat-card"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M9 2v9M6 8l3 3 3-3M3 11v4h12v-4"/></svg></div><h3 class="feat-title">CSV export</h3><p class="feat-desc">Export your subscriptions as CSV when you need a copy or want to use your data elsewhere.</p></article></div></div></section><section class="app-pricing sc-pricing" id="pricing">
+  <p class="app-pricing-label">Pricing</p>
+  <h2>Start free. Go Pro once.</h2>
+  <p class="lead">Track up to five active subscriptions and complete one import free. Pro is a one-time purchase for iPhone or Mac.</p>
+  <div class="sc-price-cards"><div class="app-price-card" id="price-ios">
+      <span class="app-price-eyebrow">iOS · One-time purchase</span>
+      <div class="app-price-row"><span class="app-price-now">$7.99</span><span class="sc-tier-label">Single</span></div>
+      <p class="app-price-note">Family $9.99 · Up to 6 people<br>No subscription. Lifetime access on iPhone and iPad.</p>
+      <ul class="app-price-list"><li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Unlimited subscriptions on iPhone</li>
+<li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Unlimited App Store and file imports</li>
+<li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>iCloud sync</li>
+<li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Worth Knowing insights</li>
+<li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>New features and updates</li></ul>
+      <div class="app-price-actions">
+        <a class="app-price-cta-mas" href="https://apps.apple.com/app/id6806599466" data-store-url="https://apps.apple.com/app/id6806599466" aria-label="Download on the App Store"><svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM256.4 74.3c30.5-36.2 27.7-69.2 26.8-81C255.9 2 224.4 21.3 205.6 44.9c-20.7 25-32.9 55.9-30.3 87.6 29.7 2.3 56.8-13 81.1-58.2z"/></svg>App Store</a>
+      </div>
+      <p class="app-price-trust">USD prices. Local pricing varies. iOS and Mac upgrades are sold separately.</p>
+    </div>
+<div class="app-price-card" id="price-macos">
+      <span class="app-price-eyebrow">macOS · One-time purchase</span>
+      <div class="app-price-row"><span class="app-price-now">$11.99</span><span class="sc-tier-label">Single</span></div>
+      <p class="app-price-note">Family $14.99 · Up to 6 people<br>No subscription. Lifetime access on Mac.</p>
+      <ul class="app-price-list"><li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Unlimited subscriptions on Mac</li>
+<li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Unlimited App Store and file imports</li>
+<li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>iCloud sync</li>
+<li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Worth Knowing insights</li>
+<li><svg class="app-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>New features and updates</li></ul>
+      <div class="app-price-actions">
+        <a class="app-price-cta-mas" href="https://apps.apple.com/app/id6806599466" data-store-url="https://apps.apple.com/app/id6806599466" aria-label="Mac Download on the App Store"><svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM256.4 74.3c30.5-36.2 27.7-69.2 26.8-81C255.9 2 224.4 21.3 205.6 44.9c-20.7 25-32.9 55.9-30.3 87.6 29.7 2.3 56.8-13 81.1-58.2z"/></svg>Mac App Store</a>
+      </div>
+      <p class="app-price-trust">USD prices. Local pricing varies. iOS and Mac upgrades are sold separately.</p>
+    </div></div>
+</section><section class="app-faq-section" id="faq" aria-label="Subscription Calendar FAQ"><div class="container"><h2 class="app-faq-title">FAQ</h2><div class="app-faq-list">
+<details><summary>Does it cancel subscriptions for me?</summary><p>No. Subscription Calendar tracks your plans and reminds you of important dates. You still cancel with the service provider or through the App Store. Recording a cancellation in the app does not cancel the service itself.</p></details>
+<details><summary>Can I track subscriptions in different currencies?</summary><p>Yes. Each subscription keeps its billing currency, while summaries and equivalent amounts use your chosen main currency.</p></details>
+<details><summary>How does importing work?</summary><p>Choose App Store subscription screenshots or a supported file. The app prepares a review and flags details that need checking. Essential includes one completed import; Pro unlocks unlimited imports.</p></details>
+<details><summary>Does it work on both iPhone and Mac?</summary><p>Yes. The app supports iOS 18 and later and macOS 15 and later. Each platform is sold separately. Pro includes optional iCloud sync, while widgets are available on both.</p></details>
+</div></div></section></main>  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-wordmark" href="../index.html">Lucid<span class="bit">Bit</span></a>
+        <div class="footer-links">
+			<a href="../Blog/index.html">Blog</a>
+			<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#108;&#117;&#99;&#105;&#100;&#98;&#105;&#116;&#46;&#97;&#112;&#112;">Contact</a>
+			<a href="../privacy.html">Privacy</a>
+			<a href="../terms.html">Terms</a>
+        </div>
+        <span class="footer-copy">&#169; 2026 LucidBit</span>
+      </div>
+    </div>
+</footer><script src="../shared.js"></script><script src="subscriptioncalendar.js?v=11"></script></body></html>
