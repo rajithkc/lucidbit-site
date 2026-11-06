@@ -31,11 +31,20 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      # Pure static site — no build step needed. Upload the repo root as-is.
+      # Publish only website assets, never templates, emails or generator code.
+      - name: Stage public site
+        run: |
+          mkdir -p _site
+          rsync -a ./ _site/ --exclude '_site/' --exclude '.*' \
+            --exclude 'emails/' --exclude 'templates/' --exclude 'scripts/' \
+            --exclude '*.py' --exclude '*.sh' --exclude '*.md' \
+            --exclude '__pycache__/' --exclude '*.pyc' --exclude '*.bak'
+          touch _site/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: "."
+          path: "_site"
 
       - name: Deploy to GitHub Pages
         id: deployment

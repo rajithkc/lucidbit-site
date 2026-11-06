@@ -10,8 +10,7 @@
 # What it does, in order:
 #   1. Cleans junk (.DS_Store, sitemap.xml.bak, *.swp).
 #   2. Regenerates the generated assets and STOPS if any were stale.
-#   3. Refreshes <lastmod> in sitemap.xml to today's date so search
-#      engines see fresh timestamps on every push.
+#   3. Refreshes sitemap dates only for changed HTML pages.
 #   4. Shows you what changed and asks for confirmation.
 #   5. Commits with the chosen message and pushes to origin/main.
 #   6. Prints the GitHub Actions URL and live-site URL so you can
@@ -167,12 +166,9 @@ else
     echo -e "${DIM}  All generated assets were already current.${RESET}"
 fi
 
-# Sitemap lastmod refresh — only if sitemap.xml exists.
-TODAY=$(date +%Y-%m-%d)
+# Update dates only for changed HTML pages, not every URL on every push.
 if [ -f sitemap.xml ]; then
-    echo -e "${DIM}→ Refreshing sitemap.xml lastmod to ${TODAY}…${RESET}"
-    sed -i.bak "s|<lastmod>[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}</lastmod>|<lastmod>${TODAY}</lastmod>|g" sitemap.xml
-    rm -f sitemap.xml.bak
+    python3 scripts/update-sitemap.py
 fi
 
 # Bail if nothing to commit.

@@ -32,12 +32,43 @@
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) {
+          e.target.classList.remove('reveal-pending');
           e.target.classList.add('visible');
           io.unobserve(e.target);
         }
       });
     }, { threshold: threshold });
-    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('reveal-pending');
+      io.observe(el);
+    });
+    // Fail open if an observer never fires (including restored/background tabs).
+    window.setTimeout(function () {
+      document.querySelectorAll('.reveal-pending').forEach(function (el) {
+        el.classList.remove('reveal-pending');
+        io.unobserve(el);
+      });
+    }, 5000);
+  }
+
+
+  /* Keep offscreen looping clips idle; preserve source URLs for crawlers. */
+  var clips = document.querySelectorAll('video[data-autoplay]');
+  clips.forEach(function (clip) { clip.controls = false; });
+  function playClip(clip) {
+    var playing = clip.play();
+    if (playing && playing.catch) playing.catch(function () { clip.controls = true; });
+  }
+  if ('IntersectionObserver' in window) {
+    var clipObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) playClip(entry.target);
+        else entry.target.pause();
+      });
+    }, { rootMargin: '100px 0px', threshold: 0.01 });
+    clips.forEach(function (clip) { clipObserver.observe(clip); });
+  } else {
+    clips.forEach(playClip);
   }
 
   /* ── Subtle tilt on [data-tilt] wrappers ──
