@@ -246,9 +246,7 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── VIDEO SECTION (dailyBlue glow halo) ──
-   GentleLimit's preview is landscape 1920×1080 (16:9), so the wrap
-   uses aspect-ratio 16:9 with width capped for a balanced hero. */
+/* ── VIDEO SECTION (dailyBlue glow halo) ── */
 .gl-video {
   max-width: 1160px;
   margin: 32px auto 72px;
@@ -273,6 +271,12 @@
     0 80px 140px rgba(0,0,0,0.16);
   transition: transform 0.35s var(--ease-out),
               box-shadow 0.35s var(--ease-out);
+}
+
+.gl-video-wrap > video {
+  height: auto;
+  aspect-ratio: 1920 / 1136;
+  object-fit: contain;
 }
 
 .gl-video-wrap:hover video,

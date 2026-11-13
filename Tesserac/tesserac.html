@@ -272,14 +272,12 @@
   display: block;
 }
 
-.ts-video-wrap video,
+.ts-video-wrap > video,
 .ts-video-wrap .ts-video-placeholder,
 .ts-video-wrap img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
   border-radius: 20px;
-  object-fit: cover;
   box-shadow:
     0 6px 18px rgba(0,0,0,0.08),
     0 30px 70px rgba(0,0,0,0.18),
@@ -287,6 +285,18 @@
   transition: transform 0.35s var(--ease-out),
               box-shadow 0.35s var(--ease-out);
 }
+.ts-video-wrap .ts-video-placeholder,
+.ts-video-wrap img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.ts-video-wrap > video {
+  height: auto;
+  aspect-ratio: 1920 / 1104;
+  object-fit: contain;
+}
+
 .ts-video-wrap:hover video,
 .ts-video-wrap:hover .ts-video-placeholder {
   box-shadow:
