@@ -1594,6 +1594,13 @@ img.app-hero-icon-anim.app-hero-icon-anim {
 
 /* Preserve intrinsic media ratios and the existing rounded silhouettes. */
 .feature-image img, .feature-image video { height: auto; }
+@media (max-width: 640px) {
+  body :is(.ts-video-wrap, .pk-video-wrap, .gl-video-wrap) > video {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .reveal.reveal-pending { opacity: 1; transform: none; }
 }
